@@ -1,0 +1,2 @@
+obj\Debug\Workflow.g.xaml
+obj\Debug\tora_asia.leaverequest.Workflows.LeaveReqeustWF_Workflow_BeforeInitializeComponentHelper.txt

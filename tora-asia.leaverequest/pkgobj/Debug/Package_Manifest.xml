@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="8f327d09-f678-4c12-848f-9a491e9ba8e5" SharePointProductVersion="16.0">
+  <FeatureManifests>
+    <FeatureManifest Location="tora-asia.leaverequest_tora-asia.leaverequest 2 Feature\Feature.xml" />
+  </FeatureManifests>
+</Solution>
