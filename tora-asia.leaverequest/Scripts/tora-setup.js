@@ -163,7 +163,9 @@
     	IsWorkflowMaping:false,
     	IsFoundWorkflow:false,
     	IsSetEndCircle:false,
-    	EndCircleDate:null,
+    	EndCircleDate: null,
+    	StartCircleYear: null,
+    	EndCircleYear: null,
     	EndCircleID:0,
     	WorkflowMapingID:0,
     	FoundWorkflowID:0,
@@ -493,7 +495,7 @@
 									    		case "EndCircleYear":
 									    				if(ddata.Details !== null){
 									    					ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;
-									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details,ko.dateformat.endcircletoList);
+									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details, ko.dateformat.endcircletoList);
 									    				}
 									    				//console.log(ddata.ID);
 									    				ToraAsiaLeaveRequestInfo.Services.EndCircleID = ddata.ID;	
@@ -1048,6 +1050,45 @@
 				deferred.resolve();
 			}
 		    return deferred.promise();
+
+    	},
+    	CheckLeaveDayUsed: function (datefrom,dateto) {
+    	    var deferred = $.Deferred();
+
+    	    var allmyrequest = ko.observableArray([]);
+    	    var allquery = [];
+    	    var allquerydate = [];
+    	    var allquerystr = "";
+            
+
+    	        allquery.push(String.format(ko.defaultquery, "Eq", "Requester", "Lookup", ToraAsiaLeaveRequestInfo.Services.GetUserId(), "LookupId='TRUE'", ""));
+
+    	    var querystatus = [];
+    	        querystatus.push(String.format(ko.defaultquery, "Eq", "LeaveStatus", "Text", "In Progress", "", ""));
+    	        querystatus.push(String.format(ko.defaultquery, "Eq", "LeaveStatus", "Text", "Approved", "", ""));
+                
+    	        allquery.push(ko.MergeCAMLConditions(querystatus, ko.MergeType.Or));
+    	    var queryFtoF = [];
+    	    queryFtoF.push(String.format(ko.defaultquery, "Geq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
+    	    queryFtoF.push(String.format(ko.defaultquery, "Leq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
+
+    	        allquerydate.push(ko.MergeCAMLConditions(queryFtoF, ko.MergeType.And));
+    	    if (dateto !== null) {
+    	        var queryFtoE = [];
+    	        queryFtoE.push(String.format(ko.defaultquery, "Geq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
+    	        queryFtoE.push(String.format(ko.defaultquery, "Leq", "EndDate", "DateTime", dateto, "IncludeTimeValue='False'", ""));
+    	        allquerydate.push(ko.MergeCAMLConditions(queryFtoE, ko.MergeType.And));
+    	    }
+    	    allquery.push(ko.MergeCAMLConditions(allquerydate, ko.MergeType.Or));
+
+    	    if (allquery.length > 0) {
+    	        allquerystr = "<Where>" + ko.MergeCAMLConditions(allquery, ko.MergeType.And) + "</Where>";
+    	    }
+
+    	    ToraAsiaLeaveRequestInfo.Services.GetAllMyLeaveRequest(allmyrequest, allquerystr).then(function () {
+    	        deferred.resolve(allmyrequest().length === 0);
+    	    });
+    	    return deferred.promise();
 
     	},
 		CheckFoundWorflow : function (context,currentWEB) {
@@ -1880,7 +1921,21 @@
 									    		case "EndCircleYear":
 									    				if(ddata.Details !== null){
 									    					ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;
-									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details,ko.dateformat.endcircletoList);
+									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details, ko.dateformat.endcircletoList);
+									    					var circlestr = ToraAsiaLeaveRequestInfo.Services.EndCircleDate.format("DD/MM/YYYY");
+									    					var curdatestr = moment().format("DD/MM/YYYY")
+									    					var endC = moment(circlestr.toString(), "DD/MM/YYYY");
+									    					var beginC = moment(circlestr.toString(), "DD/MM/YYYY");
+									    					var diffday = moment(curdatestr, "DD/MM/YYYY").diff(endC, 'd');
+									    					if (diffday <= 0) {
+									    					    beginC.add({ days: 1, years: -1 });
+									    					}
+									    					else {
+									    					    endC.add({ years: 1 });
+									    					    beginC.add({ days: 1 });
+									    					}
+									    					ToraAsiaLeaveRequestInfo.Services.StartCircleYear = moment(beginC.format("DD/MM/YYYY"), "DD/MM/YYYY");
+									    					ToraAsiaLeaveRequestInfo.Services.EndCircleYear = moment(endC.format("DD/MM/YYYY"), "DD/MM/YYYY");
 									    				}
 									    				ToraAsiaLeaveRequestInfo.Services.EndCircleID = ddata.ID;	
 

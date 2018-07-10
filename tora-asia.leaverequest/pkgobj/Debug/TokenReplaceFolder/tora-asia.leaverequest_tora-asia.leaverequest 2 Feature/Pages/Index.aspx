@@ -17,6 +17,7 @@
     <!--Other  2-->
     <script type="text/javascript" src="../Scripts/lib/moment-with-locales.js"></script>
     <script type="text/javascript" src="../Scripts/lib/moment-weekday-calc.js"></script>
+    <script type="text/javascript" src="../Scripts/lib/moment-range-v0.1.7.js"></script>
     <script type="text/javascript" src="../Scripts/lib/SharePointClient.js"></script>
 
     <!--Bootstrap 6-->

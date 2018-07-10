@@ -81,5 +81,7 @@
     <File Path="Scripts\tora-setup.js" Url="Scripts/tora-setup.js" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\moment-weekday-calc.js" Url="Scripts/lib/moment-weekday-calc.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script8_myleaveremain.js" Url="Scripts/script8_myleaveremain.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\moment-range.js" Url="Scripts/lib/moment-range.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\moment-range-v0.1.7.js" Url="Scripts/lib/moment-range-v0.1.7.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

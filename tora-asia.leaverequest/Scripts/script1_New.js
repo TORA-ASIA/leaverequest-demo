@@ -198,90 +198,122 @@ function LRNewViewModel(parent){
 			//console.log(self.moreModel().errors().length);
 		// }
 
-	}	
+	}
+	this.IsLeavedateInCircle = function () {
+	    var fromdate = true;
+	    var enddate = true;
+
+	    var range = moment().range(ToraAsiaLeaveRequestInfo.Services.StartCircleYear, ToraAsiaLeaveRequestInfo.Services.EndCircleYear);
+
+	    fromdate = range.contains(self.fromdate());
+	    if (self.morebool()) {
+	        enddate = range.contains(self.moreModel().todate());
+	    }
+
+	    return fromdate && enddate;
+	}
 	this.saveToDB = function(){
-		if (self.errors().length == 0 && self.moreModel().errors().length == 0 & self.othertypModel().errors().length == 0) {
-					var ltype = self.leavetype ()[0].trim();
-					var diff =/* moment().weekdayCalc({  
+	    if (self.errors().length == 0 && self.moreModel().errors().length == 0 & self.othertypModel().errors().length == 0) {
+	        var checktodate = null;
+	        if (self.morebool()) {
+	            checktodate = self.moreModel().todate().format(ko.dateformat.camlquery);
+	        }
+	        ToraAsiaLeaveRequestInfo.Services.CheckLeaveDayUsed(self.fromdate().format(ko.dateformat.camlquery), checktodate).then(function (r) {
+	            if (r) {
+
+	                var ltype = self.leavetype()[0].trim();
+
+
+	                var isincircle = self.IsLeavedateInCircle();
+	                if (!isincircle) {
+	                    //alert("ลากิจ ต้องเลือกวันที่ลา มากกว่า วันนี้");
+	                    swal("ไม่สามารถลาข้ามปีได้", {
+	                        icon: "error",
+	                    });
+	                    return;
+	                }
+	                var diff =/* moment().weekdayCalc({  
 								  rangeStart: self.fromdate().format(self.dateformate),  
 								  rangeEnd: moment().format(self.dateformate),  
 								  weekdays: self.workingdday.slice()  ,
 								  exclusions:[]
 								})*/
 					//console.log(diff );
-					
+
 					moment(self.fromdate().format(ko.dateformat.tolistnoTime)).diff(moment(moment().format(ko.dateformat.tolistnoTime)), 'days');
-					//console.log(diff);
-					var notcountarr = ["ลากิจ","ลาพักร้อน","ลาบวช","ลาคลอด"];
-					if(diff < 0 && notcountarr.indexOf(ltype) > -1 ){
-						//alert("ลากิจ ต้องเลือกวันที่ลา มากกว่า วันนี้");
-						swal("ไม่สามารถเลือกวันลาย้อนหลังได้", {
-					      icon: "error",
-					    });
-						return ;
-					}
-					
-					var findday = ko.utils.arrayFilter(self.leavedays(), function(item) {
-						//suminprogress += parseInt(item.NumberOfDay,10);
-						return item.Title === ltype ;
-					});
-					//console.log(findday );
-					if(findday .length > 0){
-						var findday0 = findday[0]
-						//var cal
-						var canleaveday = findday0.MaxLeaveValue	-
+	                //console.log(diff);
+
+
+	                var notcountarr = ["ลากิจ", "ลาพักร้อน", "ลาบวช", "ลาคลอด"];
+	                if (diff < 0 && notcountarr.indexOf(ltype) > -1) {
+	                    //alert("ลากิจ ต้องเลือกวันที่ลา มากกว่า วันนี้");
+	                    swal("ไม่สามารถเลือกวันลาย้อนหลังได้", {
+	                        icon: "error",
+	                    });
+	                    return;
+	                }
+
+	                var findday = ko.utils.arrayFilter(self.leavedays(), function (item) {
+	                    //suminprogress += parseInt(item.NumberOfDay,10);
+	                    return item.Title === ltype;
+	                });
+	                //console.log(findday );
+	                if (findday.length > 0) {
+	                    var findday0 = findday[0]
+	                    //var cal
+	                    var canleaveday = findday0.MaxLeaveValue -
 								findday0.MyUseDay.inprogress -
-									findday0.MyUseDay.approve ;
-									
-						if( canleaveday -self.totalday() < 0){
-							//alert("จำนวนวันลาเกิน สามารถลาได้สูงสุด " +canleaveday + " วัน");
-							swal("จำนวนวันลาเกิน สามารถลาได้สูงสุด " +canleaveday + " วัน", {
-						      icon: "error",
-						    });
+									findday0.MyUseDay.approve;
 
-							return;
-						}
-					}
-		//console.log(findday );
+	                    if (canleaveday - self.totalday() < 0) {
+	                        //alert("จำนวนวันลาเกิน สามารถลาได้สูงสุด " +canleaveday + " วัน");
+	                        swal("จำนวนวันลาเกิน สามารถลาได้สูงสุด " + canleaveday + " วัน", {
+	                            icon: "error",
+	                        });
+
+	                        return;
+	                    }
+	                }
+	                //console.log(findday );
 
 
-			
-					var mymanager = ToraAsiaLeaveRequestInfo.Services.GetOfficerManager();
-					if(mymanager  === null){
-						//alert("Manager Not Found");
-						swal("Manager Not Found", {
-						      icon: "error",
-						    });
 
-						return;
-					}
-					var officehr = ToraAsiaLeaveRequestInfo.Services.GetOfficerHR();
-					//console.log(officehr );
-					var addfieldata = [
+	                var mymanager = ToraAsiaLeaveRequestInfo.Services.GetOfficerManager();
+	                if (mymanager === null) {
+	                    //alert("Manager Not Found");
+	                    swal("Manager Not Found", {
+	                        icon: "error",
+	                    });
+
+	                    return;
+	                }
+	                var officehr = ToraAsiaLeaveRequestInfo.Services.GetOfficerHR();
+	                //console.log(officehr );
+	                var addfieldata = [
 					            	{
-										Title:"Title",
-										Value: self.title()
+					            	    Title: "Title",
+					            	    Value: self.title()
+					            	},
+									{
+									    Title: "LeaveType",
+									    Value: ltype
 									},
 									{
-										Title:"LeaveType",
-										Value: ltype 
+									    Title: "StartDate",
+									    Value: self.fromdate().format(ko.dateformat.tolistnoTime)
 									},
-									{
-										Title:"StartDate",
-										Value: self.fromdate().format(ko.dateformat.tolistnoTime)
-									},	
 									{
 									    Title: "LeaveTime",
-										Value: self.fromdatetype()
-									},	
+									    Value: self.fromdatetype()
+									},
 									{
 									    Title: "LeaveDayTotal",
-										Value: self.totalday()
-									},	
+									    Value: self.totalday()
+									},
 									{
 									    Title: "LeaveReason",
-										Value: self.reason()
-									},	
+									    Value: self.reason()
+									},
 									//{
 									//	Title:"PhoneNumber",
 									//	Value: self.phonenumber()
@@ -291,95 +323,103 @@ function LRNewViewModel(parent){
 									//	Value: self.otherleavetype()
 									//},
 									{
-										Title:"RequestType",
-										Value: "New" 
+									    Title: "RequestType",
+									    Value: "New"
 									},
 									{
-										Title:"Requester",
-										Value: self.requester()
+									    Title: "Requester",
+									    Value: self.requester()
 									},
 									{
 									    Title: "OfficerApprover",
-										Value: mymanager 
+									    Value: mymanager
 									},
 									{
-										Title:"CurrentUrl",
-										Value: ToraAsiaLeaveRequestInfo.Services.CurrentUrl 
-									},	
-									{
-										Title:"CurrentHostUrl",
-										Value: ToraAsiaLeaveRequestInfo.Services.CurrentHostUrl 
+									    Title: "CurrentUrl",
+									    Value: ToraAsiaLeaveRequestInfo.Services.CurrentUrl
 									},
 									{
-										Title:"CurrentAppUrl",
-										Value: ToraAsiaLeaveRequestInfo.Services.CurrentAppUrl 
-									},				
-																
-								];
-					if(self.morebool()){
-						addfieldata.push({
-										Title:"EndDate",
-										Value: self.moreModel().todate().format(ko.dateformat.tolistnoTime)
-									});
-						//addfieldata.push({
-						//				Title:"EndTime",
-						//				Value: self.todatetype()
-						//			});
-					}
-					//if(self.isotherType()){
-					//	addfieldata.push({
-					//					Title:"OtherLeaveType",
-					//					Value: self.othertypModel().othertype()
-					//				});
-					//}
-					if(officehr !== null){
-						addfieldata.push({
-						    Title: "OfficerHr",
-										Value: officehr 
-									});
+									    Title: "CurrentHostUrl",
+									    Value: ToraAsiaLeaveRequestInfo.Services.CurrentHostUrl
+									},
+									{
+									    Title: "CurrentAppUrl",
+									    Value: ToraAsiaLeaveRequestInfo.Services.CurrentAppUrl
+									},
 
-					}
-					var optioninside = {
-					            listTitle:self.listrequestformtitle ,
-					            data :addfieldata,
-								itemid :0
-				    }
-				    ko.contentDialog.show();
-				    ko.SaveDatatoList(optioninside ,function(id){   
-				    		//self.courseID (id);
-			            	//self.saveImagefilesVideo(self.title(),id);
-			            	//alert("Save Success");
-			            	swal("Save Success", {
-						      icon: "success",
-						    }).then(() => {
-								ko.contentDialog.hide();
-			            	   parent.navLinkClick("idhomepage");
+	                ];
+	                if (self.morebool()) {
+	                    addfieldata.push({
+	                        Title: "EndDate",
+	                        Value: self.moreModel().todate().format(ko.dateformat.tolistnoTime)
+	                    });
+	                    //addfieldata.push({
+	                    //				Title:"EndTime",
+	                    //				Value: self.todatetype()
+	                    //			});
+	                }
+	                //if(self.isotherType()){
+	                //	addfieldata.push({
+	                //					Title:"OtherLeaveType",
+	                //					Value: self.othertypModel().othertype()
+	                //				});
+	                //}
+	                if (officehr !== null) {
+	                    addfieldata.push({
+	                        Title: "OfficerHr",
+	                        Value: officehr
+	                    });
 
-							});
-							//ko.contentDialog.hide();
-			            	//parent.navLinkClick("idhomepage");
+	                }
+	                var optioninside = {
+	                    listTitle: self.listrequestformtitle,
+	                    data: addfieldata,
+	                    itemid: 0
+	                }
+	                ko.contentDialog.show();
+	                ko.SaveDatatoList(optioninside, function (id) {
+	                    //self.courseID (id);
+	                    //self.saveImagefilesVideo(self.title(),id);
+	                    //alert("Save Success");
+	                    swal("Save Success", {
+	                        icon: "success",
+	                    }).then(() => {
+	                        ko.contentDialog.hide();
+	                        parent.navLinkClick("idhomepage");
 
-			            	//ToraAsiaLeaveRequestInfo.Services.StartWorkflow(id).then(function(){
-			            	//	alert("Save Success");
-			            	//	parent.navLinkClick("idhomepage");
+	                    });
+	                    //ko.contentDialog.hide();
+	                    //parent.navLinkClick("idhomepage");
 
-			            	//},function(){
-			            	//	alert("Start Workflow Error");
-			            	//});
-					})
+	                    //ToraAsiaLeaveRequestInfo.Services.StartWorkflow(id).then(function(){
+	                    //	alert("Save Success");
+	                    //	parent.navLinkClick("idhomepage");
+
+	                    //},function(){
+	                    //	alert("Start Workflow Error");
+	                    //});
+	                })
+	            }
+	            else {
+	                swal("วันที่ลามีในระบบแล้ว", {
+	                    icon: "error",
+	                });
+	            }
+	        });
 
 
-			   } else {
-			        //alert('Please check your submission.');
-			        swal("Please check your submission.", {
-						      icon: "error",
-						    });
 
-			        self.errors.showAllMessages();
-			        self.moreModel().errors.showAllMessages();
-			        self.othertypModel().errors.showAllMessages();
-			        
-			 }
+	    } else {
+	        //alert('Please check your submission.');
+	        swal("Please check your submission.", {
+	            icon: "error",
+	        });
+
+	        self.errors.showAllMessages();
+	        self.moreModel().errors.showAllMessages();
+	        self.othertypModel().errors.showAllMessages();
+
+	    }
 	
 	}
 	this.loadLeaveChoice= function(callback){	

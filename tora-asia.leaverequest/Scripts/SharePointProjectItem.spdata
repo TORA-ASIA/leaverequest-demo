@@ -89,5 +89,7 @@
     <ProjectItemFile Source="tora-setup.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="lib\moment-weekday-calc.js" Target="Scripts\lib\" Type="ElementFile" />
     <ProjectItemFile Source="script8_myleaveremain.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\moment-range.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\moment-range-v0.1.7.js" Target="Scripts\lib\" Type="ElementFile" />
   </Files>
 </ProjectItem>

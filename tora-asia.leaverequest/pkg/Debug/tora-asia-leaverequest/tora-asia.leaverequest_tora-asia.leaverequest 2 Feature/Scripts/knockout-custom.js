@@ -3,7 +3,8 @@
 	self:"DD MMM YYYY",
 	tolist:"MM/DD/YYYY HH:mm:ss",
 	tolistnoTime:"MM/DD/YYYY",
-	endcircletoList:"MM/DD",
+	endcircletoList: "MM/DD",
+    camlquery: "YYYY-MM-DD"
 }
 ko.defaultquery = "<{0}>"+
 						"<FieldRef Name='{1}' {4}/>"+

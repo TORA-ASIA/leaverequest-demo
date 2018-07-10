@@ -116,11 +116,13 @@
     <Content Include="Scripts\lib\knockout-jqAutocomplete.js" />
     <Content Include="Scripts\lib\knockout.mapping-latest.js" />
     <Content Include="Scripts\lib\knockout.validation.min.js" />
+    <Content Include="Scripts\lib\moment-range-v0.1.7.js" />
     <Content Include="Scripts\lib\moment-weekday-calc.js" />
     <Content Include="Scripts\lib\moment-with-locales.js" />
     <Content Include="Scripts\lib\SharePointClient.js" />
     <Content Include="Scripts\lib\sweetalert-master\sweetalert.css" />
     <Content Include="Scripts\lib\sweetalert-master\sweetalert.min.js" />
+    <Content Include="Scripts\lib\moment-range.js" />
     <Content Include="Scripts\ready.js" />
     <Content Include="Scripts\script0_global.js" />
     <Content Include="Scripts\script1_New.js" />

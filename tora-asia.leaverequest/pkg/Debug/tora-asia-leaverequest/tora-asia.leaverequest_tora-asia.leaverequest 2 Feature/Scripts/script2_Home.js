@@ -2,7 +2,7 @@
 	var self =this;
 	
 	ko.contentDialog.show();
-	this.datawithpaging = ko.observable(new datawithpaging({pageSize : 5}));
+	this.datawithpaging = ko.observable(new datawithpaging({pageSize : 10}));
 	beforid ="idhomepage";
 	/*this.showPaging = ko.observable(true);
     this.pageSize = ko.observable(5);

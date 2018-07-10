@@ -94,6 +94,8 @@
     <ElementFile Location="Scripts\tora-setup.js" />
     <ElementFile Location="Scripts\lib\moment-weekday-calc.js" />
     <ElementFile Location="Scripts\script8_myleaveremain.js" />
+    <ElementFile Location="Scripts\lib\moment-range.js" />
+    <ElementFile Location="Scripts\lib\moment-range-v0.1.7.js" />
   </ElementManifests>
   <UpgradeActions>
     <VersionRange>
