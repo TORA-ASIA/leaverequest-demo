@@ -10,7 +10,7 @@
  xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <StateMachine sads:DebugSymbol.Symbol="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">
+  <StateMachine sads:DebugSymbol.Symbol="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">
     <StateMachine.InitialState>
       <State x:Name="__ReferenceID38" DisplayName="Get List Info">
         <State.Entry>
@@ -364,23 +364,53 @@
                 <State.Transitions>
                   <Transition DisplayName="T5">
                     <Transition.Condition>
-                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;)">
+                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;) || RequestType.ToLower().Equals(&quot;1&quot;)">
                         <p1:ExpressionContainerValue.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                           </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
+                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                          </InArgument>
                         </p1:ExpressionContainerValue.Arguments>
-                        <p1:IsEqualString Pattern="{x:Null}" Text="new">
-                          <p1:IsEqualString.Input>
-                            <InArgument x:TypeArguments="x:String">
-                              <p1:ToLowerCase>
-                                <InArgument x:TypeArguments="x:String">
-                                  <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                </InArgument>
-                              </p1:ToLowerCase>
+                        <p1:Or>
+                          <p1:Or.Left>
+                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                              <p1:IsEqualString Pattern="{x:Null}" Text="new">
+                                <p1:IsEqualString.Input>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <p1:ToLowerCase>
+                                      <p1:ToLowerCase.Result>
+                                        <OutArgument x:TypeArguments="x:String" />
+                                      </p1:ToLowerCase.Result>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                      </InArgument>
+                                    </p1:ToLowerCase>
+                                  </InArgument>
+                                </p1:IsEqualString.Input>
+                              </p1:IsEqualString>
                             </InArgument>
-                          </p1:IsEqualString.Input>
-                        </p1:IsEqualString>
+                          </p1:Or.Left>
+                          <p1:Or.Right>
+                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                              <p1:IsEqualString Pattern="{x:Null}" Text="1">
+                                <p1:IsEqualString.Input>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <p1:ToLowerCase>
+                                      <p1:ToLowerCase.Result>
+                                        <OutArgument x:TypeArguments="x:String" />
+                                      </p1:ToLowerCase.Result>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                      </InArgument>
+                                    </p1:ToLowerCase>
+                                  </InArgument>
+                                </p1:IsEqualString.Input>
+                              </p1:IsEqualString>
+                            </InArgument>
+                          </p1:Or.Right>
+                        </p1:Or>
                       </p1:ExpressionContainerValue>
                     </Transition.Condition>
                     <Transition.To>
@@ -789,23 +819,53 @@
                                 <State.Transitions>
                                   <Transition DisplayName="T3">
                                     <Transition.Condition>
-                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;)">
+                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;) || RequestType.ToLower().Equals(&quot;1&quot;)">
                                         <p1:ExpressionContainerValue.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
                                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                                           </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
+                                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                                          </InArgument>
                                         </p1:ExpressionContainerValue.Arguments>
-                                        <p1:IsEqualString Pattern="{x:Null}" Text="new">
-                                          <p1:IsEqualString.Input>
-                                            <InArgument x:TypeArguments="x:String">
-                                              <p1:ToLowerCase>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                                </InArgument>
-                                              </p1:ToLowerCase>
+                                        <p1:Or>
+                                          <p1:Or.Left>
+                                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                                              <p1:IsEqualString Pattern="{x:Null}" Text="new">
+                                                <p1:IsEqualString.Input>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <p1:ToLowerCase>
+                                                      <p1:ToLowerCase.Result>
+                                                        <OutArgument x:TypeArguments="x:String" />
+                                                      </p1:ToLowerCase.Result>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                                      </InArgument>
+                                                    </p1:ToLowerCase>
+                                                  </InArgument>
+                                                </p1:IsEqualString.Input>
+                                              </p1:IsEqualString>
                                             </InArgument>
-                                          </p1:IsEqualString.Input>
-                                        </p1:IsEqualString>
+                                          </p1:Or.Left>
+                                          <p1:Or.Right>
+                                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                                              <p1:IsEqualString Pattern="{x:Null}" Text="1">
+                                                <p1:IsEqualString.Input>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <p1:ToLowerCase>
+                                                      <p1:ToLowerCase.Result>
+                                                        <OutArgument x:TypeArguments="x:String" />
+                                                      </p1:ToLowerCase.Result>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                                      </InArgument>
+                                                    </p1:ToLowerCase>
+                                                  </InArgument>
+                                                </p1:IsEqualString.Input>
+                                              </p1:IsEqualString>
+                                            </InArgument>
+                                          </p1:Or.Right>
+                                        </p1:Or>
                                       </p1:ExpressionContainerValue>
                                     </Transition.Condition>
                                     <Transition.To>
@@ -1588,23 +1648,53 @@
                                                                               <If>
                                                                                 <If.Condition>
                                                                                   <InArgument x:TypeArguments="x:Boolean">
-                                                                                    <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;)">
+                                                                                    <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;) || RequestType.ToLower().Equals(&quot;1&quot;)">
                                                                                       <p1:ExpressionContainerValue.Arguments>
                                                                                         <InArgument x:TypeArguments="x:String" x:Key="RequestType">
                                                                                           <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                                                                                         </InArgument>
+                                                                                        <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
+                                                                                          <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                                                                                        </InArgument>
                                                                                       </p1:ExpressionContainerValue.Arguments>
-                                                                                      <p1:IsEqualString Pattern="{x:Null}" Text="new">
-                                                                                        <p1:IsEqualString.Input>
-                                                                                          <InArgument x:TypeArguments="x:String">
-                                                                                            <p1:ToLowerCase>
-                                                                                              <InArgument x:TypeArguments="x:String">
-                                                                                                <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                                                                              </InArgument>
-                                                                                            </p1:ToLowerCase>
+                                                                                      <p1:Or>
+                                                                                        <p1:Or.Left>
+                                                                                          <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                                                                                            <p1:IsEqualString Pattern="{x:Null}" Text="new">
+                                                                                              <p1:IsEqualString.Input>
+                                                                                                <InArgument x:TypeArguments="x:String">
+                                                                                                  <p1:ToLowerCase>
+                                                                                                    <p1:ToLowerCase.Result>
+                                                                                                      <OutArgument x:TypeArguments="x:String" />
+                                                                                                    </p1:ToLowerCase.Result>
+                                                                                                    <InArgument x:TypeArguments="x:String">
+                                                                                                      <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                                                                                    </InArgument>
+                                                                                                  </p1:ToLowerCase>
+                                                                                                </InArgument>
+                                                                                              </p1:IsEqualString.Input>
+                                                                                            </p1:IsEqualString>
                                                                                           </InArgument>
-                                                                                        </p1:IsEqualString.Input>
-                                                                                      </p1:IsEqualString>
+                                                                                        </p1:Or.Left>
+                                                                                        <p1:Or.Right>
+                                                                                          <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                                                                                            <p1:IsEqualString Pattern="{x:Null}" Text="1">
+                                                                                              <p1:IsEqualString.Input>
+                                                                                                <InArgument x:TypeArguments="x:String">
+                                                                                                  <p1:ToLowerCase>
+                                                                                                    <p1:ToLowerCase.Result>
+                                                                                                      <OutArgument x:TypeArguments="x:String" />
+                                                                                                    </p1:ToLowerCase.Result>
+                                                                                                    <InArgument x:TypeArguments="x:String">
+                                                                                                      <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                                                                                    </InArgument>
+                                                                                                  </p1:ToLowerCase>
+                                                                                                </InArgument>
+                                                                                              </p1:IsEqualString.Input>
+                                                                                            </p1:IsEqualString>
+                                                                                          </InArgument>
+                                                                                        </p1:Or.Right>
+                                                                                      </p1:Or>
                                                                                     </p1:ExpressionContainerValue>
                                                                                   </InArgument>
                                                                                 </If.Condition>
@@ -2420,9 +2510,12 @@
                                                 <State.Transitions>
                                                   <Transition DisplayName="T4">
                                                     <Transition.Condition>
-                                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;new&quot;) &amp;&amp; iscancelstate == 0">
+                                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="(RequestType.ToLower().Equals(&quot;new&quot;) || RequestType.ToLower().Equals(&quot;1&quot;)) &amp;&amp; iscancelstate == 0">
                                                         <p1:ExpressionContainerValue.Arguments>
                                                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
+                                                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
                                                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                                                           </InArgument>
                                                           <InArgument x:TypeArguments="x:Int32" x:Key="iscancelstate">
@@ -2432,20 +2525,50 @@
                                                         <p1:And>
                                                           <p1:And.Left>
                                                             <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
-                                                              <p1:IsEqualString Pattern="{x:Null}" Text="new">
-                                                                <p1:IsEqualString.Input>
-                                                                  <InArgument x:TypeArguments="x:String">
-                                                                    <p1:ToLowerCase>
-                                                                      <p1:ToLowerCase.Result>
-                                                                        <OutArgument x:TypeArguments="x:String" />
-                                                                      </p1:ToLowerCase.Result>
-                                                                      <InArgument x:TypeArguments="x:String">
-                                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                                                      </InArgument>
-                                                                    </p1:ToLowerCase>
+                                                              <p1:Or>
+                                                                <p1:Or.Left>
+                                                                  <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                                                                    <p1:IsEqualString Pattern="{x:Null}" Text="new">
+                                                                      <p1:IsEqualString.Input>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <p1:ToLowerCase>
+                                                                            <p1:ToLowerCase.Result>
+                                                                              <OutArgument x:TypeArguments="x:String" />
+                                                                            </p1:ToLowerCase.Result>
+                                                                            <InArgument x:TypeArguments="x:String">
+                                                                              <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                                                            </InArgument>
+                                                                          </p1:ToLowerCase>
+                                                                        </InArgument>
+                                                                      </p1:IsEqualString.Input>
+                                                                      <p1:IsEqualString.Result>
+                                                                        <OutArgument x:TypeArguments="x:Boolean" />
+                                                                      </p1:IsEqualString.Result>
+                                                                    </p1:IsEqualString>
                                                                   </InArgument>
-                                                                </p1:IsEqualString.Input>
-                                                              </p1:IsEqualString>
+                                                                </p1:Or.Left>
+                                                                <p1:Or.Right>
+                                                                  <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                                                                    <p1:IsEqualString Pattern="{x:Null}" Text="1">
+                                                                      <p1:IsEqualString.Input>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <p1:ToLowerCase>
+                                                                            <p1:ToLowerCase.Result>
+                                                                              <OutArgument x:TypeArguments="x:String" />
+                                                                            </p1:ToLowerCase.Result>
+                                                                            <InArgument x:TypeArguments="x:String">
+                                                                              <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                                                            </InArgument>
+                                                                          </p1:ToLowerCase>
+                                                                        </InArgument>
+                                                                      </p1:IsEqualString.Input>
+                                                                      <p1:IsEqualString.Result>
+                                                                        <OutArgument x:TypeArguments="x:Boolean" />
+                                                                      </p1:IsEqualString.Result>
+                                                                    </p1:IsEqualString>
+                                                                  </InArgument>
+                                                                </p1:Or.Right>
+                                                              </p1:Or>
                                                             </InArgument>
                                                           </p1:And.Left>
                                                           <p1:And.Right>
@@ -2800,9 +2923,12 @@
                                                   </Transition>
                                                   <Transition DisplayName="T12">
                                                     <Transition.Condition>
-                                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;cancel&quot;) &amp;&amp; iscancelstate == 0">
+                                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="(RequestType.ToLower().Equals(&quot;cancel&quot;) || RequestType.ToLower().Equals(&quot;2&quot;) )&amp;&amp; iscancelstate == 0">
                                                         <p1:ExpressionContainerValue.Arguments>
                                                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
+                                                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                                                          </InArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
                                                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                                                           </InArgument>
                                                           <InArgument x:TypeArguments="x:Int32" x:Key="iscancelstate">
@@ -2812,20 +2938,50 @@
                                                         <p1:And>
                                                           <p1:And.Left>
                                                             <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
-                                                              <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
-                                                                <p1:IsEqualString.Input>
-                                                                  <InArgument x:TypeArguments="x:String">
-                                                                    <p1:ToLowerCase>
-                                                                      <p1:ToLowerCase.Result>
-                                                                        <OutArgument x:TypeArguments="x:String" />
-                                                                      </p1:ToLowerCase.Result>
-                                                                      <InArgument x:TypeArguments="x:String">
-                                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                                                      </InArgument>
-                                                                    </p1:ToLowerCase>
+                                                              <p1:Or>
+                                                                <p1:Or.Left>
+                                                                  <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                                                                    <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
+                                                                      <p1:IsEqualString.Input>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <p1:ToLowerCase>
+                                                                            <p1:ToLowerCase.Result>
+                                                                              <OutArgument x:TypeArguments="x:String" />
+                                                                            </p1:ToLowerCase.Result>
+                                                                            <InArgument x:TypeArguments="x:String">
+                                                                              <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                                                            </InArgument>
+                                                                          </p1:ToLowerCase>
+                                                                        </InArgument>
+                                                                      </p1:IsEqualString.Input>
+                                                                      <p1:IsEqualString.Result>
+                                                                        <OutArgument x:TypeArguments="x:Boolean" />
+                                                                      </p1:IsEqualString.Result>
+                                                                    </p1:IsEqualString>
                                                                   </InArgument>
-                                                                </p1:IsEqualString.Input>
-                                                              </p1:IsEqualString>
+                                                                </p1:Or.Left>
+                                                                <p1:Or.Right>
+                                                                  <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                                                                    <p1:IsEqualString Pattern="{x:Null}" Text="2">
+                                                                      <p1:IsEqualString.Input>
+                                                                        <InArgument x:TypeArguments="x:String">
+                                                                          <p1:ToLowerCase>
+                                                                            <p1:ToLowerCase.Result>
+                                                                              <OutArgument x:TypeArguments="x:String" />
+                                                                            </p1:ToLowerCase.Result>
+                                                                            <InArgument x:TypeArguments="x:String">
+                                                                              <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                                                            </InArgument>
+                                                                          </p1:ToLowerCase>
+                                                                        </InArgument>
+                                                                      </p1:IsEqualString.Input>
+                                                                      <p1:IsEqualString.Result>
+                                                                        <OutArgument x:TypeArguments="x:Boolean" />
+                                                                      </p1:IsEqualString.Result>
+                                                                    </p1:IsEqualString>
+                                                                  </InArgument>
+                                                                </p1:Or.Right>
+                                                              </p1:Or>
                                                             </InArgument>
                                                           </p1:And.Left>
                                                           <p1:And.Right>
@@ -3165,23 +3321,53 @@
                                   </Transition>
                                   <Transition DisplayName="T9">
                                     <Transition.Condition>
-                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;cancel&quot;)">
+                                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;cancel&quot;) || RequestType.ToLower().Equals(&quot;2&quot;)">
                                         <p1:ExpressionContainerValue.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
                                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                                           </InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
+                                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                                          </InArgument>
                                         </p1:ExpressionContainerValue.Arguments>
-                                        <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
-                                          <p1:IsEqualString.Input>
-                                            <InArgument x:TypeArguments="x:String">
-                                              <p1:ToLowerCase>
-                                                <InArgument x:TypeArguments="x:String">
-                                                  <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                                </InArgument>
-                                              </p1:ToLowerCase>
+                                        <p1:Or>
+                                          <p1:Or.Left>
+                                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                                              <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
+                                                <p1:IsEqualString.Input>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <p1:ToLowerCase>
+                                                      <p1:ToLowerCase.Result>
+                                                        <OutArgument x:TypeArguments="x:String" />
+                                                      </p1:ToLowerCase.Result>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                                      </InArgument>
+                                                    </p1:ToLowerCase>
+                                                  </InArgument>
+                                                </p1:IsEqualString.Input>
+                                              </p1:IsEqualString>
                                             </InArgument>
-                                          </p1:IsEqualString.Input>
-                                        </p1:IsEqualString>
+                                          </p1:Or.Left>
+                                          <p1:Or.Right>
+                                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                                              <p1:IsEqualString Pattern="{x:Null}" Text="2">
+                                                <p1:IsEqualString.Input>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <p1:ToLowerCase>
+                                                      <p1:ToLowerCase.Result>
+                                                        <OutArgument x:TypeArguments="x:String" />
+                                                      </p1:ToLowerCase.Result>
+                                                      <InArgument x:TypeArguments="x:String">
+                                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                                      </InArgument>
+                                                    </p1:ToLowerCase>
+                                                  </InArgument>
+                                                </p1:IsEqualString.Input>
+                                              </p1:IsEqualString>
+                                            </InArgument>
+                                          </p1:Or.Right>
+                                        </p1:Or>
                                       </p1:ExpressionContainerValue>
                                     </Transition.Condition>
                                     <Transition.To>
@@ -3414,23 +3600,53 @@
                   </Transition>
                   <Transition DisplayName="T6">
                     <Transition.Condition>
-                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;cancel&quot;)">
+                      <p1:ExpressionContainerValue x:TypeArguments="x:Boolean" DisplayName="RequestType.ToLower().Equals(&quot;cancel&quot;)|| RequestType.ToLower().Equals(&quot;2&quot;)">
                         <p1:ExpressionContainerValue.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="RequestType">
                             <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
                           </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="RequestType1">
+                            <VariableValue x:TypeArguments="x:String" Variable="{x:Reference __ReferenceID20}" />
+                          </InArgument>
                         </p1:ExpressionContainerValue.Arguments>
-                        <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
-                          <p1:IsEqualString.Input>
-                            <InArgument x:TypeArguments="x:String">
-                              <p1:ToLowerCase>
-                                <InArgument x:TypeArguments="x:String">
-                                  <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
-                                </InArgument>
-                              </p1:ToLowerCase>
+                        <p1:Or>
+                          <p1:Or.Left>
+                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="0">
+                              <p1:IsEqualString Pattern="{x:Null}" Text="cancel">
+                                <p1:IsEqualString.Input>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <p1:ToLowerCase>
+                                      <p1:ToLowerCase.Result>
+                                        <OutArgument x:TypeArguments="x:String" />
+                                      </p1:ToLowerCase.Result>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType" />
+                                      </InArgument>
+                                    </p1:ToLowerCase>
+                                  </InArgument>
+                                </p1:IsEqualString.Input>
+                              </p1:IsEqualString>
                             </InArgument>
-                          </p1:IsEqualString.Input>
-                        </p1:IsEqualString>
+                          </p1:Or.Left>
+                          <p1:Or.Right>
+                            <InArgument x:TypeArguments="x:Boolean" EvaluationOrder="1">
+                              <p1:IsEqualString Pattern="{x:Null}" Text="2">
+                                <p1:IsEqualString.Input>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <p1:ToLowerCase>
+                                      <p1:ToLowerCase.Result>
+                                        <OutArgument x:TypeArguments="x:String" />
+                                      </p1:ToLowerCase.Result>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <ArgumentValue x:TypeArguments="x:String" ArgumentName="RequestType1" />
+                                      </InArgument>
+                                    </p1:ToLowerCase>
+                                  </InArgument>
+                                </p1:IsEqualString.Input>
+                              </p1:IsEqualString>
+                            </InArgument>
+                          </p1:Or.Right>
+                        </p1:Or>
                       </p1:ExpressionContainerValue>
                     </Transition.Condition>
                     <Transition.To>
@@ -3470,7 +3686,7 @@
                                       <InArgument x:TypeArguments="p1:DynamicValue">
                                         <p1:SetDynamicValueProperties>
                                           <scg:Dictionary x:TypeArguments="x:String, InArgument">
-                                            <InArgument x:TypeArguments="x:String" x:Key="CancelLeaveStatus">In Progress</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="LeaveStatus">In Progress</InArgument>
                                           </scg:Dictionary>
                                         </p1:SetDynamicValueProperties>
                                       </InArgument>

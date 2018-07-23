@@ -77,7 +77,7 @@
 				</div>
 				<div class="col-xs-10 col-sm-6">
 					<div class='input-group date dateTimes'>
-						<input type="text"  autocomplete="off" class="form-control" data-bind="datepicker: todate,datepickerOptions:{format:$parent.dateformate,minDate:$parent.fromdate()},plusday:1" /> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						<input type="text"  autocomplete="off" class="form-control" data-bind="datepicker: todate,datepickerOptions:{format:$parent.dateformate,minDate:$parent.fromdate(),disabledDates:ToraAsiaLeaveRequestInfo.Services.HoliDays},plusday:1" /> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 					</div>
 				</div>
 			</div>
@@ -101,6 +101,14 @@
 					<input type="text" class="form-control" autocomplete="off" data-bind="value:title"/>
 				</div>
 			</div>
+             <div class="row form-group">
+				<div class="col-sm-offset-2 col-xs-offset-0 col-xs-2 control-label">
+					<span>ผู้อนุมัติ</span>
+				</div>
+				<div class="col-xs-10 col-sm-6">
+					<input type="text" class="form-control" autocomplete="off" data-bind="value:mymanagerName,enable:false"/>
+				</div>
+			</div>
 			<div class="row form-group">
 				<div class="col-sm-offset-2 col-xs-offset-0 col-xs-2 control-label">
 					<span>ประเภทวันลา</span>
@@ -116,7 +124,7 @@
 				</div>
 				<div class="col-xs-10 col-sm-6">
 					<div class='input-group date dateTimes'>
-						<input type="text"  autocomplete="off" class="form-control" data-bind="datepicker: fromdate,datepickerOptions:{format:dateformate}" /> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+						<input type="text"  autocomplete="off" class="form-control" data-bind="datepicker: fromdate,datepickerOptions:{format:dateformate,disabledDates:ToraAsiaLeaveRequestInfo.Services.HoliDays}" /> <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
 					</div>
 				</div>
 			</div>
@@ -190,6 +198,14 @@
 				</div>
 				<div class="col-xs-10 col-sm-6">
 					<input type="text" class="form-control" autocomplete="off" data-bind="value:title,enable:false"/>
+				</div>
+			</div>
+            <div class="row form-group">
+				<div class="col-sm-offset-2 col-xs-offset-0 col-xs-2 control-label">
+					<span>ผู้อนุมัติ</span>
+				</div>
+				<div class="col-xs-10 col-sm-6">
+					<input type="text" class="form-control" autocomplete="off" data-bind="value:mymanagerName,enable:false"/>
 				</div>
 			</div>
 			<div class="row form-group">

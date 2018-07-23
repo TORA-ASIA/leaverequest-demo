@@ -64,7 +64,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -75,7 +75,7 @@
 		            //console.log(self);
 		            swal("Create List Success", {
 						      icon: "success",
-						    }).then(() => {
+						    }).then(function()  {
 								ko.contentDialog.hide();
 			            	    self.isAllcreate(ToraAsiaLeaveRequestInfo.Services.IsAllListCreated());
 		            			parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
@@ -110,7 +110,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -138,7 +138,7 @@
 						    
 						    	swal("Activate Feature Success", {
 							      icon: "success",
-							    }).then(() => {
+							    }).then(function()  {
 									ko.contentDialog.hide();
 				            	    ToraAsiaLeaveRequestInfo.Services.ActivateFeatureID = id;
 									self.isFeatureActivate(ToraAsiaLeaveRequestInfo.Services.GetIsFeatureActivate());
@@ -150,7 +150,7 @@
 						//console.log(merr);
 						swal(merr, {
 						      icon: "error",
-						    }).then(() => {
+						    }).then(function()  {
 									ko.contentDialog.hide();							
 				           });
 
@@ -203,7 +203,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -229,7 +229,7 @@
 						    ko.SaveDatatoList(optioninside ,function(id){   
 								swal("Clone/Update Workflow Success", {
 							      icon: "success",
-							    }).then(() => {
+							    }).then(function()  {
 									ko.contentDialog.hide();
 				            	    ToraAsiaLeaveRequestInfo.Services.FoundWorkflowID = id;
 									self.isfoundWorkflow (ToraAsiaLeaveRequestInfo.Services.GetIsFoundWorkflow ());
@@ -242,7 +242,7 @@
 						//console.log(merr);
 						swal(merr, {
 						      icon: "error",
-						    }).then(() => {
+						    }).then(function()  {
 									ko.contentDialog.hide();							
 				           });
 
@@ -295,7 +295,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -321,7 +321,7 @@
 						    ko.SaveDatatoList(optioninside ,function(id){   
 								swal("Add workflow to List Success", {
 							      icon: "success",
-							    }).then(() => {
+							    }).then(function()  {
 									ko.contentDialog.hide();
 				            	    ToraAsiaLeaveRequestInfo.Services.WorkflowMapingID = id;
 									self.isWorkflowMap(ToraAsiaLeaveRequestInfo.Services.GetIsWorkflowMapping());
@@ -334,7 +334,7 @@
 						//console.log(merr);
 						swal(merr, {
 						      icon: "error",
-						    }).then(() => {
+						    }).then(function()  {
 									ko.contentDialog.hide();							
 				           });
 
@@ -385,7 +385,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -394,7 +394,7 @@
 		   		ToraAsiaLeaveRequestInfo.Services.deleteAllList().then(function(m){
 					       swal(m, {
 							      icon: "success",
-							    }).then(() => {
+							    }).then(function()  {
 									ko.contentDialog.hide();
 				            	    window.location.href = window.location.href;								
 				           });	
@@ -403,7 +403,7 @@
 						//console.log(merr);
 						swal(merr, {
 						      icon: "error",
-						    }).then(() => {
+						    }).then(function()  {
 									ko.contentDialog.hide();							
 				           });
 					});

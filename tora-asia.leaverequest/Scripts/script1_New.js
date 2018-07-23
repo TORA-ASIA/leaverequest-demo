@@ -26,6 +26,13 @@ function LRNewViewModel(parent){
 	this.leavetypearr = ko.observableArray();
 	this.otherleavetype= ko.observable();
 	
+	this.mymanager = ko.observable(ToraAsiaLeaveRequestInfo.Services.GetOfficerManager());
+	this.mymanagerName = ko.observable();
+	if (this.mymanager() != null) { 
+	    console.log(this.mymanager().get_lookupValue());
+	    this.mymanagerName(this.mymanager().get_lookupValue());
+	}
+
 	this.leavedatetypearr = ko.observableArray(["เช้า","บ่าย","เต็มวัน"]);
 	this.fromdate = ko.observable().extend({ required: true });	
 	this.fromdatetype = ko.observable("เต็มวัน");
@@ -179,7 +186,7 @@ function LRNewViewModel(parent){
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete) {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -278,8 +285,8 @@ function LRNewViewModel(parent){
 
 
 
-	                var mymanager = ToraAsiaLeaveRequestInfo.Services.GetOfficerManager();
-	                if (mymanager === null) {
+	                //var mymanager = ToraAsiaLeaveRequestInfo.Services.GetOfficerManager();
+	                if (self.mymanager() === null) {
 	                    //alert("Manager Not Found");
 	                    swal("Manager Not Found", {
 	                        icon: "error",
@@ -332,7 +339,7 @@ function LRNewViewModel(parent){
 									},
 									{
 									    Title: "OfficerApprover",
-									    Value: mymanager
+									    Value: self.mymanager()
 									},
 									{
 									    Title: "CurrentUrl",
@@ -383,7 +390,7 @@ function LRNewViewModel(parent){
 	                    //alert("Save Success");
 	                    swal("Save Success", {
 	                        icon: "success",
-	                    }).then(() => {
+	                    }).then(function() {
 	                        ko.contentDialog.hide();
 	                        parent.navLinkClick("idhomepage");
 

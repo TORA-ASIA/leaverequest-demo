@@ -19,7 +19,8 @@
 	
 	this.isshowdate  = ko.observable(showdate );
 	
-	this.title= ko.observable();
+	this.title = ko.observable();
+	this.mymanagerName = ko.observable();
 	this.leavetype = ko.observable();
 	this.otherleavetype= ko.observable(null);
 	this.fromdate = ko.observable();	
@@ -70,7 +71,7 @@
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -109,7 +110,7 @@
 		                  //self.saveImagefilesVideo(self.title(),id);
 		                  swal(type + " Success", {
 		                      icon: "success",
-		                  }).then(() => {
+		                  }).then(function() {
 		                      ko.contentDialog.hide();
 		                      parent.navLinkClick(self.backtoform());
 		                  });
@@ -124,7 +125,7 @@
 		          else {
 		              swal("Task already complted.", {
 		                  icon: "warning",
-		              }).then(() => {
+		              }).then(function() {
 		                  ko.contentDialog.hide();
 		                  parent.navLinkClick(self.backtoform());
 		              });
@@ -147,7 +148,8 @@
 					{ field: "LeaveDayTotal" },
 					{ field: "LeaveReason" },
 					{field:"LeaveStatus"},
-					{field:"Requester"},
+					{ field: "Requester" },
+                    { field: "OfficerApprover" },
 					{field:"CancelWorkflow"}									  
 				],
 				ItemId:itemId
@@ -175,6 +177,9 @@
 					            self.todatevisible(true);
 					        }
 					    }
+					}
+					if (dataitem.OfficerApprover !== null) {
+					    self.mymanagerName(dataitem.OfficerApprover.get_lookupValue());
 					}
 					//if(dataitem.EndTime !== null){
 						//self.todatevisible(true);

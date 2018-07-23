@@ -37,7 +37,7 @@ function LRSettingViewModel(parent){
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete) {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -69,7 +69,7 @@ function LRSettingViewModel(parent){
 			            	ToraAsiaLeaveRequestInfo.Services.GetEndCircleData().then(function(){
 			            		swal("Save Success", {
 								      icon: "success",
-								    }).then(() => {
+								    }).then(function()  {
 										ko.contentDialog.hide();
 					            	    self.oldcircledate(self.circledate());
 					            		self.circleEnable(false);
@@ -150,7 +150,7 @@ function LRSettingViewModel(parent){
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -183,7 +183,7 @@ function LRSettingViewModel(parent){
 			            	ToraAsiaLeaveRequestInfo.Services.WorkingDays =  self.workingDays().slice();
 			            	swal("Save Success", {
 								      icon: "success",
-								    }).then(() => {
+								    }).then(function()  {
 										ko.contentDialog.hide();
 					            	    self.oldworkingDays(self.workingDays().slice());
 					            		self.workingEnable(false);
@@ -220,7 +220,7 @@ function LRSettingViewModel(parent){
 		  buttons: true,
 		  dangerMode: true,
 		})
-		.then((willDelete) => {
+		.then(function(willDelete)  {
 		  if (willDelete) {
 		   // swal("Poof! Your imaginary file has been deleted!", {
 		    //  icon: "success",
@@ -253,7 +253,7 @@ function LRSettingViewModel(parent){
 			            	ToraAsiaLeaveRequestInfo.Services.WorkType=  self.worktype();
 			            	swal("Save Success", {
 								      icon: "success",
-								    }).then(() => {
+								    }).then(function()  {
 										ko.contentDialog.hide();
 					            	    self.oldworktype(self.worktype());
 					            		self.worktypeEnable(false);

@@ -1866,7 +1866,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"new\")") 
+                        && ((expressionText == "RequestType.ToLower().Equals(\"new\") || RequestType.ToLower().Equals(\"1\")") 
                         && (Workflow_TypedDataContext8_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 24;
                 return true;
@@ -2042,13 +2042,15 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"new\") && iscancelstate == 0") 
+                        && ((expressionText == "(RequestType.ToLower().Equals(\"new\") || RequestType.ToLower().Equals(\"1\")) && isc" +
+                            "ancelstate == 0") 
                         && (Workflow_TypedDataContext6_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 53;
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"cancel\") && iscancelstate == 0") 
+                        && ((expressionText == "(RequestType.ToLower().Equals(\"cancel\") || RequestType.ToLower().Equals(\"2\") )&& " +
+                            "iscancelstate == 0") 
                         && (Workflow_TypedDataContext6_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 54;
                 return true;
@@ -2157,13 +2159,13 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"new\")") 
+                        && ((expressionText == "RequestType.ToLower().Equals(\"new\") || RequestType.ToLower().Equals(\"1\")") 
                         && (Workflow_TypedDataContext10_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 72;
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"cancel\")") 
+                        && ((expressionText == "RequestType.ToLower().Equals(\"cancel\") || RequestType.ToLower().Equals(\"2\")") 
                         && (Workflow_TypedDataContext10_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 73;
                 return true;
@@ -2241,13 +2243,13 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"new\")") 
+                        && ((expressionText == "RequestType.ToLower().Equals(\"new\") || RequestType.ToLower().Equals(\"1\")") 
                         && (Workflow_TypedDataContext14_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 86;
                 return true;
             }
             if (((isReference == false) 
-                        && ((expressionText == "RequestType.ToLower().Equals(\"cancel\")") 
+                        && ((expressionText == "RequestType.ToLower().Equals(\"cancel\")|| RequestType.ToLower().Equals(\"2\")") 
                         && (Workflow_TypedDataContext14_ForReadOnly.Validate(locations, true, 0) == true)))) {
                 expressionId = 87;
                 return true;
@@ -4753,7 +4755,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 888 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                                                      RequestType.ToLower().Equals("new") && iscancelstate == 0;
+                                                      (RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1")) && iscancelstate == 0;
                 
                 #line default
                 #line hidden
@@ -4765,7 +4767,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 888 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                                                      RequestType.ToLower().Equals("new") && iscancelstate == 0;
+                                                      (RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1")) && iscancelstate == 0;
                 
                 #line default
                 #line hidden
@@ -4780,7 +4782,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 998 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                                                      RequestType.ToLower().Equals("cancel") && iscancelstate == 0;
+                                                      (RequestType.ToLower().Equals("cancel") || RequestType.ToLower().Equals("2") )&& iscancelstate == 0;
                 
                 #line default
                 #line hidden
@@ -4792,7 +4794,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 998 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                                                      RequestType.ToLower().Equals("cancel") && iscancelstate == 0;
+                                                      (RequestType.ToLower().Equals("cancel") || RequestType.ToLower().Equals("2") )&& iscancelstate == 0;
                 
                 #line default
                 #line hidden
@@ -6132,7 +6134,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 578 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                                                                                    RequestType.ToLower().Equals("new");
+                                                                                    RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -6144,7 +6146,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 578 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                                                                                    RequestType.ToLower().Equals("new");
+                                                                                    RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -6757,7 +6759,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 329 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                                      RequestType.ToLower().Equals("new");
+                                      RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -6769,7 +6771,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 329 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                                      RequestType.ToLower().Equals("new");
+                                      RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -6784,7 +6786,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 1186 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                                      RequestType.ToLower().Equals("cancel");
+                                      RequestType.ToLower().Equals("cancel") || RequestType.ToLower().Equals("2");
                 
                 #line default
                 #line hidden
@@ -6796,7 +6798,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 1186 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                                      RequestType.ToLower().Equals("cancel");
+                                      RequestType.ToLower().Equals("cancel") || RequestType.ToLower().Equals("2");
                 
                 #line default
                 #line hidden
@@ -7959,7 +7961,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 175 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                      RequestType.ToLower().Equals("new");
+                      RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -7971,7 +7973,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 175 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                      RequestType.ToLower().Equals("new");
+                      RequestType.ToLower().Equals("new") || RequestType.ToLower().Equals("1");
                 
                 #line default
                 #line hidden
@@ -7986,7 +7988,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 1284 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 System.Linq.Expressions.Expression<System.Func<bool>> expression = () => 
-                      RequestType.ToLower().Equals("cancel");
+                      RequestType.ToLower().Equals("cancel")|| RequestType.ToLower().Equals("2");
                 
                 #line default
                 #line hidden
@@ -7998,7 +8000,7 @@ namespace tora_asia.leaverequest.Workflows.LeaveReqeustWF {
                 
                 #line 1284 "E:\WORKSPACE\TORA-ASIA\LEAVEREQUEST\REPO\LEAVEREQUEST-DEMO\TORA-ASIA.LEAVEREQUEST\WORKFLOWS\LEAVEREQEUSTWF\WORKFLOW.XAML"
                 return 
-                      RequestType.ToLower().Equals("cancel");
+                      RequestType.ToLower().Equals("cancel")|| RequestType.ToLower().Equals("2");
                 
                 #line default
                 #line hidden
