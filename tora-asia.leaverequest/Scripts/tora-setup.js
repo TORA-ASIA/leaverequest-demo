@@ -35,113 +35,64 @@
 
     ToraAsiaLeaveRequestInfo.AddNameSpace("ListManagement");
     ToraAsiaLeaveRequestInfo.ListManagement = {
-       // //AdminHr
-       // //AdminHr: {
-       // //    Title: "LRAdminHr",
-       // //    ID:null,
-       // //    Url:null
-       // //},
-       ///* A1: {
-       //     Title: "testForDel1",
-       //     ID:null,
-       //     Url:null
-       // },
-	   //  A2: {
-       //     Title: "testForDel2",
-       //     ID:null,
-       //     Url:null
-       // },*/
+        //AdminHr
+        //AdminHr: {
+        //    Title: "LRAdminHr",
+        //    ID:null,
+        //    Url:null
+        //},
+       /* A1: {
+            Title: "testForDel1",
+            ID:null,
+            Url:null
+        },
+		 A2: {
+            Title: "testForDel2",
+            ID:null,
+            Url:null
+        },*/
 
-       // //LeaveMaxDate
-       // LeaveMaxDate: {
-       //     Title: "LRLeaveMaxDate2",
-       //     ID:null,
-       //     Url:null
-       // },
-       // //Officer
-       // Officer: {
-       //     Title: "LROfficer2",
-       //     ID:null,
-       //     Url:null
-       // },
-       // //Options
-       // Options: {
-       //     Title: "LROptions2",
-       //     ID:null,
-       //     Url:null
-       // },
-       // //RequestForm
-       // RequestForm: {
-       //     Title: "LRRequestForm2",
-       //     ID:null,
-       //     Url:null
-       // },
-       // Holidays : {
-       //     Title: "LRHolidays2",
-       //     ID:null,
-       //     Url:null
-       // },
-       // //WorkflowHistoryList
-       // WorkflowHistoryList: {
-       //     Title: "LRWorkflowHistoryList2",
-       //     ID: null,
-       //     Url:null
-       // },
-       // //WorkflowTaskList
-       // WorkflowTaskList: {
-       //     Title: "LRWorkflowTaskList2",
-       //     ID: null,
-       //     Url:null
-        // }
-        //เก็บข้อมูลพนักงานภายใน
-        LeaveRequestOfficer: {
-            Title: "Leave Request Officer",
-            Internal: "LeaveRequestOfficer",
-            ID: null,
-            Url: null
+        //LeaveMaxDate
+        LeaveMaxDate: {
+            Title: "LRLeaveMaxDate1",
+            ID:null,
+            Url:null
         },
-        //เก็บข้อมูลวันหยุด
-        LeaveRequestHoliday: {
-            Title: "Leave Request Holiday",
-            Internal: "LeaveRequestHoliday",
-            ID: null,
-            Url: null
+        //Officer
+        Officer: {
+            Title: "LROfficer1",
+            ID:null,
+            Url:null
         },
-        //เก็บข้อมูลประเภทการลาและเงื่อนไขต่างๆ ในแต่ละประเภท
-        LeaveRequestCondition: {
-            Title: "Leave Request Condition",
-            Internal: "LeaveRequestCondition",
-            ID: null,
-            Url: null
+        //Options
+        Options: {
+            Title: "LROptions1",
+            ID:null,
+            Url:null
         },
-        //เก็บข้อมูล Configuration ของ Leave Request
-        LeaveRequestConfiguration: {
-            Title: "Leave Request Configuration",
-            Internal: "LeaveRequestConfiguration",
-            ID: null,
-            Url: null
+        //RequestForm
+        RequestForm: {
+            Title: "LRRequestForm1",
+            ID:null,
+            Url:null
         },
-        //เก็บข้อมูลการลา
-        LeaveRequestItem: {
-            Title: "Leave Request Item",
-            Internal: "LeaveRequestItem",
-            ID: null,
-            Url: null
+        Holidays : {
+            Title: "LRHolidays1",
+            ID:null,
+            Url:null
         },
-        //เก็บ workflow historys
-        LeaveRequestWorkflowHistory: {
-            Title: "Leave Request Workflow History",
-            Internal: "LeaveRequestWorkflowHistory",
+        //WorkflowHistoryList
+        WorkflowHistoryList: {
+            Title: "LRWorkflowHistoryList1",
             ID: null,
-            Url: null
+            Url:null
         },
-        //เก็บ workflow tasks
-        LeaveRequestWorkflowTask: {
-            Title: "Leave Request Workflow Task",
-            Internal: "LeaveRequestWorkflowTask",
+        //WorkflowTaskList
+        WorkflowTaskList: {
+            Title: "LRWorkflowTaskList1",
             ID: null,
-            Url: null
-        },
+            Url:null
+        }
     };
     //#endregion
 
@@ -155,7 +106,8 @@
     	WorkFlowDefName:"LeaveReqeustWF",//"WF Not Use",//"LeaveReqeustWF",
     	WorkFlowName:"APP Leave Request",//"WF Not Use",//"APP Leave Request",//"Leave Request",//for subscription
     	WorkflowDefId:null,
-    	WorkflowSubscriptionId:null,
+    	WorkflowSubscriptionId: null,
+        isSiteAdmin:false,
     	IsCrossDomain:false,
     	IsFeatureActivate:false,
     	IsWorkflowMapingOption:false,
@@ -163,20 +115,74 @@
     	IsWorkflowMaping:false,
     	IsFoundWorkflow:false,
     	IsSetEndCircle:false,
-    	EndCircleDate: null,
-    	StartCircleYear: null,
-    	EndCircleYear: null,
+    	EndCircleDate:null,
     	EndCircleID:0,
     	WorkflowMapingID:0,
     	FoundWorkflowID:0,
     	ActivateFeatureID:0,
     	WorkingDaysID:0,
+    	WorkTypeID:0,
+    	WorkType:"ปัดเศษทิ้ง",
     	WorkingDays:[],
     	OfficerInfo:[],
     	OfficerHR:[],
     	HoliDays:[],
     	WorkDayYear:0,
-    	WorkDayRatio:0,
+    	WorkDayRatio: 0,
+    	swalalrt: function (opt,funcok,funcother) {
+    	    swal(opt)
+                .then(function (r) {
+    	        if (r.value) {
+    	            if (typeof funcok !== "undefined" && typeof funcok === "function" && funcok !== null) {
+    	                funcok();
+    	            }
+    	        }
+    	        if (typeof funcother !== "undefined" && typeof funcother === "function" && funcother !== null) {
+    	            funcother();
+    	        }
+    	    });
+    	},
+    	queryDataJSOM: function (props, funcsuccess,d/*defect*/) {
+    	    props.listtitle = props.listtitle || "";
+    	    if (props.listtitle.length === 0) {
+    	        if (callback) {
+    	            callback();
+    	        }
+
+    	    }
+    	    props.query = props.query || "";
+    	    props.view = props.view || "";
+    	    props.orderby = props.orderby || "<FieldRef Name='Created' Ascending='false'/>";
+    	    props.rowlimit = props.rowlimit || 100;
+    	    props.options = props.options || {};
+
+
+    	    //if(typeof valueAccessor() === "undefined"){
+    	    //	valueAccessor(new ToraAsiaSarabun.Services.datawithpaging())
+    	    //}
+
+    	    var listServices = new SharePointClient.Services.JSOM.ListServices();
+
+    	    //Get SP clientContext
+    	    var context = new SharePointClient.Services.JSOM.Context();
+    	    //Create Caml object
+    	    var camlConstant = SharePointClient.Constants.CAML_CONSTANT;
+    	    var camlQuery = new SharePointClient.CamlExtension.JSOM.CamlQuery();
+
+    	    camlQuery
+            .ViewAttribute(props.view)
+            .Query(props.query)
+            .QueryThrottleMode(camlConstant.CAML_QUERY_THROTTLE_MODE.OVERRIDE)
+            .OrderByMe(props.orderby)
+            .RowLimit(props.rowlimit);
+    	    //.FolderServerRelativeUrl(self.selectdFolder());
+
+    	    listServices.GetListItemsBatchByListName(context,
+                    props.listtitle, camlQuery.BuildQuery()).Execute(funcsuccess, function () {
+                        d.reject();
+                    });
+
+    	},
     	CalulateWorkDay:function(rootcallback){
     		if(ToraAsiaLeaveRequestInfo.Services.OfficerInfo.length > 0){
     				//console.log(ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0]);
@@ -188,6 +194,7 @@
 		    			
 		    			var curuserYear = curofficer.OfficerYear;
 		    			var curuserQuata = curofficer.OfficerQuata;
+		    			var officerworktype = ToraAsiaLeaveRequestInfo.Services.WorkType;
 		    		
 		    			var startworkdate = moment(startworkdatestr );
 		    			var circlestr = ToraAsiaLeaveRequestInfo.Services.EndCircleDate.format("DD/MM/YYYY");
@@ -215,19 +222,23 @@
 						var myyear = moment().diff(startworkdate, 'y');
 						var mymonth = endC.diff(startworkdate, 'M');
 						
+						if(curuserQuata === null && officerworktype === "ปัดเศษทิ้ง"){
+							myyear = (myyear >0? myyear-1:0);
+						}
 						//console.log(mymonth%12 );
 						
 						
 						//Get All Leave
 						var getAllleave = function(callback){
 			    			var options = {
-			    			    listTitle: ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestCondition.Title,
+							listTitle:ToraAsiaLeaveRequestInfo.ListManagement.LeaveMaxDate.Title,
 								fileData :[
 									{field:"Id",type:"Default",typefield:"ID"},
 									{field:"Title"},
 									{field:"MaxLeaveValue"},
-									{ field: "GenderCondition" },
-									{field:"ShowHide"}
+									{field:"GenderMaxDate"},
+									{field:"ShowHide"},
+									{field:"MinimumYear"}
 								],
 								queryText:"<View><Query><OrderBy><FieldRef Name='SortIndex'/></OrderBy></Query></View>"
 							}
@@ -264,7 +275,7 @@
 						   	}
 
 			    			var options = {
-			    			    listTitle: ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.Title,
+							listTitle:ToraAsiaLeaveRequestInfo.ListManagement.RequestForm.Title,
 								fileData :[
 									{field:"Id",type:"Default",typefield:"ID"},
 								],
@@ -282,13 +293,14 @@
 						//Find Spacial Leave
 		    			var getSpacialLeave = function(callback){
 			    			var options = {
-			    			    listTitle: ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestCondition.Title,
+							listTitle:ToraAsiaLeaveRequestInfo.ListManagement.LeaveMaxDate.Title,
 								fileData :[
 									{field:"Id",type:"Default",typefield:"ID"},
 									{field:"Title"},
 									{field:"MaxLeaveValue"},
-									{ field: "GenderCondition" },
+									{field:"GenderMaxDate"},
 									{field:"ShowHide"},
+									{field:"MinimumYear"},
 									
 								],
 								queryText:"<View><Query><OrderBy><FieldRef Name='SortIndex' Ascending='True'/><FieldRef Name='MinimumYear' Ascending = 'False'/></OrderBy></Query></View>"
@@ -316,30 +328,48 @@
 								//console.log(countleaves);
 								
 								//find all leave user has permission
-							    ko.utils.arrayForEach(allleavetype, function (p) {
-							        var filunique = ko.utils.arrayFilter(myleavearr, function (itm) {
-							            return itm.Title === p.Title
-							        });
+								var filter1 = ko.utils.arrayFilter(allleavetype, function(p) {
 									switch(p.Title){
-									    case "ลาบวช":
-									        if (usergender === "Male" && countleaves === 0 && filunique.length === 0)
-									            myleavearr.push(p);
-									        break;
-									    case "ลาคลอด":
-									        if (usergender === "Female" && filunique.length === 0)
-									            myleavearr.push(p);
-									        break;
-									    case "ลากิจ":
-									    case "ลาป่วย":
-									    case "ลาพักร้อน":
-									    case "อื่นๆ":
-									        if (p.GenderCondition === "All" && filunique.length === 0)
-									            myleavearr.push(p);
-									        break;
+										case "ลาบวช":
+										   return (p.MinimumYear <= myyear && usergender  === "Male" && countleaves === 0)
+										case "ลาคลอด":
+										return (p.MinimumYear <= myyear && usergender  === "Female" && countleaves === 0)
+										default:
+											return (p.MinimumYear <= myyear && p.GenderMaxDate === "All")
 									}
 					                
 					            });
 					            
+					            var myrealleave = [];
+								//Loop add officer Leave
+								ko.utils.arrayForEach(filter1, function(item) {
+									var curitem = $.extend({}, item);
+									if(curuserQuata === null && officerworktype === "คำนวณตามสัดส่วน" && curitem.MinimumYear > 0){
+											//console.log(mymonth%12 );
+									    var oldmax = curitem.MaxLeaveValue;
+									    var newmax =  Math.floor(oldmax * ((mymonth%12)/12));
+										curitem.MaxLeaveValue = newmax;
+									}
+									
+							    	if(myrealleave.length === 0 && curitem.MaxLeaveValue > 0){
+							    		myrealleave.push(curitem);
+							    	}
+							    	else{
+							    		var curindex = -1;
+							    		var funiqu = ko.utils.arrayFilter(myrealleave, function(p,index) {
+							    			curindex = index;
+											return p.Title === item.Title && p.MinimumYear < item.MinimumYear 				                
+							            });
+										if(funiqu.length ===0 && curitem.MaxLeaveValue > 0){
+											myrealleave.push(curitem);
+										}
+										else{
+											if(curindex > -1  && curitem.MaxLeaveValue > 0){
+												myrealleave[curindex] = curitem;
+											}
+										}
+							    	}
+							    });
 							    //console.log(filter1 );
 								//console.log(myrealleave);
 								
@@ -347,7 +377,7 @@
 							    var addfieldata = [
 									{
 										Title:"OfficerQuata",
-										Value: JSON.stringify(myleavearr)
+										Value: JSON.stringify(myrealleave)
 									},
 									{
 										Title:"OfficerYear",
@@ -355,14 +385,14 @@
 									}								
 								];
 								var optioninside = {
-								    listTitle: ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestOfficer.Title,
+								            listTitle:ToraAsiaLeaveRequestInfo.ListManagement.Officer.Title,
 								            data :addfieldata,
 											itemid :curofficer.ID
 							    }
 						   
 					   			// parent.navLinkClick("idapprove");
 							    ko.SaveDatatoList(optioninside ,function(id){   
-							        curofficer.OfficerQuata = JSON.stringify(myleavearr);
+							    	curofficer.OfficerQuata  = JSON.stringify(myrealleave);
 							    	curofficer.OfficerYear = focusyear ;
 							    	rootcallback();
 								});
@@ -373,19 +403,15 @@
 								
 							}
 							
-							getAllleave(function (d) {
-							    if (typeof d !== "undefined") {
-							        allleavetype = d.slice();
-							    }
+							getAllleave(function(d){
+								allleavetype  = d.slice();
 								curruning++;
 								if(curruning  === maxruning ){
 									successLoad();
 								}
 							});
-							getLeavebyGender(function (d) {
-							    if (typeof d !== "undefined") {
-							        countleaves = d.length;
-							    }
+							getLeavebyGender(function(d){
+								countleaves= d.length;
 								curruning++;
 								if(curruning  === maxruning ){
 									successLoad();
@@ -439,7 +465,27 @@
 							            "</Value>"+
 							         "</Leq>"+
 							      "</And>"+
-							   "</Where>";    
+							   "</Where>";
+
+						var options = {};
+						options.fileData = [
+							{ field: "ID" },
+							{ field: "Title" },
+							{ field: "HolidayDate", type: "Date", format: ko.dateformat.normal }
+						];
+						var props = {};
+						props.listtitle = ToraAsiaLeaveRequestInfo.ListManagement.Holidays.Title;
+						props.query = qdate;
+						props.rowlimit = 1000;
+						//props.options = options;
+						ToraAsiaLeaveRequestInfo.Services.queryDataJSOM(props,function (result) {
+						    var alldata = ko.getdataFromEnum({
+						        ItemEnum: result,
+						        filedDisplay: options.fileData
+						    }, options);
+						    deferred.resolve(alldata);
+						}, deferred);
+            /*
 						//console.log(qdate );      
 						var listServices = new SharePointClient.Services.JSOM.ListServices();
 				
@@ -457,16 +503,11 @@
 				        .OrderByMe("<FieldRef Name='Created' Ascending='false'/>")
 				        //.OrderByIndex()
 				        .RowLimit(1000);
-				        var options = {};
-				        options.fileData =[
-							{field:"ID"},
-							{field:"Title"},
-							{field:"HolidayDate",type:"Date",format:ko.dateformat.normal}
-						];
+				        
 
 				        //.FolderServerRelativeUrl(self.selectdFolder());
 				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestHoliday.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				        		ToraAsiaLeaveRequestInfo.ListManagement.Holidays.Title, camlQuery.BuildQuery()).Execute(function (result) {
 				               // console.log(result.get_count());
 				               //console.log(result);
 				               var alldata = 	ko.getdataFromEnum({
@@ -483,7 +524,9 @@
 						     //   }
 
 				               deferred.resolve(alldata);
-				        }); 
+				        		});
+
+                                */
 			return deferred.promise();
     	},  	
     	GetEndCircleData:function(){
@@ -495,7 +538,7 @@
 									    		case "EndCircleYear":
 									    				if(ddata.Details !== null){
 									    					ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;
-									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details, ko.dateformat.endcircletoList);
+									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details,ko.dateformat.endcircletoList);
 									    				}
 									    				//console.log(ddata.ID);
 									    				ToraAsiaLeaveRequestInfo.Services.EndCircleID = ddata.ID;	
@@ -511,50 +554,68 @@
 
     	},
     	GetOptionsData:function(){	
-    		var deferred = $.Deferred();               
-					var listServices = new SharePointClient.Services.JSOM.ListServices();
+    	    var deferred = $.Deferred();
+
+    	    var options = {};
+    	    options.fileData =[
+                {field:"ID"},
+                {field:"Title"},
+                {field:"Details"}
+    	    ];
+    	    var props = {};
+    	    props.listtitle = ToraAsiaLeaveRequestInfo.ListManagement.Options.Title;
+    	    props.rowlimit = 30;
+    	    //props.options = options;
+    	    ToraAsiaLeaveRequestInfo.Services.queryDataJSOM(props, function (result) {
+    	        var alldata = ko.getdataFromEnum({
+    	            ItemEnum: result,
+    	            filedDisplay: options.fileData
+    	        }, options);
+    	        deferred.resolve(alldata);
+    	    }, deferred);
+					//var listServices = new SharePointClient.Services.JSOM.ListServices();
 				
-				        //Get SP clientContext
-				        SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
-				        var context = new SharePointClient.Services.JSOM.Context();				
-				         //SharePointClient.Configurations.IsCrossDomainRequest = false;
-				        //Create Caml object
-				        var camlConstant = SharePointClient.Constants.CAML_CONSTANT;
-				        var camlQuery = new SharePointClient.CamlExtension.JSOM.CamlQuery();
-				        camlQuery
-				        .ViewAttribute("")
-				        .Query()
-				        .QueryThrottleMode(camlConstant.CAML_QUERY_THROTTLE_MODE.OVERRIDE)
-				        .OrderByMe("<FieldRef Name='Created' Ascending='false'/>")
-				        //.OrderByIndex()
-				        .RowLimit(30);
-				        var options = {};
-				        options.fileData =[
-							{field:"ID"},
-							{field:"Title"},
-							{field:"Details"}
-						];
+				    //    //Get SP clientContext
+				    //    SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
+				    //    var context = new SharePointClient.Services.JSOM.Context();				
+				    //     //SharePointClient.Configurations.IsCrossDomainRequest = false;
+				    //    //Create Caml object
+				    //    var camlConstant = SharePointClient.Constants.CAML_CONSTANT;
+				    //    var camlQuery = new SharePointClient.CamlExtension.JSOM.CamlQuery();
+				    //    camlQuery
+				    //    .ViewAttribute("")
+				    //    .Query()
+				    //    .QueryThrottleMode(camlConstant.CAML_QUERY_THROTTLE_MODE.OVERRIDE)
+				    //    .OrderByMe("<FieldRef Name='Created' Ascending='false'/>")
+				    //    //.OrderByIndex()
+				    //    .RowLimit(30);
+				    //    var options = {};
+				    //    options.fileData =[
+					//		{field:"ID"},
+					//		{field:"Title"},
+					//		{field:"Details"}
+					//	];
 
-				        //.FolderServerRelativeUrl(self.selectdFolder());
-				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestConfiguration.Title, camlQuery.BuildQuery()).Execute(function (result) {
-				               // console.log(result.get_count());
-				               //console.log(result);
-				               var alldata = 	ko.getdataFromEnum({
-							        	ItemEnum:result,
-							        	filedDisplay:options.fileData		        	
-						        	},options)	;
-				              // var listItemEnumerator = result.getEnumerator();
-				              // while (listItemEnumerator.moveNext()) 
-						      //  {
-						      //  	var oListItem = listItemEnumerator.get_current();
-							//		ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;	
-							//		ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(oListItem.get_item("Details"),ko.dateformat.endcircletoList);
-							//		ToraAsiaLeaveRequestInfo.Services.EndCircleID = oListItem.get_item("ID")						
-						     //   }
+				    //    //.FolderServerRelativeUrl(self.selectdFolder());
+				    //    listServices.GetListItemsBatchByListName(context, 
+				    //    		ToraAsiaLeaveRequestInfo.ListManagement.Options.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				    //           // console.log(result.get_count());
+				    //           //console.log(result);
+				    //           var alldata = 	ko.getdataFromEnum({
+					//		        	ItemEnum:result,
+					//		        	filedDisplay:options.fileData		        	
+					//	        	},options)	;
+				    //          // var listItemEnumerator = result.getEnumerator();
+				    //          // while (listItemEnumerator.moveNext()) 
+					//	      //  {
+					//	      //  	var oListItem = listItemEnumerator.get_current();
+					//		//		ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;	
+					//		//		ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(oListItem.get_item("Details"),ko.dateformat.endcircletoList);
+					//		//		ToraAsiaLeaveRequestInfo.Services.EndCircleID = oListItem.get_item("ID")						
+					//	     //   }
 
-				               deferred.resolve(alldata);
-				        }); 
+				    //           deferred.resolve(alldata);
+				    //    }); 
 			return deferred.promise();
     	},  	
         GetAllMyLeaveRequest:function(requestvalue,qry){
@@ -586,15 +647,15 @@
 							{field:"Id",type:"Default",typefield:"ID"},
 							{field:"Title"},
 							{field:"StartDate",type:"Date",format:ko.dateformat.normal},
-							{ field: "LeaveDayTotal" },
-							{ field: "LeaveStatus" },
-							//{field:"CancelLeaveStatus"},
-							{ field: "LeaveType" },
+							{field:"NumberOfDay"},
+							{field:"LeaveStatus"},
+							{field:"CancelLeaveStatus"},
+							{field:"LeaveType"},
 						];
 						options.format = ko.dateformat.normal;
 
 				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				        		ToraAsiaLeaveRequestInfo.ListManagement.RequestForm.Title, camlQuery.BuildQuery()).Execute(function (result) {
 				                //console.log(result.get_count());
 				               //console.log(result);
 				               var alldata = 	ko.getdataFromEnum({
@@ -623,22 +684,22 @@
     				ko.utils.arrayForEach(objquata , function(item) {
 						var daytitile = item.Title;
 						var dayinprogress =  ko.utils.arrayFilter(myrequestdata, function(dv) {
-						    return dv.LeaveStatus === "In Progress" && dv.LeaveType === daytitile;
-										//&& dv.CancelLeaveStatus !== "Cancelled";
+								return dv.LeaveStatus === "In Progress" && dv.LeaveType === daytitile
+										&& dv.CancelLeaveStatus !== "Cancelled";
 						});
 						var dayapprove =  ko.utils.arrayFilter(myrequestdata, function(dv) {
-						    return dv.LeaveStatus === "Approved" && dv.LeaveType === daytitile;
-										//&& dv.CancelLeaveStatus !== "Cancelled";
+								return dv.LeaveStatus === "Approved" && dv.LeaveType === daytitile 
+										&& dv.CancelLeaveStatus !== "Cancelled";
 						});
 						var dayobj = {};
 						var suminprogress = 0;
 						var sumapprove = 0;
 														//var sumcancel = 0;
 						ko.utils.arrayForEach(dayinprogress, function(item) {
-						    suminprogress += parseInt(item.LeaveDayTotal, 10);
+							suminprogress += parseInt(item.NumberOfDay,10);
 						});
 						ko.utils.arrayForEach(dayapprove, function(item) {
-						    sumapprove += parseInt(item.LeaveDayTotal, 10);
+							sumapprove += parseInt(item.NumberOfDay,10);
 						});
 
 						dayobj.inprogress = suminprogress ;
@@ -756,7 +817,7 @@
 				        //.FolderServerRelativeUrl(self.selectdFolder());
 
 				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowTask.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				        		ToraAsiaLeaveRequestInfo.ListManagement.WorkflowTaskList.Title, camlQuery.BuildQuery()).Execute(function (result) {
 								var listEnumerator = result.getEnumerator();
 									//var featureInfo = '';
 									while (listEnumerator.moveNext()) {
@@ -774,7 +835,7 @@
 									//}
 									//console.log(deltaskid);
 									if(deltaskid.length>0){
-									    var oList = curweb.get_lists().getByTitle(ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowTask.Title);
+										var oList = curweb.get_lists().getByTitle(ToraAsiaLeaveRequestInfo.ListManagement.WorkflowTaskList.Title);
 										ko.utils.arrayForEach(deltaskid, function(uid ) {
 							                var oListItem = oList.getItemById(uid );
 							                oListItem.deleteObject();
@@ -881,7 +942,7 @@
 				        //.FolderServerRelativeUrl(self.selectdFolder());
 
 				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowTask.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				        		ToraAsiaLeaveRequestInfo.ListManagement.WorkflowTaskList.Title, camlQuery.BuildQuery()).Execute(function (result) {
 								var listEnumerator = result.getEnumerator();
 									//var featureInfo = '';
 									while (listEnumerator.moveNext()) {
@@ -919,7 +980,7 @@
 					allquery.push(String.format(ko.defaultquery,"Eq","Officer" ,"Lookup",_spPageContextInfo.userId,"LookupId='TRUE'","")); 
 				}
 				else{
-			        allquery.push(String.format(ko.defaultquery, "Contains", "OfficerRole", "Text", "HR", "", ""));
+					allquery.push(String.format(ko.defaultquery,"Eq","OfficerPosition" ,"Text","HR","","")); 
 
 				}
 				//allquery = allquery.concat(otherqueryarr )	;				
@@ -927,58 +988,97 @@
 			   		allquerystr  = "<Where>"+ ko.MergeCAMLConditions(allquery,ko.MergeType.And)+"</Where>";
 			   	}
 
-    			var deferred = $.Deferred();
-    			//SharePointClient.Services.JSOM.Initialize(function () {
-    			var listServices = new SharePointClient.Services.JSOM.ListServices();
-				
-				        //Get SP clientContext
-				        var context = new SharePointClient.Services.JSOM.Context();				
-				        //Create Caml object
-				        var camlConstant = SharePointClient.Constants.CAML_CONSTANT;
-				        var camlQuery = new SharePointClient.CamlExtension.JSOM.CamlQuery();
-				        camlQuery
-				        .ViewAttribute("")
-				        .Query(allquerystr)
-				        .QueryThrottleMode(camlConstant.CAML_QUERY_THROTTLE_MODE.OVERRIDE)
-				        .OrderByMe("<FieldRef Name='Created' Ascending='false'/>")
-				        //.OrderByIndex()
-				        .RowLimit(30);
-				        //.FolderServerRelativeUrl(self.selectdFolder());
-				        						 //Get All list items batch by list name
-				        var options = {};
-				        options.fileData =[
-							{field:"ID"},
-							{field:"Title"},
-							{field:"Officer"},
-							{field:"OfficerGender"},
-							{ field: "OfficerPosition" },
-                            { field: "OfficerRole" },
-							{field:"OfficerDepartment"},
-							{field:"OfficerApprover"},
-							{field:"OfficerStartWorking",type:"Date",format:ko.dateformat.normal}
-						];
+				var deferred = $.Deferred();
 
-				        listServices.GetListItemsBatchByListName(context, 
-				        		ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestOfficer.Title, camlQuery.BuildQuery()).Execute(function (result) {
-				                //console.log(result.get_count());
-				               //console.log(result);
-				               var alldata = 	ko.getdataFromEnum({
-							        	ItemEnum:result,
-							        	filedDisplay:options.fileData,
-							        	format :options.format			        	
-						        	},options)	;	
-						        if(!ishr){	
-									ToraAsiaLeaveRequestInfo.Services.OfficerInfo = alldata ;
-								}
-								else{
-									ToraAsiaLeaveRequestInfo.Services.OfficerHR = alldata ;
-								}
+				var options = {};
+				options.fileData = [
+                    { field: "ID" },
+                    { field: "Title" },
+                    { field: "Officer" },
+                    { field: "OfficerGender" },
+                    { field: "OfficerPosition" },
+                    { field: "OfficerDepartment" },
+                    { field: "OfficerManager" },
+                    { field: "OfficerStartWorking", type: "Date", format: ko.dateformat.normal },
+                    { field: "OfficerQuata" },
+                    { field: "OfficerYear" }
+				];
+				var props = {};
+				props.listtitle = ToraAsiaLeaveRequestInfo.ListManagement.Officer.Title;
+				props.query = allquerystr;
+				props.rowlimit = 30;
+	        //props.options = options;
+				ToraAsiaLeaveRequestInfo.Services.queryDataJSOM(props, function (result) {
+				    var alldata = ko.getdataFromEnum({
+				        ItemEnum: result,
+				        filedDisplay: options.fileData,
+				        format: options.format
+				    }, options);
+				    if (!ishr) {
+				        ToraAsiaLeaveRequestInfo.Services.OfficerInfo = alldata;
+				    }
+				    else {
+				        ToraAsiaLeaveRequestInfo.Services.OfficerHR = alldata;
+				    }
+
+				    var nextpost = result.get_listItemCollectionPosition();
+				    if (nextpost == null) {
+				        deferred.resolve();
+				    }
+				}, deferred);
+
+    			//SharePointClient.Services.JSOM.Initialize(function () {
+    			//var listServices = new SharePointClient.Services.JSOM.ListServices();
+				
+				//        //Get SP clientContext
+				//        var context = new SharePointClient.Services.JSOM.Context();				
+				//        //Create Caml object
+				//        var camlConstant = SharePointClient.Constants.CAML_CONSTANT;
+				//        var camlQuery = new SharePointClient.CamlExtension.JSOM.CamlQuery();
+				//        camlQuery
+				//        .ViewAttribute("")
+				//        .Query(allquerystr)
+				//        .QueryThrottleMode(camlConstant.CAML_QUERY_THROTTLE_MODE.OVERRIDE)
+				//        .OrderByMe("<FieldRef Name='Created' Ascending='false'/>")
+				//        //.OrderByIndex()
+				//        .RowLimit(30);
+				//        //.FolderServerRelativeUrl(self.selectdFolder());
+				//        						 //Get All list items batch by list name
+				//        var options = {};
+				//        options.fileData =[
+				//			{field:"ID"},
+				//			{field:"Title"},
+				//			{field:"Officer"},
+				//			{field:"OfficerGender"},
+				//			{field:"OfficerPosition"},
+				//			{field:"OfficerDepartment"},
+				//			{field:"OfficerManager"},
+				//			{field:"OfficerStartWorking",type:"Date",format:ko.dateformat.normal},
+				//			{field:"OfficerQuata"},
+				//			{field:"OfficerYear"}
+				//		];
+
+				//        listServices.GetListItemsBatchByListName(context, 
+				//        		ToraAsiaLeaveRequestInfo.ListManagement.Officer.Title, camlQuery.BuildQuery()).Execute(function (result) {
+				//                //console.log(result.get_count());
+				//               //console.log(result);
+				//               var alldata = 	ko.getdataFromEnum({
+				//			        	ItemEnum:result,
+				//			        	filedDisplay:options.fileData,
+				//			        	format :options.format			        	
+				//		        	},options)	;	
+				//		        if(!ishr){	
+				//					ToraAsiaLeaveRequestInfo.Services.OfficerInfo = alldata ;
+				//				}
+				//				else{
+				//					ToraAsiaLeaveRequestInfo.Services.OfficerHR = alldata ;
+				//				}
 				               
-				               var nextpost = result.get_listItemCollectionPosition();
-					            if(nextpost ==null){
-					            		deferred.resolve();
-					            }
-				        }); 
+				//               var nextpost = result.get_listItemCollectionPosition();
+				//	            if(nextpost ==null){
+				//	            		deferred.resolve();
+				//	            }
+				//        }); 
 			//});
 			return deferred.promise();
     	}, 
@@ -1020,8 +1120,8 @@
 	        	{	
 	        		var usergender = ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerGender;
 	        		var subgender = [];  
-	        		subgender.push(String.format(ko.defaultquery, "Eq", "GenderCondition", "Text", "All", "", ""));
-	        		subgender.push(String.format(ko.defaultquery, "Eq", "GenderCondition", "Text", usergender, "", ""));
+	        		subgender.push(String.format(ko.defaultquery,"Eq","GenderMaxDate" ,"Text","All","",""));   	
+	        		subgender.push(String.format(ko.defaultquery,"Eq","GenderMaxDate" ,"Text",usergender,"",""));   
 	        		subgendertype  = "<Where>"+ko.MergeCAMLConditions(subgender,ko.MergeType.Or)+"</Where>";
 	        	}
 	
@@ -1050,45 +1150,6 @@
 				deferred.resolve();
 			}
 		    return deferred.promise();
-
-    	},
-    	CheckLeaveDayUsed: function (datefrom,dateto) {
-    	    var deferred = $.Deferred();
-
-    	    var allmyrequest = ko.observableArray([]);
-    	    var allquery = [];
-    	    var allquerydate = [];
-    	    var allquerystr = "";
-            
-
-    	        allquery.push(String.format(ko.defaultquery, "Eq", "Requester", "Lookup", ToraAsiaLeaveRequestInfo.Services.GetUserId(), "LookupId='TRUE'", ""));
-
-    	    var querystatus = [];
-    	        querystatus.push(String.format(ko.defaultquery, "Eq", "LeaveStatus", "Text", "In Progress", "", ""));
-    	        querystatus.push(String.format(ko.defaultquery, "Eq", "LeaveStatus", "Text", "Approved", "", ""));
-                
-    	        allquery.push(ko.MergeCAMLConditions(querystatus, ko.MergeType.Or));
-    	    var queryFtoF = [];
-    	    queryFtoF.push(String.format(ko.defaultquery, "Geq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
-    	    queryFtoF.push(String.format(ko.defaultquery, "Leq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
-
-    	        allquerydate.push(ko.MergeCAMLConditions(queryFtoF, ko.MergeType.And));
-    	    if (dateto !== null) {
-    	        var queryFtoE = [];
-    	        queryFtoE.push(String.format(ko.defaultquery, "Geq", "StartDate", "DateTime", datefrom, "IncludeTimeValue='False'", ""));
-    	        queryFtoE.push(String.format(ko.defaultquery, "Leq", "EndDate", "DateTime", dateto, "IncludeTimeValue='False'", ""));
-    	        allquerydate.push(ko.MergeCAMLConditions(queryFtoE, ko.MergeType.And));
-    	    }
-    	    allquery.push(ko.MergeCAMLConditions(allquerydate, ko.MergeType.Or));
-
-    	    if (allquery.length > 0) {
-    	        allquerystr = "<Where>" + ko.MergeCAMLConditions(allquery, ko.MergeType.And) + "</Where>";
-    	    }
-
-    	    ToraAsiaLeaveRequestInfo.Services.GetAllMyLeaveRequest(allmyrequest, allquerystr).then(function () {
-    	        deferred.resolve(allmyrequest().length === 0);
-    	    });
-    	    return deferred.promise();
 
     	},
 		CheckFoundWorflow : function (context,currentWEB) {
@@ -1136,7 +1197,7 @@
 		                    	var wfServicesManager = new SP.WorkflowServices.WorkflowServicesManager(context, currentWEB );
 								var workflowSubscriptionService=wfServicesManager.getWorkflowSubscriptionService();				
 								var workflowAssociations= workflowSubscriptionService.enumerateSubscriptionsByList(
-									ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.ID
+									ToraAsiaLeaveRequestInfo.ListManagement.RequestForm.ID
 								);								
 		                        context.load(workflowAssociations);
 		                        context.executeQueryAsync(function () {
@@ -1347,7 +1408,7 @@
 			            //SharePointClient.Configurations.IsCrossDomainRequest = false;
 			      
 			       		var WorkflowAssociationToList = function (ctx, web, workflowDefinitionId) {
-			       		    var listGuid = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.ID;
+			                var listGuid = ToraAsiaLeaveRequestInfo.ListManagement.RequestForm.ID;
 			                // Create a new Deferred object
 			                var deferred = $.Deferred();
 			
@@ -1368,8 +1429,8 @@
 			                sub.set_eventTypes(["WorkflowStart","ItemAdded","ItemUpdated"]);
 			
 			                // These 3 are MANDATORY! Otherwise the workflow will fail to complete
-			                sub.setProperty("TaskListId", ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowTask.ID);
-			                sub.setProperty("HistoryListId", ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowHistory.ID);
+			                sub.setProperty("TaskListId", ToraAsiaLeaveRequestInfo.ListManagement.WorkflowTaskList.ID);
+			                sub.setProperty("HistoryListId", ToraAsiaLeaveRequestInfo.ListManagement.WorkflowHistoryList.ID);
 			                sub.setProperty("FormData", "");
 			
 			                // Associate the workflow with the list
@@ -1436,11 +1497,7 @@
                         context.load(currentWEB);
                         context.executeQueryAsync(function () {
                             //alert("Sharepoint custom list is created Successfully..")
-                            var rootweb = currentWEB.get_url();//.replace(currentWEB.get_serverRelativeUrl(),"");
-                            var relatveweb = currentWEB.get_serverRelativeUrl();
-                            if (relatveweb !== "/") {
-                                rootweb = rootweb.replace(relatveweb, "");
-                            }
+                            var rootweb = currentWEB.get_url().replace(currentWEB.get_serverRelativeUrl(),"");
                             return deferred.resolve(list.get_id(),rootweb +listRootFolder.get_serverRelativeUrl());
                         }, function (sender, args) {
                             //console.log('Failed to create list. Error:' + args.get_message());
@@ -1605,19 +1662,20 @@
 
                         //set list template
                         switch (_key) {
-                            case "LeaveRequestOfficer":
-                            case "LeaveRequestHoliday":
-                            case "LeaveRequestCondition":
-                            case "LeaveRequestConfiguration":
-                            case "LeaveRequestItem":
+                            case "AdminHr":
+                            case "LeaveMaxDate":
+                            case "Officer":
+                            case "Options":
+                            case "Holidays":
+                            case "RequestForm":
                                 //provide template type - genericList is custom list template  
                                 listCreationInfo.set_templateType(SP.ListTemplateType.genericList);
                                 break;
-                            case "LeaveRequestWorkflowHistory":
+                            case "WorkflowHistoryList":
                                 //provide template type - genericList is custom list template  
                                 listCreationInfo.set_templateType(SP.ListTemplateType.workflowHistory);
                                 break;
-                            case "LeaveRequestWorkflowTask":
+                            case "WorkflowTaskList":
                                 //provide template type - genericList is custom list template  
                                 listCreationInfo.set_templateType(SP.ListTemplateType.tasks);
                                 break;
@@ -1647,48 +1705,61 @@
                         //setFieldToList(context, fldCollection, { title: "AChoiceDropDown", internalname: "AChoiceDropDown", arraychoice: new Array("Admin", "HR"), defaultvalue: "HR" }, "ChoiceDropDown");
                         //setFieldToList(context, fldCollection, { title: "AChoiceRadio", internalname: "AChoiceRadio", arraychoice: new Array("Admin", "HR") }, "ChoiceRadio");
                         //setFieldToList(context, fldCollection, { title: "AChoiceCheckBox", internalname: "AChoiceCheckBox", arraychoice: new Array("Admin", "HR") }, "ChoiceCheckBox");
-                            case "LeaveRequestOfficer":
-                                setFieldToList(context, fldCollection, { title: "Officer", internalname: "Officer", require: true }, "User");
-                                setFieldToList(context, fldCollection, { title: "Gender", internalname: "OfficerGender", arraychoice: new Array("Male", "Female"), require: true }, "ChoiceDropDown");
-                                setFieldToList(context, fldCollection, { title: "Position", internalname: "OfficerPosition" }, "Text");
-                                setFieldToList(context, fldCollection, { title: "Department", internalname: "OfficerDepartment" }, "Text");
-                                setFieldToList(context, fldCollection, { title: "Role", internalname: "OfficerRole", arraychoice: new Array("Admin", "HR", "Approver","Officer"), require: true }, "ChoiceCheckBox");
-                                setFieldToList(context, fldCollection, { title: "Start Working", internalname: "OfficerStartWorking", require: true }, "DateOnly");
-                                setFieldToList(context, fldCollection, { title: "Approver", internalname: "OfficerApprover" }, "User");
-                                setFieldToList(context, fldCollection, { title: "My Quata", internalname: "OfficerQuata" }, "PlainText");
-                                setFieldToList(context, fldCollection, { title: "Stamp Year", internalname: "OfficerYear" }, "Number");
+                            case "AdminHr":                               
+                                setFieldToList(context, fldCollection, { title: "Officer", internalname: "Officer" }, "User");
+                                setFieldToList(context, fldCollection, { title: "Position Type", internalname: "PositionType", arraychoice: new Array("Admin", "HR"), defaultvalue: "Admin" }, "ChoiceDropDown");
                                 break;
-                            case "LeaveRequestHoliday":
-                                setFieldToList(context, fldCollection, { title: "HolidayDate", internalname: "HolidayDate" }, "DateOnly");
-                                break;
-                            case "LeaveRequestCondition":
-                                //setFieldToList(context, fldCollection, { title: "LeaveCode", internalname: "LeaveCode" }, "Text");
-                                setFieldToList(context, fldCollection, { title: "Gender", internalname: "GenderCondition", arraychoice: new Array("All", "Male", "Female"), defaultvalue: "All" }, "ChoiceDropDown");
-                                setFieldToList(context, fldCollection, { title: "Show Hide", internalname: "ShowHide" }, "Boolean");
+                            case "LeaveMaxDate":
                                 setFieldToList(context, fldCollection, { title: "Max Leave Value", internalname: "MaxLeaveValue" }, "Number");
-                                //setFieldToList(context, fldCollection, { title: "Condition Employee Rights", internalname: "ConditionEmployeeRights" }, "PlainText");
+                                setFieldToList(context, fldCollection, { title: "Sort Index", internalname: "SortIndex" }, "Number");
+                                setFieldToList(context, fldCollection, { title: "Show Hide", internalname: "ShowHide" }, "Boolean");
+                                setFieldToList(context, fldCollection, { title: "Gender", internalname: "GenderMaxDate", arraychoice: new Array("All", "Male", "Female"), defaultvalue: "All" }, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "Minimum Year", internalname: "MinimumYear",defaultvalue:"0" }, "Number");
                                 break;
-                            case "LeaveRequestConfiguration":
+                            case "Officer":
+                                setFieldToList(context, fldCollection, { title: "Officer", internalname: "Officer",require:true }, "User");
+                                setFieldToList(context, fldCollection, { title: "Gender", internalname: "OfficerGender", arraychoice: new Array("Male", "Female"), require: true }, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "Position", internalname: "OfficerPosition" ,arraychoice: new Array("Admin", "HR","Manager","IT"), require: true}, "ChoiceCheckBox");
+                                setFieldToList(context, fldCollection, { title: "Department", internalname: "OfficerDepartment" }, "Text");
+                                setFieldToList(context, fldCollection, { title: "Start Working", internalname: "OfficerStartWorking",require: true  }, "DateOnly");
+                                setFieldToList(context, fldCollection, { title: "Manager", internalname: "OfficerManager" }, "User");
+								setFieldToList(context, fldCollection, { title: "My Quata", internalname: "OfficerQuata" }, "PlainText");
+								setFieldToList(context, fldCollection, { title: "Stamp Year", internalname: "OfficerYear" }, "Number");
+
+                                break;
+                            case "Options":
                                 setFieldToList(context, fldCollection, { title: "Details", internalname: "Details" }, "Text");
                                 break;
-                            case "LeaveRequestItem":
-                                setFieldToList(context, fldCollection, { title: "Requester", internalname: "Requester" }, "User");
-                                setFieldToList(context, fldCollection, { title: "LeaveType", internalname: "LeaveType" }, "Text");
+                            case "Holidays":
+                                setFieldToList(context, fldCollection, { title: "HolidayDate", internalname: "HolidayDate" }, "DateOnly");
+                                break;
+
+                            case "RequestForm":
+                                setFieldToList(context, fldCollection, { title: "Position", internalname: "OfficerPosition" }, "Text");
+                                setFieldToList(context, fldCollection, { title: "Unit", internalname: "OfficerUnit" }, "Text");
+                                setFieldToList(context, fldCollection, { title: "Division", internalname: "OfficerDivision" }, "Text");
+                                setFieldToList(context, fldCollection, { title: "Leave Type", internalname: "LeaveType", arraychoice: new Array("ลากิจ", "ลาป่วย", "อื่นๆ") }, "ChoiceDropDown");
                                 setFieldToList(context, fldCollection, { title: "Start Date", internalname: "StartDate" }, "DateOnly");
+                                setFieldToList(context, fldCollection, { title: "Start Time", internalname: "StartTime", arraychoice: new Array("เช้า", "บ่าย", "เต็มวัน") }, "ChoiceDropDown");
                                 setFieldToList(context, fldCollection, { title: "End Date", internalname: "EndDate" }, "DateOnly");
-                                setFieldToList(context, fldCollection, { title: "Leave Time", internalname: "LeaveTime" }, "Text");
-                                setFieldToList(context, fldCollection, { title: "Leave Day Total", internalname: "LeaveDayTotal" }, "Number");
-                                setFieldToList(context, fldCollection, { title: "Reason", internalname: "LeaveReason" }, "PlainText");
-                                setFieldToList(context, fldCollection, { title: "Leave Status", internalname: "LeaveStatus", arraychoice: new Array("In Progress", "Approved", "Rejected"), defaultvalue: "In Progress" }, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "End Time", internalname: "EndTime", arraychoice: new Array("เช้า", "บ่าย", "เต็มวัน") }, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "Number Of Day", internalname: "NumberOfDay" }, "Number");
+                                setFieldToList(context, fldCollection, { title: "Reason", internalname: "Reason" }, "PlainText");
+                                setFieldToList(context, fldCollection, { title: "Phone Number", internalname: "PhoneNumber" }, "Text");
+                                setFieldToList(context, fldCollection, { title: "Leave Status", internalname: "LeaveStatus", arraychoice: new Array("In Progress", "Approved", "Rejected", "Cancelled"), defaultvalue: "In Progress" }, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "Cancel Leave Status", internalname: "CancelLeaveStatus", arraychoice: new Array("In Progress", "Cancelled", "Rejected")}, "ChoiceDropDown");
+                                setFieldToList(context, fldCollection, { title: "Other Leave Type", internalname: "OtherLeaveType" }, "Text");
                                 setFieldToList(context, fldCollection, { title: "Request Type", internalname: "RequestType", arraychoice: new Array("New", "Cancel") }, "ChoiceDropDown");
-                                setFieldToList(context, fldCollection, { title: "Approver", internalname: "OfficerApprover" }, "User");
-                                setFieldToList(context, fldCollection, { title: "Hr", internalname: "OfficerHr", allowmutiple: true }, "User");
+                                setFieldToList(context, fldCollection, { title: "Requester", internalname: "Requester" }, "User");
+                                setFieldToList(context, fldCollection, { title: "Manager", internalname: "OfficerManager" }, "User");
+                                setFieldToList(context, fldCollection, { title: "Hr Approve", internalname: "HrApprove", allowmutiple: true }, "User");
                                 setFieldToList(context, fldCollection, { title: "CancelWorkflow", internalname: "CancelWorkflow" }, "Text");
                                 setFieldToList(context, fldCollection, { title: "CurrentUrl", internalname: "CurrentUrl" }, "Text");
                                 setFieldToList(context, fldCollection, { title: "CurrentHostUrl", internalname: "CurrentHostUrl" }, "Text");
                                 setFieldToList(context, fldCollection, { title: "CurrentAppUrl", internalname: "CurrentAppUrl" }, "Text");
+
                                 break;
-                            case "LeaveRequestWorkflowTask":
+                              case "WorkflowTaskList":
                                 setFieldToList(context, fldCollection, { title: "Task Reason", internalname: "TaskReason" }, "PlainText");
                                 break;
 
@@ -1701,11 +1772,7 @@
                         context.load(currentWEB);
                         context.executeQueryAsync(function () {
                             //alert("Sharepoint custom list is created Successfully..")
-                            var rootweb = currentWEB.get_url();//.replace(currentWEB.get_serverRelativeUrl(),"");
-                            var relatveweb = currentWEB.get_serverRelativeUrl();
-                            if (relatveweb !== "/") {
-                                rootweb = rootweb.replace(relatveweb, "");
-                            }
+                            var rootweb = currentWEB.get_url().replace(currentWEB.get_serverRelativeUrl(),"");
                             return deferred.resolve(list.get_id(),rootweb +listRootFolder.get_serverRelativeUrl());
                         }, function (sender, args) {
                             //console.log('Failed to create list. Error:' + args.get_message());
@@ -1724,14 +1791,14 @@
                         
                         //New Item to List
                         switch (_key) {
-                            case "LeaveRequestCondition":
+                           case "LeaveMaxDate":
                                //ลากิจ
                                 var itemCreateInfo = new SP.ListItemCreationInformation();
                                 var listitem1 = list.addItem(itemCreateInfo );
 
                                 listitem1.set_item('Title', 'ลากิจ');
-                                //listitem1.set_item('LeaveCode', 'L1');
                                 listitem1.set_item('MaxLeaveValue', 6);
+                                listitem1.set_item('SortIndex', 1);
                                 listitem1.set_item('ShowHide', true);
 
                                 listitem1.update();
@@ -1739,18 +1806,27 @@
                                 var listitem2 = list.addItem(itemCreateInfo );
 
                                 listitem2.set_item('Title', 'ลาป่วย');
-                                //listitem2.set_item('LeaveCode', 'L2');
                                 listitem2.set_item('MaxLeaveValue', 30);
+                                listitem2.set_item('SortIndex', 2);
                                 listitem2.set_item('ShowHide', true);
 
                                 listitem2.update();
+                                //อื่นๆ
+                                var listitem3 = list.addItem(itemCreateInfo );
+
+                                listitem3.set_item('Title', 'อื่นๆ');
+                                listitem3.set_item('MaxLeaveValue', 90);
+                                listitem3.set_item('SortIndex',4);
+                                listitem3.set_item('ShowHide', false);
+
+                                listitem3.update();
                                 
                                 //ลาพักร้อน
                                 var listitem4 = list.addItem(itemCreateInfo );
 
                                 listitem4.set_item('Title', 'ลาพักร้อน');
-                                //listitem4.set_item('LeaveCode', 'L3');
                                 listitem4.set_item('MaxLeaveValue', 6);
+                                listitem4.set_item('SortIndex', 3);
                                 listitem4.set_item('ShowHide', true);
 
                                 listitem4.update();
@@ -1758,25 +1834,26 @@
 								// ลาบวช 
                                 var listitem5 = list.addItem(itemCreateInfo );
 
-                                listitem5.set_item('Title', 'ลาบวช');
-                                //listitem5.set_item('LeaveCode', 'L4');
+                                listitem5 .set_item('Title', 'ลาบวช');
                                 listitem5 .set_item('MaxLeaveValue', 15);
+                                listitem5 .set_item('SortIndex', 5);
                                 listitem5 .set_item('ShowHide', false);
-                                listitem5.set_item('GenderCondition', "Male");
+                                listitem5 .set_item('GenderMaxDate', "Male");
 
                                 listitem5 .update();
 								
 								//ลาคลอด
                                 var listitem6 = list.addItem(itemCreateInfo );
 
-                                listitem6.set_item('Title', 'ลาคลอด');
-                                //listitem6.set_item('LeaveCode', 'L5');
+                                listitem6 .set_item('Title', 'ลาคลอด');
                                 listitem6 .set_item('MaxLeaveValue', 90);
+                                listitem6 .set_item('SortIndex', 6);
                                 listitem6 .set_item('ShowHide', false);
-                                listitem6.set_item('GenderCondition', "Female");
+                                listitem6 .set_item('GenderMaxDate', "Female");
 
 
-                                listitem6.update();
+                                listitem6 .update();
+
                                 break;
                             //case "Options":
                             //    break;
@@ -1805,7 +1882,7 @@
                         var contentTypeNameArr = [];
 
                         switch (_key) {
-                            case "LeaveRequestWorkflowTask":
+                            case "WorkflowTaskList":
                                 contentTypeNameArr = ["Workflow Task (SharePoint 2013)"]
                                 break;
                                 //case "Options":
@@ -1825,7 +1902,7 @@
                                 list.update();
                                 context.load(list);
                                 var listCollectionCT = list.get_contentTypes();
-                                
+
                                 //then load the list collection content types  
                                 for (var i = 0; i < contentTypeNameArr.length; i++) {
                                     var contentTypeName = contentTypeNameArr[i];
@@ -1867,8 +1944,21 @@
                     		var maxstepcheck = 7;
                     		var currentstepcount = 0;
                             
-                            //Add Contentype
-
+                    		/*var curuser = currentWEB.get_currentUser();
+                    		context.load(curuser);
+                    		context.executeQueryAsync(function () {
+                    		    ToraAsiaLeaveRequestInfo.Services.isSiteAdmin = curuser.get_isSiteAdmin();
+                    		    currentstepcount++
+                    		    if (currentstepcount === maxstepcheck) {
+                    		        loadAfterGetUserInfo();
+                    		    }
+                    		}, function (sender, args) {
+                    		    currentstepcount++
+                    		    if (currentstepcount === maxstepcheck) {
+                    		        loadAfterGetUserInfo();
+                    		    }
+                    		});
+                            */
 							ToraAsiaLeaveRequestInfo.Services.CheckworkflowMapping(context,currentWEB ).then(function(){
 									currentstepcount++
 									if(currentstepcount === maxstepcheck ){
@@ -1921,21 +2011,7 @@
 									    		case "EndCircleYear":
 									    				if(ddata.Details !== null){
 									    					ToraAsiaLeaveRequestInfo.Services.IsSetEndCircle = true;
-									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details, ko.dateformat.endcircletoList);
-									    					var circlestr = ToraAsiaLeaveRequestInfo.Services.EndCircleDate.format("DD/MM/YYYY");
-									    					var curdatestr = moment().format("DD/MM/YYYY")
-									    					var endC = moment(circlestr.toString(), "DD/MM/YYYY");
-									    					var beginC = moment(circlestr.toString(), "DD/MM/YYYY");
-									    					var diffday = moment(curdatestr, "DD/MM/YYYY").diff(endC, 'd');
-									    					if (diffday <= 0) {
-									    					    beginC.add({ days: 1, years: -1 });
-									    					}
-									    					else {
-									    					    endC.add({ years: 1 });
-									    					    beginC.add({ days: 1 });
-									    					}
-									    					ToraAsiaLeaveRequestInfo.Services.StartCircleYear = moment(beginC.format("DD/MM/YYYY"), "DD/MM/YYYY");
-									    					ToraAsiaLeaveRequestInfo.Services.EndCircleYear = moment(endC.format("DD/MM/YYYY"), "DD/MM/YYYY");
+									    					ToraAsiaLeaveRequestInfo.Services.EndCircleDate = moment(ddata.Details,ko.dateformat.endcircletoList);
 									    				}
 									    				ToraAsiaLeaveRequestInfo.Services.EndCircleID = ddata.ID;	
 
@@ -1963,6 +2039,12 @@
 									    					ToraAsiaLeaveRequestInfo.Services.WorkingDays = ddata.Details.split(',');
 									    				}
 									    				ToraAsiaLeaveRequestInfo.Services.WorkingDaysID=ddata.ID;	
+									    		break;
+									    		case "WorkType":
+									    				if(ddata.Details !== null && ddata.Details !== ""){
+									    					ToraAsiaLeaveRequestInfo.Services.WorkType= ddata.Details;
+									    				}
+									    				ToraAsiaLeaveRequestInfo.Services.WorkTypeID=ddata.ID;	
 									    		break;
 
 
@@ -2030,7 +2112,7 @@
                         //alert(key + ": " + value);
                         var curkey = key;
                         var curvalue = value;
-                        getListInfo(curvalue.Title).then(function (id,url) {
+                        getListInfo(curvalue.Title).then(function (id, url) {
                             curvalue.ID = id.toString();
                             curvalue.Url = url;
                             //ToraAsiaLeaveRequestInfo.ListManagement[curkey] = curvalue;
@@ -2042,69 +2124,69 @@
                             }
                         }, function (egr) {
                             console.log(egr);
-                            if(iscreatelist){
-		                            createList(curkey,curvalue).then(function (id2,url2) {
-		                                curvalue.ID = id2.toString();
-                            			curvalue.Url = url2;
-		                                //ToraAsiaLeaveRequestInfo.ListManagement[curkey] = curvalue;
-                            			var countdefault = 0;
-                            			var maxcountdefault = 2;
-                            			addContenTypeToList(curkey, curvalue).then(function () {
-                            			    countdefault++;
-                            			    if (countdefault === maxcountdefault) {
-                            			        currentListCount++;
-                            			        if (currentListCount === maxListCount) {
-                            			            loadGetCreateListSuccess();
-                            			        }
-                            			    }
-                            			    
-                            			}, function (egr3) {
-                            			    console.log(egr3);
-                            			    countdefault++;
-                            			    if (countdefault === maxcountdefault) {
-                            			        currentListCount++;
-                            			        if (currentListCount === maxListCount) {
-                            			            loadGetCreateListSuccess();
-                            			        }
-                            			    }
-                            			});
-		                                createDefaultItemList(curkey,curvalue).then(function () {
+                            if (iscreatelist) {
+                                createList(curkey, curvalue).then(function (id2, url2) {
+                                    curvalue.ID = id2.toString();
+                                    curvalue.Url = url2;
+                                    //ToraAsiaLeaveRequestInfo.ListManagement[curkey] = curvalue;
+                                    var countdefault = 0;
+                                    var maxcountdefault = 2;
+                                    addContenTypeToList(curkey, curvalue).then(function () {
+                                        countdefault++;
+                                        if (countdefault === maxcountdefault) {
+                                            currentListCount++;
+                                            if (currentListCount === maxListCount) {
+                                                loadGetCreateListSuccess();
+                                            }
+                                        }
 
-		                                    countdefault++;
-		                                    if (countdefault === maxcountdefault) {
-		                                        currentListCount++;
-		                                        if (currentListCount === maxListCount) {
-		                                            loadGetCreateListSuccess();
-		                                        }
-		                                    }
-			                            }, function (egr3) {
-			                                console.log(egr3);
-			                                countdefault++;
-			                                if (countdefault === maxcountdefault) {
-			                                    currentListCount++;
-			                                    if (currentListCount === maxListCount) {
-			                                        loadGetCreateListSuccess();
-			                                    }
-			                                }
-			                            });
+                                    }, function (egr3) {
+                                        console.log(egr3);
+                                        countdefault++;
+                                        if (countdefault === maxcountdefault) {
+                                            currentListCount++;
+                                            if (currentListCount === maxListCount) {
+                                                loadGetCreateListSuccess();
+                                            }
+                                        }
+                                    });
+                                    createDefaultItemList(curkey, curvalue).then(function () {
 
-		                                //currentListCount++;
-		                                //if (currentListCount === maxListCount) {
-		                                //    callback();
-		                                //}
-		                            }, function (egr2) {
-		                                console.log(egr2);
-		                                currentListCount++;
-		                                if (currentListCount === maxListCount) {
-		                                    loadGetCreateListSuccess();
-		                                }
-		                            });
+                                        countdefault++;
+                                        if (countdefault === maxcountdefault) {
+                                            currentListCount++;
+                                            if (currentListCount === maxListCount) {
+                                                loadGetCreateListSuccess();
+                                            }
+                                        }
+                                    }, function (egr3) {
+                                        console.log(egr3);
+                                        countdefault++;
+                                        if (countdefault === maxcountdefault) {
+                                            currentListCount++;
+                                            if (currentListCount === maxListCount) {
+                                                loadGetCreateListSuccess();
+                                            }
+                                        }
+                                    });
+
+                                    //currentListCount++;
+                                    //if (currentListCount === maxListCount) {
+                                    //    callback();
+                                    //}
+                                }, function (egr2) {
+                                    console.log(egr2);
+                                    currentListCount++;
+                                    if (currentListCount === maxListCount) {
+                                        loadGetCreateListSuccess();
+                                    }
+                                });
                             }
-                            else{
-                            	//currentListCount++;
-		                        //if (currentListCount === maxListCount) {
-		                            callback();
-		                        //}
+                            else {
+                                currentListCount++;
+                                if (currentListCount === maxListCount) {
+                                    callback();
+                                }
 
                             }
                         })
@@ -2176,11 +2258,11 @@
         		return null;
         	}
         	else{
-        	    return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerApprover
+        		return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerManager
         	}
         },
         GetOfficerHR:function(){
-            if (ToraAsiaLeaveRequestInfo.Services.OfficerHR.length === 0)
+        	if(ToraAsiaLeaveRequestInfo.Services.OfficerInfo.length === 0) 
         	{	
         		return null;
         	}
@@ -2198,8 +2280,9 @@
 		GetUserId:function(){
         	return _spPageContextInfo.userId;
         },
-        isSiteAdmin:function(){
-        	return _spPageContextInfo.isSiteAdmin;
+		isSiteAdmin: function () {
+		    return _spPageContextInfo.isSiteAdmin
+            //return ToraAsiaLeaveRequestInfo.Services.isSiteAdmin;
         },
         isFoundOfficer:function(){
         	return ToraAsiaLeaveRequestInfo.Services.OfficerInfo.length > 0;
@@ -2210,7 +2293,7 @@
         		return false;
         	}
         	else{
-        	    return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerRole.indexOf("Admin") > -1
+        		return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerPosition.indexOf("Admin") > -1
         	}
         },
         isHr:function(){
@@ -2219,7 +2302,7 @@
         		return false;
         	}
         	else{
-        	    return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerRole.indexOf("HR") > -1
+        		return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerPosition.indexOf("HR") > -1
         	}
         },
         isManager:function(){
@@ -2228,7 +2311,7 @@
         		return false;
         	}
         	else{
-        	    return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerRole.indexOf("Approver") > -1
+        		return ToraAsiaLeaveRequestInfo.Services.OfficerInfo[0].OfficerPosition.indexOf("Manager") > -1
         	}
         },
         isAppReady:function(){

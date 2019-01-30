@@ -9,22 +9,6 @@
     <ProjectItemFile Source="jquery-3.0.0.min.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-3.0.0.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="jquery-3.0.0-vsdoc.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap-theme.css" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap.css" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap.css.map" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap.min.css" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\css\bootstrap.min.css.map" Target="Scripts\lib\bootstrap-3.3.6-dist\css\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.eot" Target="Scripts\lib\bootstrap-3.3.6-dist\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.svg" Target="Scripts\lib\bootstrap-3.3.6-dist\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.ttf" Target="Scripts\lib\bootstrap-3.3.6-dist\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff" Target="Scripts\lib\bootstrap-3.3.6-dist\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff2" Target="Scripts\lib\bootstrap-3.3.6-dist\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\js\bootstrap.js" Target="Scripts\lib\bootstrap-3.3.6-dist\js\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\js\bootstrap.min.js" Target="Scripts\lib\bootstrap-3.3.6-dist\js\" Type="ElementFile" />
-    <ProjectItemFile Source="lib\bootstrap-3.3.6-dist\js\npm.js" Target="Scripts\lib\bootstrap-3.3.6-dist\js\" Type="ElementFile" />
     <ProjectItemFile Source="lib\bs_pagination-master\jquery.bs_pagination.bs2.css" Target="Scripts\lib\bs_pagination-master\" Type="ElementFile" />
     <ProjectItemFile Source="lib\bs_pagination-master\jquery.bs_pagination.bs2.min.css" Target="Scripts\lib\bs_pagination-master\" Type="ElementFile" />
     <ProjectItemFile Source="lib\bs_pagination-master\jquery.bs_pagination.css" Target="Scripts\lib\bs_pagination-master\" Type="ElementFile" />
@@ -78,7 +62,6 @@
     <ProjectItemFile Source="lib\SharePointClient.js" Target="Scripts\lib\" Type="ElementFile" />
     <ProjectItemFile Source="knockout-custom.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="ready.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="script0_global.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="script1_New.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="script2_Home.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="script3_History.js" Target="Scripts\" Type="ElementFile" />
@@ -86,10 +69,614 @@
     <ProjectItemFile Source="script5_Tasks.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="script6_Setting.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="script7_BeginSetting.js" Target="Scripts\" Type="ElementFile" />
-    <ProjectItemFile Source="tora-setup.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="lib\moment-weekday-calc.js" Target="Scripts\lib\" Type="ElementFile" />
     <ProjectItemFile Source="script8_myleaveremain.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="lib\moment-range.js" Target="Scripts\lib\" Type="ElementFile" />
     <ProjectItemFile Source="lib\moment-range-v0.1.7.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\boostrap4-datetimepicker\bootstrap-datetimepicker.css" Target="Scripts\lib\boostrap4-datetimepicker\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\boostrap4-datetimepicker\bootstrap-datetimepicker.min.css" Target="Scripts\lib\boostrap4-datetimepicker\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\boostrap4-datetimepicker\bootstrap-datetimepicker.min.js" Target="Scripts\lib\boostrap4-datetimepicker\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-grid.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-grid.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-grid.min.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-grid.min.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.min.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.min.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap.min.css" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\css\bootstrap.min.css.map" Target="Scripts\lib\bootstrap-4.1.0-dist\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.js" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.js.map" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.min.js" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.min.js.map" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.js" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.js.map" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.min.js" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-4.1.0-dist\js\bootstrap.min.js.map" Target="Scripts\lib\bootstrap-4.1.0-dist\js\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-brands.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-brands.min.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-regular.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-regular.min.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-solid.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fa-solid.min.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fontawesome-all.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fontawesome-all.min.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fontawesome.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\css\fontawesome.min.css" Target="Scripts\lib\fontawesome 5.0.13\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_animated.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_bordered-pulled.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_core.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_fixed-width.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_icons.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_larger.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_list.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_mixins.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_rotated-flipped.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_screen-reader.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_stacked.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\_variables.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\fa-brands.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\fa-regular.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\fa-solid.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\less\fontawesome.less" Target="Scripts\lib\fontawesome 5.0.13\less\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_animated.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_bordered-pulled.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_core.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_fixed-width.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_icons.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_larger.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_list.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_mixins.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_rotated-flipped.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_screen-reader.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_stacked.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\_variables.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\fa-brands.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\fa-regular.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\fa-solid.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\scss\fontawesome.scss" Target="Scripts\lib\fontawesome 5.0.13\scss\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-brands-400.eot" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-brands-400.svg" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-brands-400.ttf" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-brands-400.woff" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-brands-400.woff2" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-regular-400.eot" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-regular-400.svg" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-regular-400.ttf" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-regular-400.woff" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-regular-400.woff2" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-solid-900.eot" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-solid-900.svg" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-solid-900.ttf" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-solid-900.woff" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\fontawesome 5.0.13\webfonts\fa-solid-900.woff2" Target="Scripts\lib\fontawesome 5.0.13\webfonts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\css\flag-icon.css" Target="Scripts\lib\flag-icon-css-master\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\css\flag-icon.min.css" Target="Scripts\lib\flag-icon-css-master\css\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ad.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ae.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\af.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ag.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ai.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\al.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\am.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ao.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\aq.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ar.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\as.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\at.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\au.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\aw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ax.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\az.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ba.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bb.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bd.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\be.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bi.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bj.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bo.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bq.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\br.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bs.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\by.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\bz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ca.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cd.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ch.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ci.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ck.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\co.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cx.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cy.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\cz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\de.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\dj.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\dk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\dm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\do.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\dz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ec.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ee.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\eg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\eh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\er.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\es-ct.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\es.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\et.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\eu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fi.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fj.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fo.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\fr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ga.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gb-eng.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gb-nir.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gb-sct.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gb-wls.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gb.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gd.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ge.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gi.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gp.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gq.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gs.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\gy.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\hk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\hm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\hn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\hr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ht.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\hu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\id.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ie.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\il.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\im.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\in.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\io.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\iq.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ir.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\is.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\it.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\je.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\jm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\jo.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\jp.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ke.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ki.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\km.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kp.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ky.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\kz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\la.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lb.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\li.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ls.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\lv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ly.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ma.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\md.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\me.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ml.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mo.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mp.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mq.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ms.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mx.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\my.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\mz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\na.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ne.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ng.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ni.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\no.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\np.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\nz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\om.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pa.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pe.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ph.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ps.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\pw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\py.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\qa.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\re.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ro.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\rs.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ru.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\rw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sa.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sb.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sd.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\se.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sh.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\si.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sj.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\so.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ss.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\st.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sx.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sy.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\sz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\td.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\th.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tj.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tl.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\to.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tr.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tv.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\tz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ua.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ug.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\um.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\un.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\us.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\uy.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\uz.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\va.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\vc.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ve.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\vg.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\vi.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\vn.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\vu.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\wf.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ws.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\xk.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\ye.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\yt.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\za.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\zm.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\1x1\zw.svg" Target="Scripts\lib\flag-icon-css-master\flags\1x1\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ad.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ae.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\af.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ag.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ai.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\al.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\am.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ao.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\aq.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ar.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\as.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\at.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\au.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\aw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ax.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\az.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ba.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bb.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bd.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\be.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bi.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bj.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bo.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bq.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\br.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bs.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\by.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\bz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ca.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cd.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ch.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ci.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ck.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\co.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cx.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cy.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\cz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\de.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\dj.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\dk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\dm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\do.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\dz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ec.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ee.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\eg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\eh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\er.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\es-ct.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\es.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\et.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\eu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fi.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fj.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fo.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\fr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ga.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gb-eng.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gb-nir.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gb-sct.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gb-wls.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gb.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gd.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ge.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gi.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gp.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gq.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gs.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\gy.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\hk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\hm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\hn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\hr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ht.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\hu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\id.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ie.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\il.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\im.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\in.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\io.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\iq.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ir.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\is.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\it.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\je.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\jm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\jo.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\jp.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ke.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ki.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\km.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kp.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ky.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\kz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\la.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lb.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\li.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ls.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\lv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ly.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ma.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\md.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\me.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ml.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mo.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mp.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mq.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ms.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mx.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\my.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\mz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\na.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ne.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ng.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ni.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\no.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\np.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\nz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\om.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pa.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pe.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ph.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ps.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\pw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\py.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\qa.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\re.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ro.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\rs.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ru.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\rw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sa.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sb.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sd.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\se.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sh.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\si.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sj.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\so.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ss.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\st.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sx.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sy.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\sz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\td.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\th.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tj.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tl.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\to.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tr.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tv.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\tz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ua.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ug.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\um.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\un.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\us.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\uy.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\uz.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\va.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\vc.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ve.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\vg.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\vi.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\vn.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\vu.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\wf.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ws.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\xk.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\ye.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\yt.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\za.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\zm.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\flag-icon-css-master\flags\4x3\zw.svg" Target="Scripts\lib\flag-icon-css-master\flags\4x3\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-select-v4.min.css" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\bootstrap-select-v4.min.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\if-b4-breakpoint.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\sweetalert2.all.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="lib\popper.min.js" Target="Scripts\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="dic_th.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib0_global.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib1_listmanagement.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="lib2_services.js" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>

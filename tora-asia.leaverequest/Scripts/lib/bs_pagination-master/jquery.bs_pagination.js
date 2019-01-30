@@ -92,7 +92,40 @@
                     selector_go_to_page, selector_rows_per_page;
 
                 /* CREATE NAV PANEL ----------------------------------------- */
-                if(settings.bootstrap_version == "3") {
+                if(settings.bootstrap_version == "4") {
+                    html += '<div class="' + settings.mainWrapperClass + '">';
+
+                    html += '<div class="' + settings.navListContainerClass + '">';
+                    html += '<div class="' + settings.navListWrapperClass + '">';
+                    html += '<ul id="' + nav_list_id + '" class="' + settings.navListClass + '">';
+                    html += '</ul>';
+                    html += '</div>';
+                    html += '</div>';
+
+                    if(settings.showGoToPage && settings.visiblePageLinks < settings.totalPages) {
+                        html += '<div class="' + settings.navGoToPageContainerClass + '">';
+                        html += '<div class="input-group">';
+                        html += '<span class="input-group-prepend" title="' + rsc_bs_pag.go_to_page_title + '"><span class="input-group-text"><i class="' + settings.navGoToPageIconClass + '"></i></span></span>';
+                        html += '<input id="' + goto_page_id + '" type="text" class="' + settings.navGoToPageClass + '" title="' + rsc_bs_pag.go_to_page_title + '">';
+                        html += '</div>';
+                        html += '</div>';
+                    }
+                    if(settings.showRowsPerPage) {
+                        html += '<div class="' + settings.navRowsPerPageContainerClass + '">';
+                        html += '<div class="input-group">';
+                        html += '<span class="input-group-prepend" title="' + rsc_bs_pag.rows_per_page_title + '"><span class="input-group-text"><i class="' + settings.navRowsPerPageIconClass + '"></i></span></span>';
+                        html += '<input id="' + rows_per_page_id + '" value="' + settings.rowsPerPage + '" type="text" class="' + settings.navRowsPerPageClass + '" title="' + rsc_bs_pag.rows_per_page_title + '">';
+                        html += '</div>';
+                        html += '</div>';
+                    }
+                    if(settings.showRowsInfo) {
+                        html += '<div class="' + settings.navInfoContainerClass + '">';
+                        html += '<div id="' + rows_info_id + '" class="' + settings.navInfoClass + '"></div>';
+                        html += '</div>';
+                    }
+
+                }
+                else if(settings.bootstrap_version == "3") {
                     html += '<div class="' + settings.mainWrapperClass + '">';
 
                     html += '<div class="' + settings.navListContainerClass + '">';
@@ -336,28 +369,30 @@
                 directURL: false, // or a function with current page as argument
                 disableTextSelectionInNavPane: true, // disable text selection and double click
 
-                bootstrap_version: "3",
+                bootstrap_version: "4",
 
                 // bootstrap 3
                 containerClass: "well",
 
                 mainWrapperClass: "row",
 
-                navListContainerClass: "col-xs-12 col-sm-12 col-md-6",
+                navListContainerClass: "col-12 col-sm-12 col-md-6 small",
                 navListWrapperClass: "",
-                navListClass: "pagination pagination_custom",
+                navListClass: "pagination",
+                navListLIClass: "page-item",
+                navListLinkClass: "page-link",
                 navListActiveItemClass: "active",
 
-                navGoToPageContainerClass: "col-xs-6 col-sm-4 col-md-2 row-space",
-                navGoToPageIconClass: "glyphicon glyphicon-arrow-right",
+                navGoToPageContainerClass: "col-6 col-sm-4 col-md-2 row-space",
+                navGoToPageIconClass: "fas fa-long-arrow-alt-right",
                 navGoToPageClass: "form-control small-input",
 
-                navRowsPerPageContainerClass: "col-xs-6 col-sm-4 col-md-2 row-space",
-                navRowsPerPageIconClass: "glyphicon glyphicon-th-list",
+                navRowsPerPageContainerClass: "col-6 col-sm-4 col-md-2 row-space",
+                navRowsPerPageIconClass: "fas fa-th-list",
                 navRowsPerPageClass: "form-control small-input",
 
-                navInfoContainerClass: "col-xs-12 col-sm-4 col-md-2 row-space",
-                navInfoClass: "",
+                navInfoContainerClass: "col-12 col-sm-4 col-md-2 row-space",
+                navInfoClass: "small",
 
                 // element IDs
                 nav_list_id_prefix: "nav_list_",
@@ -489,6 +524,8 @@
                 nav_html = "",
                 nav_start = parseInt(s.currentPage),
                 nav_end,
+                nav_li_class = s.navListLIClass,
+                nav_a_class = s.navListLinkClass,
                 i, mod, offset, totalSections,
                 nav_url = "",
                 no_url = "javascript:void(0);";
@@ -517,21 +554,21 @@
             // show - hide backward nav controls
             if(nav_start > 1) {
                 nav_url = s.directURL ? s.directURL(1) : no_url;
-                nav_html += '<li><a id="' + nav_top_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_top_text + '</a></li>';
+                nav_html += '<li class="'+nav_li_class+'"><a class= "'+nav_a_class+'" id="' + nav_top_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_top_text + '</a></li>';
                 nav_url = s.directURL ? s.directURL(nav_start - 1) : no_url;
-                nav_html += '<li><a id="' + nav_prev_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_prev_text + '</a></li>';
+                nav_html += '<li class="'+nav_li_class+'"><a class= "'+nav_a_class+'" id="' + nav_prev_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_prev_text + '</a></li>';
             }
             // show nav pages
             for(i = nav_start; i <= nav_end; i++) {
                 nav_url = s.directURL ? s.directURL(i) : no_url;
-                nav_html += '<li><a id="' + nav_item_id_prefix + i + '" href="' + nav_url + '">' + i + '</a></li>';
+                nav_html += '<li class="'+nav_li_class+'"><a class= "'+nav_a_class+'" id="' + nav_item_id_prefix + i + '" href="' + nav_url + '">' + i + '</a></li>';
             }
             // show - hide forward nav controls
             if(nav_end < s.totalPages) {
                 nav_url = s.directURL ? s.directURL(nav_end + 1) : no_url;
-                nav_html += '<li><a id="' + nav_next_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_next_text + '</a></li>';
+                nav_html += '<li class="'+nav_li_class+'"><a class= "'+nav_a_class+'" id="' + nav_next_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_next_text + '</a></li>';
                 nav_url = s.directURL ? s.directURL(s.totalPages) : no_url;
-                nav_html += '<li><a id="' + nav_last_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_last_text + '</a></li>';
+                nav_html += '<li class="'+nav_li_class+'"><a class= "'+nav_a_class+'" id="' + nav_last_id + '" href="' + nav_url + '">' + rsc_bs_pag.go_last_text + '</a></li>';
             }
             elem_nav_list.html(nav_html);
 

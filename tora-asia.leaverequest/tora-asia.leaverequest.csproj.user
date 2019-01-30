@@ -2,13 +2,14 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <SharePointSiteUrl>https://toracloud.sharepoint.com/teams/Developers/</SharePointSiteUrl>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{C1CDDADD-2546-481F-9697-4EA41081F2FC}">
         <ProjectStore>
-          <AppInstancePackageModifiedTime>2018-07-23T04:09:57.0156733Z</AppInstancePackageModifiedTime>
-          <AppInstanceId>4fd1c082-749e-4056-9e4a-e1b3d67418b6</AppInstanceId>
+          <AppInstancePackageModifiedTime>2019-01-29T11:58:37.1903359Z</AppInstancePackageModifiedTime>
+          <AppInstanceId>d83bad75-6927-41dc-b09b-aa7a87e2fe20</AppInstanceId>
         </ProjectStore>
       </FlavorProperties>
     </VisualStudio>

@@ -1,4 +1,4 @@
-/*
+﻿/*
 DO NOT CHANGE this file, as it will be overwritten in next update.
 Write your own classes in other css file.
 */
@@ -16,6 +16,7 @@ Write your own classes in other css file.
 
 .small-input {
     width: 50px !important;
+    flex:none!important;
 }
 
 /* bootstrap 3 "sm": Small devices (tablets, 768px and up) */

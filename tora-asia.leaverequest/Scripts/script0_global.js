@@ -48,3 +48,31 @@ function datawithpaging(options){
     }, this);
 
 }
+var gswalText = {
+    setting: {
+        confirmsave: "Are you sure to Save Date?",
+        savesuccess: "Save Success"
+    },
+    newleave: {
+        confirmsave: "Are you sure to Save Date?",
+        alertcantyesterday: "ไม่สามารถเลือกวันลาย้อนหลังได้",
+        maxleave: "จำนวนวันลาเกิน สามารถลาได้สูงสุด {0} วัน",
+        managernotfound: "Manager Not Found",
+        checksubmitsion: "Please check your submission.",
+        savesuccess: "Save Success"
+    },
+    admin: {
+        createlist: "Are you sure to create Lists?",
+        createlistsuccess: "Create List Success",
+        activatefeature: "Are you sure to Activate Feature?",
+        activatefeaturesuccess: "Activate Feature Success",
+        clonewf: "Are you sure to update/clone Workflow?",
+        clonewfsuccess: "Clone/Update Workflow Success",
+        mapwf: "Are you sure to mapping Workflow?",
+        mapwfsuccess: "Add workflow to List Success",
+        deletelist: "Are you sure to delete Lists?",
+    }
+
+}
+var gleavedic = {};
+$.extend(gleavedic, dic_lang_th);

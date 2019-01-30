@@ -1,22 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Scripts">
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap-theme.css" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.css" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap-theme.css.map" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.css.map" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap-theme.min.css" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap-theme.min.css.map" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css.map" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap.css" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap.css" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap.css.map" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap.css.map" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap.min.css" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\css\bootstrap.min.css.map" Url="Scripts/lib/bootstrap-3.3.6-dist/css/bootstrap.min.css.map" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.eot" Url="Scripts/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.eot" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.svg" Url="Scripts/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.svg" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.ttf" Url="Scripts/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.ttf" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff" Url="Scripts/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\fonts\glyphicons-halflings-regular.woff2" Url="Scripts/lib/bootstrap-3.3.6-dist/fonts/glyphicons-halflings-regular.woff2" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\js\bootstrap.js" Url="Scripts/lib/bootstrap-3.3.6-dist/js/bootstrap.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\js\bootstrap.min.js" Url="Scripts/lib/bootstrap-3.3.6-dist/js/bootstrap.min.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\lib\bootstrap-3.3.6-dist\js\npm.js" Url="Scripts/lib/bootstrap-3.3.6-dist/js/npm.js" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\bs_pagination-master\jquery.bs_pagination.bs2.css" Url="Scripts/lib/bs_pagination-master/jquery.bs_pagination.bs2.css" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\bs_pagination-master\jquery.bs_pagination.bs2.min.css" Url="Scripts/lib/bs_pagination-master/jquery.bs_pagination.bs2.min.css" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\bs_pagination-master\jquery.bs_pagination.css" Url="Scripts/lib/bs_pagination-master/jquery.bs_pagination.css" ReplaceContent="TRUE" />
@@ -70,7 +54,6 @@
     <File Path="Scripts\lib\SharePointClient.js" Url="Scripts/lib/SharePointClient.js" ReplaceContent="TRUE" />
     <File Path="Scripts\knockout-custom.js" Url="Scripts/knockout-custom.js" ReplaceContent="TRUE" />
     <File Path="Scripts\ready.js" Url="Scripts/ready.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\script0_global.js" Url="Scripts/script0_global.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script1_New.js" Url="Scripts/script1_New.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script2_Home.js" Url="Scripts/script2_Home.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script3_History.js" Url="Scripts/script3_History.js" ReplaceContent="TRUE" />
@@ -78,10 +61,614 @@
     <File Path="Scripts\script5_Tasks.js" Url="Scripts/script5_Tasks.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script6_Setting.js" Url="Scripts/script6_Setting.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script7_BeginSetting.js" Url="Scripts/script7_BeginSetting.js" ReplaceContent="TRUE" />
-    <File Path="Scripts\tora-setup.js" Url="Scripts/tora-setup.js" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\moment-weekday-calc.js" Url="Scripts/lib/moment-weekday-calc.js" ReplaceContent="TRUE" />
     <File Path="Scripts\script8_myleaveremain.js" Url="Scripts/script8_myleaveremain.js" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\moment-range.js" Url="Scripts/lib/moment-range.js" ReplaceContent="TRUE" />
     <File Path="Scripts\lib\moment-range-v0.1.7.js" Url="Scripts/lib/moment-range-v0.1.7.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\boostrap4-datetimepicker\bootstrap-datetimepicker.css" Url="Scripts/lib/boostrap4-datetimepicker/bootstrap-datetimepicker.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\boostrap4-datetimepicker\bootstrap-datetimepicker.min.css" Url="Scripts/lib/boostrap4-datetimepicker/bootstrap-datetimepicker.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\boostrap4-datetimepicker\bootstrap-datetimepicker.min.js" Url="Scripts/lib/boostrap4-datetimepicker/bootstrap-datetimepicker.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-grid.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-grid.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-grid.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-grid.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-grid.min.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-grid.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-grid.min.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-grid.min.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-reboot.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-reboot.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.min.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-reboot.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap-reboot.min.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap-reboot.min.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap.min.css" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\css\bootstrap.min.css.map" Url="Scripts/lib/bootstrap-4.1.0-dist/css/bootstrap.min.css.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.js" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.bundle.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.js.map" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.bundle.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.min.js" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.bundle.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.bundle.min.js.map" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.bundle.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.js" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.js.map" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.min.js" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-4.1.0-dist\js\bootstrap.min.js.map" Url="Scripts/lib/bootstrap-4.1.0-dist/js/bootstrap.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-brands.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-brands.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-brands.min.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-brands.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-regular.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-regular.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-regular.min.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-regular.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-solid.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-solid.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fa-solid.min.css" Url="Scripts/lib/fontawesome 5.0.13/css/fa-solid.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fontawesome-all.css" Url="Scripts/lib/fontawesome 5.0.13/css/fontawesome-all.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fontawesome-all.min.css" Url="Scripts/lib/fontawesome 5.0.13/css/fontawesome-all.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fontawesome.css" Url="Scripts/lib/fontawesome 5.0.13/css/fontawesome.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\css\fontawesome.min.css" Url="Scripts/lib/fontawesome 5.0.13/css/fontawesome.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_animated.less" Url="Scripts/lib/fontawesome 5.0.13/less/_animated.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_bordered-pulled.less" Url="Scripts/lib/fontawesome 5.0.13/less/_bordered-pulled.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_core.less" Url="Scripts/lib/fontawesome 5.0.13/less/_core.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_fixed-width.less" Url="Scripts/lib/fontawesome 5.0.13/less/_fixed-width.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_icons.less" Url="Scripts/lib/fontawesome 5.0.13/less/_icons.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_larger.less" Url="Scripts/lib/fontawesome 5.0.13/less/_larger.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_list.less" Url="Scripts/lib/fontawesome 5.0.13/less/_list.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_mixins.less" Url="Scripts/lib/fontawesome 5.0.13/less/_mixins.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_rotated-flipped.less" Url="Scripts/lib/fontawesome 5.0.13/less/_rotated-flipped.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_screen-reader.less" Url="Scripts/lib/fontawesome 5.0.13/less/_screen-reader.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_stacked.less" Url="Scripts/lib/fontawesome 5.0.13/less/_stacked.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\_variables.less" Url="Scripts/lib/fontawesome 5.0.13/less/_variables.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\fa-brands.less" Url="Scripts/lib/fontawesome 5.0.13/less/fa-brands.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\fa-regular.less" Url="Scripts/lib/fontawesome 5.0.13/less/fa-regular.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\fa-solid.less" Url="Scripts/lib/fontawesome 5.0.13/less/fa-solid.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\less\fontawesome.less" Url="Scripts/lib/fontawesome 5.0.13/less/fontawesome.less" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_animated.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_animated.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_bordered-pulled.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_bordered-pulled.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_core.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_core.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_fixed-width.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_fixed-width.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_icons.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_icons.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_larger.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_larger.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_list.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_list.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_mixins.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_mixins.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_rotated-flipped.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_rotated-flipped.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_screen-reader.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_screen-reader.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_stacked.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_stacked.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\_variables.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/_variables.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\fa-brands.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/fa-brands.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\fa-regular.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/fa-regular.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\fa-solid.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/fa-solid.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\scss\fontawesome.scss" Url="Scripts/lib/fontawesome 5.0.13/scss/fontawesome.scss" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-brands-400.eot" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-brands-400.eot" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-brands-400.svg" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-brands-400.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-brands-400.ttf" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-brands-400.ttf" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-brands-400.woff" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-brands-400.woff" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-brands-400.woff2" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-brands-400.woff2" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-regular-400.eot" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-regular-400.eot" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-regular-400.svg" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-regular-400.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-regular-400.ttf" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-regular-400.ttf" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-regular-400.woff" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-regular-400.woff" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-regular-400.woff2" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-regular-400.woff2" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-solid-900.eot" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-solid-900.eot" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-solid-900.svg" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-solid-900.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-solid-900.ttf" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-solid-900.ttf" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-solid-900.woff" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-solid-900.woff" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\fontawesome 5.0.13\webfonts\fa-solid-900.woff2" Url="Scripts/lib/fontawesome 5.0.13/webfonts/fa-solid-900.woff2" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\css\flag-icon.css" Url="Scripts/lib/flag-icon-css-master/css/flag-icon.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\css\flag-icon.min.css" Url="Scripts/lib/flag-icon-css-master/css/flag-icon.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ad.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ad.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ae.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ae.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\af.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/af.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ag.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ag.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ai.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ai.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\al.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/al.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\am.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/am.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ao.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ao.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\aq.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/aq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ar.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ar.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\as.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/as.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\at.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/at.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\au.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/au.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\aw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/aw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ax.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ax.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\az.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/az.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ba.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ba.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bb.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bd.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\be.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/be.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bi.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bj.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bo.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bq.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\br.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/br.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bs.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\by.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/by.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\bz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/bz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ca.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ca.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cd.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ch.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ch.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ci.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ci.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ck.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ck.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\co.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/co.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cx.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cy.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\cz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/cz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\de.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/de.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\dj.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/dj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\dk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/dk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\dm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/dm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\do.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/do.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\dz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/dz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ec.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ec.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ee.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ee.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\eg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/eg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\eh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/eh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\er.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/er.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\es-ct.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/es-ct.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\es.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/es.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\et.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/et.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\eu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/eu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fi.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fj.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fo.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\fr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/fr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ga.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ga.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gb-eng.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gb-eng.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gb-nir.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gb-nir.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gb-sct.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gb-sct.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gb-wls.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gb-wls.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gb.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gd.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ge.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ge.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gi.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gp.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gq.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gs.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\gy.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/gy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\hk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/hk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\hm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/hm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\hn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/hn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\hr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/hr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ht.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ht.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\hu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/hu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\id.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/id.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ie.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ie.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\il.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/il.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\im.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/im.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\in.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/in.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\io.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/io.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\iq.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/iq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ir.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ir.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\is.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/is.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\it.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/it.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\je.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/je.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\jm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/jm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\jo.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/jo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\jp.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/jp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ke.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ke.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ki.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ki.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\km.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/km.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kp.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ky.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ky.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\kz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/kz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\la.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/la.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lb.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\li.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/li.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ls.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ls.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\lv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/lv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ly.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ly.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ma.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ma.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\md.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/md.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\me.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/me.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ml.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ml.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mo.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mp.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mq.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ms.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ms.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mx.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\my.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/my.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\mz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/mz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\na.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/na.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ne.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ne.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ng.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ng.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ni.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ni.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\no.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/no.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\np.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/np.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\nz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/nz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\om.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/om.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pa.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pe.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pe.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ph.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ph.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ps.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ps.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\pw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/pw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\py.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/py.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\qa.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/qa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\re.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/re.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ro.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ro.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\rs.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/rs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ru.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ru.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\rw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/rw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sa.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sb.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sd.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\se.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/se.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sh.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\si.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/si.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sj.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\so.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/so.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ss.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ss.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\st.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/st.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sx.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sy.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\sz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/sz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\td.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/td.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\th.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/th.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tj.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tl.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\to.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/to.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tr.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tv.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\tz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/tz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ua.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ua.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ug.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ug.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\um.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/um.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\un.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/un.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\us.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/us.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\uy.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/uy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\uz.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/uz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\va.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/va.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\vc.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/vc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ve.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ve.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\vg.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/vg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\vi.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/vi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\vn.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/vn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\vu.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/vu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\wf.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/wf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ws.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ws.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\xk.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/xk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\ye.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/ye.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\yt.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/yt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\za.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/za.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\zm.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/zm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\1x1\zw.svg" Url="Scripts/lib/flag-icon-css-master/flags/1x1/zw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ad.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ad.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ae.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ae.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\af.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/af.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ag.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ag.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ai.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ai.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\al.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/al.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\am.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/am.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ao.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ao.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\aq.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/aq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ar.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ar.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\as.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/as.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\at.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/at.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\au.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/au.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\aw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/aw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ax.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ax.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\az.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/az.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ba.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ba.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bb.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bd.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\be.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/be.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bi.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bj.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bo.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bq.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\br.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/br.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bs.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\by.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/by.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\bz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/bz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ca.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ca.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cd.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ch.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ch.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ci.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ci.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ck.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ck.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\co.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/co.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cx.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cy.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\cz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/cz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\de.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/de.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\dj.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/dj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\dk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/dk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\dm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/dm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\do.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/do.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\dz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/dz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ec.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ec.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ee.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ee.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\eg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/eg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\eh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/eh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\er.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/er.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\es-ct.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/es-ct.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\es.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/es.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\et.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/et.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\eu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/eu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fi.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fj.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fo.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\fr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/fr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ga.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ga.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gb-eng.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gb-eng.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gb-nir.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gb-nir.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gb-sct.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gb-sct.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gb-wls.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gb-wls.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gb.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gd.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ge.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ge.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gi.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gp.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gq.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gs.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\gy.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/gy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\hk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/hk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\hm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/hm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\hn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/hn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\hr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/hr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ht.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ht.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\hu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/hu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\id.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/id.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ie.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ie.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\il.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/il.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\im.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/im.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\in.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/in.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\io.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/io.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\iq.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/iq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ir.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ir.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\is.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/is.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\it.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/it.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\je.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/je.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\jm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/jm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\jo.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/jo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\jp.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/jp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ke.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ke.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ki.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ki.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\km.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/km.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kp.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ky.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ky.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\kz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/kz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\la.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/la.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lb.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\li.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/li.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ls.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ls.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\lv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/lv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ly.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ly.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ma.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ma.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\md.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/md.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\me.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/me.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ml.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ml.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mo.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mo.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mp.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mp.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mq.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mq.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ms.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ms.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mx.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\my.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/my.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\mz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/mz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\na.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/na.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ne.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ne.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ng.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ng.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ni.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ni.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\no.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/no.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\np.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/np.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\nz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/nz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\om.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/om.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pa.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pe.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pe.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ph.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ph.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ps.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ps.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\pw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/pw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\py.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/py.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\qa.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/qa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\re.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/re.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ro.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ro.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\rs.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/rs.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ru.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ru.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\rw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/rw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sa.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sa.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sb.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sb.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sd.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sd.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\se.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/se.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sh.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sh.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\si.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/si.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sj.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\so.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/so.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ss.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ss.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\st.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/st.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sx.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sx.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sy.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\sz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/sz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\td.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/td.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\th.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/th.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tj.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tj.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tl.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tl.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\to.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/to.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tr.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tr.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tv.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tv.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\tz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/tz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ua.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ua.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ug.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ug.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\um.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/um.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\un.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/un.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\us.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/us.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\uy.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/uy.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\uz.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/uz.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\va.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/va.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\vc.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/vc.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ve.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ve.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\vg.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/vg.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\vi.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/vi.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\vn.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/vn.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\vu.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/vu.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\wf.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/wf.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ws.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ws.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\xk.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/xk.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\ye.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/ye.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\yt.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/yt.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\za.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/za.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\zm.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/zm.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\flag-icon-css-master\flags\4x3\zw.svg" Url="Scripts/lib/flag-icon-css-master/flags/4x3/zw.svg" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-select-v4.min.css" Url="Scripts/lib/bootstrap-select-v4.min.css" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\bootstrap-select-v4.min.js" Url="Scripts/lib/bootstrap-select-v4.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\if-b4-breakpoint.js" Url="Scripts/lib/if-b4-breakpoint.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\sweetalert2.all.js" Url="Scripts/lib/sweetalert2.all.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib\popper.min.js" Url="Scripts/lib/popper.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\dic_th.js" Url="Scripts/dic_th.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib0_global.js" Url="Scripts/lib0_global.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib1_listmanagement.js" Url="Scripts/lib1_listmanagement.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\lib2_services.js" Url="Scripts/lib2_services.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

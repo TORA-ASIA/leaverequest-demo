@@ -256,15 +256,15 @@ var SharePointClient = SharePointClient || {};
                 case "sp.requestexecutor.js": if (SP.RequestInfo) { return true; } else { return false; }
                     break;
                 case "sp.workflowservices.js": if (SP.WorkflowServices) { return true; } else { return false; }
-                    break;
+                	break;
                 case "clientforms.js": if (SP.ClientForms) { return true; } else { return false; }
-                    break;
+                	break;
                 case "autofill.js": if (SP.ClientAutoFill) { return true; } else { return false; }
-                    break;
+                	break;
                 case "clienttemplates.js": if (SP.ClientTemplates) { return true; } else { return false; }
-                    break;
-                case "clientpeoplepicker.js": if (SP.ClientPeoplePicker) { return true; } else { return false; }
-                    break;
+                	break;
+				case "clientpeoplepicker.js": if (SP.ClientPeoplePicker) { return true; } else { return false; }
+                	break;
                 default: return false;
             }
         };
@@ -620,15 +620,15 @@ var SharePointClient = SharePointClient || {};
 
                     return this;
                 };
-                var orderByMe = function (orderby) {
+			 var orderByMe = function (orderby) {
                     ///<summary>
                     /// This method will override the order by with default ID field sortng order by Descending.
                     ///</summary>
                     /// <returns type="Object">Current class instance</returns>
-                    queryStatement.OrderBy = orderby;
+                    queryStatement.OrderBy =orderby;
                     return this;
                 };
-
+		
                 var rowLimit = function (numberOfRecords) {
                     ///<summary>
                     /// This method will set the row limit.
@@ -646,11 +646,11 @@ var SharePointClient = SharePointClient || {};
                     /// This method will override the order by with default ID field sortng order by Descending.
                     ///</summary>
                     /// <returns type="Object">Current class instance</returns>
-                    queryStatement.FolderServerRelativeUrl = folderurl;
+                    queryStatement.FolderServerRelativeUrl=folderurl;
                     return this;
                 };
 
-
+			
                 var buildCamlQuery = function () {
                     ///<summary>
                     /// This method will build the vewXml.
@@ -738,9 +738,9 @@ var SharePointClient = SharePointClient || {};
                     OverrideOrderByIndex: orderByIndex,
                     OverrideOrderBy: orderBy,
                     OverrideOrderByDesc: orderByDesc,
-                    OverrideOrderByMe: orderByMe,
+                    OverrideOrderByMe: orderByMe ,
                     SetRowLimit: rowLimit,
-                    SetFolderServerRelativeUrl: folderRelativeUrl,
+                    SetFolderServerRelativeUrl: folderRelativeUrl ,
                     BuildQuery: buildCamlQuery,
                     GetQueryViewXml: get_viewXml
                 };
@@ -887,7 +887,7 @@ var SharePointClient = SharePointClient || {};
             /// This method will override the order by with default ID field sortng order by Descending.
             ///</summary>
             /// <returns type="Object">Current class instance</returns>
-            this.queryStatement.OrderBy = orderby;
+            this.queryStatement.OrderBy =orderby;
             return this;
         },
 
@@ -900,13 +900,13 @@ var SharePointClient = SharePointClient || {};
             this.queryStatement.RowLimit = numberOfRecords;
             return this;
         },
-
-        FolderServerRelativeUrl: function (urlfol) {
+        
+         FolderServerRelativeUrl: function (urlfol) {
             ///<summary>
             /// This method will set the row limit.
             ///</summary>
             /// <returns type="Object">Current class instance</returns>
-            this.queryStatement.FolderServerRelativeUrl = urlfol;
+            this.queryStatement.FolderServerRelativeUrl= urlfol;
             return this;
         },
 
@@ -956,7 +956,7 @@ var SharePointClient = SharePointClient || {};
             var orderBy = this.queryStatement.OrderBy;
             if (orderBy) {
                 orderByElement = camlUtility.ConvertToCamlSchema("OrderBy", orderBy);
-                //console.log(orderBy);
+			//console.log(orderBy);
                 //Append to Query object
                 if (queryElement.length === 0) {
                     queryElement += "<Query>";
@@ -971,25 +971,25 @@ var SharePointClient = SharePointClient || {};
                 }
 
             }
-            //console.log(queryElement );
+		 //console.log(queryElement );
             //RowLimit element
             var rowlimit = this.queryStatement.RowLimit;
             if (rowlimit) {
                 rowLimit = camlUtility.ConvertToCamlSchema("RowLimit", rowlimit);
             }
-            //console.log(queryElement );
+		 //console.log(queryElement );
             viewRootElement += queryElement + viewFieldsElement + queryOptionsElement + rowLimit + "</View>";
-
-            //console.log(viewRootElement);
+		
+		 //console.log(viewRootElement);
             this.set_viewXml(viewRootElement);
-
-            //Query element if exists
+		 
+		  //Query element if exists
             var rootfolder = this.queryStatement.FolderServerRelativeUrl;
-            if (rootfolder) {
-                this.set_folderServerRelativeUrl(rootfolder);
+            if (rootfolder ) {
+                this.set_folderServerRelativeUrl(rootfolder );   
             }
-
-
+	
+	
             return this;
         },
     };
@@ -1040,7 +1040,7 @@ var SharePointClient = SharePointClient || {};
             return {
                 Execute: execute,
                 OnSuccess: function (result) { return successFunction(result); },
-                OnError: function () { return errorFunction; }
+                OnError: function (args) { return errorFunction(args); }
             };
         },
         //#endregion
@@ -1058,8 +1058,8 @@ var SharePointClient = SharePointClient || {};
                 var config = SharePointClient.Configurations;
                 var baseUrl = utility.JSOM.GetBaseUrl();
 
-                var jsFiles = ["SP.Runtime.js", "SP.js", "sp.workflowservices.js", "clientforms.js"
-                				, "autofill.js", "clientpeoplepicker.js", "clienttemplates.js"];
+                var jsFiles = ["SP.Runtime.js", "SP.js","sp.workflowservices.js","clientforms.js"
+                				,"autofill.js","clientpeoplepicker.js","clienttemplates.js"];
 
                 if (config.IsCrossDomainRequest) {
                     //load SP.RequestExecutor if not mentioned in js Array
@@ -1278,6 +1278,8 @@ var SharePointClient = SharePointClient || {};
 
                             run.OnSuccess(itemsCollection);
                         }
+                    }, function () {
+                        run.OnError();
                     });
 
                     return run;
@@ -1331,6 +1333,7 @@ var SharePointClient = SharePointClient || {};
                                 }
                             },
                             function (sender, args) {
+                                run.OnError(args);
                                 SharePointClient.Logger.LogJSOMException(args);
                             });
                 };
@@ -1366,457 +1369,461 @@ var SharePointClient = SharePointClient || {};
         //#endregion
 
         //#region REST service
-        REST: {
-            RESTService: function () {
-                ///<summary>
-                /// REST service class.
-                ///</summary>
+        //REST: {
+        //    RESTService: function () {
+        //        ///<summary>
+        //        /// REST service class.
+        //        ///</summary>
 
-                $.support.cors = true;
+        //        $.support.cors = true;
 
-                var ajax = {
-                    //#region Ajax call without Request digest
-                    call: function (url, type, data, responseType, requireStringify) {
-                        ///<summary>
-                        /// Ajax call.
-                        ///</summary>
-                        /// <param name="url" type="String">Url of service.</param>
-                        /// <param name="type" type="String">Request type.</param>
-                        /// <param name="data" type="Object">Request data.</param>
-                        /// <param name="responseType" type="String">Response type.</param>
-                        /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
-                        /// <returns type="Object">response</returns>
-                        var call = $.ajax({
-                            url: url,
-                            type: type,
-                            contentType: responseType,
-                            data: stringify(data, requireStringify),
-                            headers: getHeaders(responseType)
-                        });
-                        return (call.then(success, error));
-                    }
-                    //#endregion
-                };
+        //        var ajax = {
+        //            //#region Ajax call without Request digest
+        //            call: function (url, type, data, responseType, requireStringify) {
+        //                ///<summary>
+        //                /// Ajax call.
+        //                ///</summary>
+        //                /// <param name="url" type="String">Url of service.</param>
+        //                /// <param name="type" type="String">Request type.</param>
+        //                /// <param name="data" type="Object">Request data.</param>
+        //                /// <param name="responseType" type="String">Response type.</param>
+        //                /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
+        //                /// <returns type="Object">response</returns>
+        //                var call = $.ajax({
+        //                    url: url,
+        //                    type: type,
+        //                    contentType: responseType,
+        //                    data: stringify(data, requireStringify),
+        //                    headers: getHeaders(responseType)
+        //                });
+        //                return (call.then(success, error));
+        //            }
+        //            //#endregion
+        //        };
 
-                var ajaxWithFormDigest = {
-                    //#region Ajax call with Request digest value
-                    call: function (url, type, data, digestValue, responseType, requireStringify) {
-                        ///<summary>
-                        /// Ajax call.
-                        ///</summary>
-                        /// <param name="url" type="String">Url of service.</param>
-                        /// <param name="type" type="String">Request type.</param>
-                        /// <param name="data" type="Object">Request data.</param>
-                        /// <param name="digestValue" type="String">Page Digest value for SharePoint.</param>
-                        /// <param name="responseType" type="String">Response type.</param>
-                        /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
-                        /// <returns type="Object">response</returns>
-                        var call = $.ajax({
-                            url: url,
-                            type: type,
-                            data: stringify(data, requireStringify),
-                            headers: getHeadersWithDigest(responseType, digestValue)
-                        });
-                        return (call.then(success, error));
-                    }
-                    //#endregion
-                };
+        //        var ajaxWithFormDigest = {
+        //            //#region Ajax call with Request digest value
+        //            call: function (url, type, data, digestValue, responseType, requireStringify) {
+        //                ///<summary>
+        //                /// Ajax call.
+        //                ///</summary>
+        //                /// <param name="url" type="String">Url of service.</param>
+        //                /// <param name="type" type="String">Request type.</param>
+        //                /// <param name="data" type="Object">Request data.</param>
+        //                /// <param name="digestValue" type="String">Page Digest value for SharePoint.</param>
+        //                /// <param name="responseType" type="String">Response type.</param>
+        //                /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
+        //                /// <returns type="Object">response</returns>
+        //                var call = $.ajax({
+        //                    url: url,
+        //                    type: type,
+        //                    data: stringify(data, requireStringify),
+        //                    headers: getHeadersWithDigest(responseType, digestValue)
+        //                });
+        //                return (call.then(success, error));
+        //            }
+        //            //#endregion
+        //        };
 
-                var crossDomainRequest = {
-                    //#region CrossDomain Request
-                    call: function (url, type, data, responseType, requireStringify) {
-                        ///<summary>
-                        /// Ajax call.
-                        ///</summary>
-                        /// <param name="url" type="String">Url of service.</param>
-                        /// <param name="type" type="String">Request type.</param>
-                        /// <param name="data" type="Object">Request data.</param>
-                        /// <param name="responseType" type="String">Response type.</param>
-                        /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
-                        /// <returns type="Object">response</returns>
-                        var dfd = jQuery.Deferred();
-                        var utility = new SharePointClient.Utilities.Utility();
-                        var executor = new SP.RequestExecutor(utility.GetQueryStringParameter("SPAppWebUrl"));
-                        var requestUrl = utility.REST.GetCrossDomainRequestUrl(url);
-                        var call = executor.executeAsync({
-                            url: requestUrl,
-                            method: type,
-                            headers: {
-                                "Accept": responseType,
-                                "Content-Type": SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON
-                            },
-                            body: JSON.stringify(data),
-                            success: function (data) {
-                                dfd.resolve(data.body);
-                            },
-                            error: function (data, errorCode, errorMessage) {
-                                dfd.reject(errorMessage);
-                            }
-                        });
+        //        var crossDomainRequest = {
+        //            //#region CrossDomain Request
+        //            call: function (url, type, data, responseType, requireStringify) {
+        //                ///<summary>
+        //                /// Ajax call.
+        //                ///</summary>
+        //                /// <param name="url" type="String">Url of service.</param>
+        //                /// <param name="type" type="String">Request type.</param>
+        //                /// <param name="data" type="Object">Request data.</param>
+        //                /// <param name="responseType" type="String">Response type.</param>
+        //                /// <param name="requireStringify" type="Boolean">Stringify request data or not.</param>
+        //                /// <returns type="Object">response</returns>
+        //                var dfd = jQuery.Deferred();
+        //                var utility = new SharePointClient.Utilities.Utility();
+        //                var executor = new SP.RequestExecutor(utility.GetQueryStringParameter("SPAppWebUrl"));
+        //                var requestUrl = utility.REST.GetCrossDomainRequestUrl(url);
+        //                var call = executor.executeAsync({
+        //                    url: requestUrl,
+        //                    method: type,
+        //                    headers: {
+        //                        "Accept": responseType,
+        //                        "Content-Type": SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON
+        //                    },
+        //                    body: JSON.stringify(data),
+        //                    success: function (data) {
+        //                        dfd.resolve(data.body);
+        //                    },
+        //                    error: function (data, errorCode, errorMessage) {
+        //                        dfd.reject(errorMessage);
+        //                    }
+        //                });
 
-                        return dfd.promise();
-                    }
-                    //#endregion
-                };
+        //                return dfd.promise();
+        //            }
+        //            //#endregion
+        //        };
 
-                var stringify = function (data, requireStringify) {
-                    ///<summary>
-                    /// Convert JSON format of request data.
-                    ///</summary>
-                    /// <param name="data" type="Object">Request data.</param>
-                    /// <param name="requireStringify" type="Boolean">TRUE for JSON stringify, FALSE for not converting.</param>
-                    /// <returns type="Object">Request data</returns>
-                    if (requireStringify) {
-                        return JSON.stringify(data);
-                    }
-                    else {
-                        return data;
-                    }
-                };
+        //        var stringify = function (data, requireStringify) {
+        //            ///<summary>
+        //            /// Convert JSON format of request data.
+        //            ///</summary>
+        //            /// <param name="data" type="Object">Request data.</param>
+        //            /// <param name="requireStringify" type="Boolean">TRUE for JSON stringify, FALSE for not converting.</param>
+        //            /// <returns type="Object">Request data</returns>
+        //            if (requireStringify) {
+        //                return JSON.stringify(data);
+        //            }
+        //            else {
+        //                return data;
+        //            }
+        //        };
 
-                var getHeaders = function (responseType) {
-                    ///<summary>
-                    /// Construct request headers.
-                    ///</summary>
-                    /// <param name="responseType" type="String">Response type.</param>
-                    /// <returns type="Object">Request Headers object</returns>
-                    var headers = {
-                        "Accept": responseType
-                    };
+        //        var getHeaders = function (responseType) {
+        //            ///<summary>
+        //            /// Construct request headers.
+        //            ///</summary>
+        //            /// <param name="responseType" type="String">Response type.</param>
+        //            /// <returns type="Object">Request Headers object</returns>
+        //            var headers = {
+        //                "Accept": responseType
+        //            };
 
-                    if (SharePointClient.Configurations.AccessToken) {
-                        headers.Authorization = "Bearer " + SharePointClient.Configurations.AccessToken;
-                    }
+        //            if (SharePointClient.Configurations.AccessToken) {
+        //                headers.Authorization = "Bearer " + SharePointClient.Configurations.AccessToken;
+        //            }
 
-                    return headers;
-                };
+        //            return headers;
+        //        };
 
-                var getHeadersWithDigest = function (responseType, digestValue) {
-                    ///<summary>
-                    /// Construct request headers with requet digest value.
-                    ///</summary>
-                    /// <param name="responseType" type="String">Response type.</param>
-                    /// <param name="digestValue" type="String">Digest value for SharePoint.</param>
-                    /// <returns type="Object">Request Headers object</returns>
-                    var headers = {
-                        "Accept": responseType,
-                        "X-RequestDigest": digestValue,
-                        "Content-Type": SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON,
-                    };
+        //        var getHeadersWithDigest = function (responseType, digestValue) {
+        //            ///<summary>
+        //            /// Construct request headers with requet digest value.
+        //            ///</summary>
+        //            /// <param name="responseType" type="String">Response type.</param>
+        //            /// <param name="digestValue" type="String">Digest value for SharePoint.</param>
+        //            /// <returns type="Object">Request Headers object</returns>
+        //            var headers = {
+        //                "Accept": responseType,
+        //                "X-RequestDigest": digestValue,
+        //                "Content-Type": SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON,
+        //            };
 
-                    if (SharePointClient.Configurations.AccessToken) {
-                        headers.Authorization = "Bearer " + SharePointClient.Configurations.AccessToken;
-                    }
+        //            if (SharePointClient.Configurations.AccessToken) {
+        //                headers.Authorization = "Bearer " + SharePointClient.Configurations.AccessToken;
+        //            }
 
-                    return headers;
-                };
+        //            return headers;
+        //        };
 
-                var success = function (data) {
-                    ///<summary>
-                    /// Success Event handler for Asynchronous calls.
-                    ///</summary>
-                    /// <param name="data" type="Object">Response.</param>
-                    /// <returns type="Object">Response data</returns>
-                    return data;
-                };
+        //        var success = function (data) {
+        //            ///<summary>
+        //            /// Success Event handler for Asynchronous calls.
+        //            ///</summary>
+        //            /// <param name="data" type="Object">Response.</param>
+        //            /// <returns type="Object">Response data</returns>
+        //            return data;
+        //        };
 
-                var error = function (xhr, errorType, exception) {
-                    ///<summary>
-                    /// Error Event handler for Asynchronous calls.
-                    ///</summary>
-                    /// <param name="xhr" type="Object">Response related object for Error details.</param>
-                    /// <param name="errorType" type="String">Type of exception.</param>
-                    /// <param name="exception" type="String">Exception message.</param>
-                    SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
-                };
+        //        var error = function (xhr, errorType, exception) {
+        //            ///<summary>
+        //            /// Error Event handler for Asynchronous calls.
+        //            ///</summary>
+        //            /// <param name="xhr" type="Object">Response related object for Error details.</param>
+        //            /// <param name="errorType" type="String">Type of exception.</param>
+        //            /// <param name="exception" type="String">Exception message.</param>
+        //            SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
+        //        };
 
-                return {
-                    Request: ajax.call,
-                    RequestWithDigest: ajaxWithFormDigest.call,
-                    RequestCrossDomain: crossDomainRequest.call
-                };
-            },
+        //        return {
+        //            Request: ajax.call,
+        //            RequestWithDigest: ajaxWithFormDigest.call,
+        //            RequestCrossDomain: crossDomainRequest.call
+        //        };
+        //    },
 
-            ListServices: function () {
-                ///<summary>
-                /// SharePoint REST ListServices.
-                ///</summary>
+        //    ListServices: function () {
+        //        ///<summary>
+        //        /// SharePoint REST ListServices.
+        //        ///</summary>
 
-                var utility = new SharePointClient.Utilities.Utility();
-                var constants = SharePointClient.Constants.REST;
-                var Service = SharePointClient.Services.REST.RESTService();
+        //        var utility = new SharePointClient.Utilities.Utility();
+        //        var constants = SharePointClient.Constants.REST;
+        //        var Service = SharePointClient.Services.REST.RESTService();
 
-                var lists = function (responseType) {
-                    ///<summary>
-                    /// Get the lists collection.
-                    ///</summary>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">Lists collection data</returns>
-                    var run = new SharePointClient.Services.ClientRun();
-                    var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS;
+        //        var lists = function (responseType) {
+        //            ///<summary>
+        //            /// Get the lists collection.
+        //            ///</summary>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">Lists collection data</returns>
+        //            var run = new SharePointClient.Services.ClientRun();
+        //            var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS;
 
-                    Service.Request(RequestUrl, constants.HTTP.GET, null, responseType, false).then(
-                        function (result) {
-                            run.OnSuccess(result);
-                        });
+        //            Service.Request(RequestUrl, constants.HTTP.GET, null, responseType, false).then(
+        //                function (result) {
+        //                    run.OnSuccess(result);
+        //                });
 
-                    return run;
-                };
+        //            return run;
+        //        };
 
-                var listByTitle = function (listTitle, responseType) {
-                    ///<summary>
-                    /// Get the list by title.
-                    ///</summary>
-                    /// <param name="listTitle" type="String">List Name.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">List</returns>
-                    var run = new SharePointClient.Services.ClientRun();
-                    var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')";
+        //        var listByTitle = function (listTitle, responseType) {
+        //            ///<summary>
+        //            /// Get the list by title.
+        //            ///</summary>
+        //            /// <param name="listTitle" type="String">List Name.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">List</returns>
+        //            var run = new SharePointClient.Services.ClientRun();
+        //            var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')";
 
-                    Service.Request(RequestUrl, constants.HTTP.GET, null, responseType, false).then(
-                        function (result) {
-                            run.OnSuccess(result);
-                        });
+        //            Service.Request(RequestUrl, constants.HTTP.GET, null, responseType, false).then(
+        //                function (result) {
+        //                    run.OnSuccess(result);
+        //                });
 
-                    return run;
-                };
+        //            return run;
+        //        };
 
-                var executeCrossDomainRequest = function (requestUrl, requestType, requestData, responseType, run) {
-                    ///<summary>
-                    /// This is the delegate request for cross domain which is called recursively when more items to be fetched in batch.
-                    ///</summary>
-                    /// <param name="requestUrl" type="String">Request Url.</param>
-                    /// <param name="requestType" type="String">Request Type.</param>
-                    /// <param name="requestData" type="Object">Request data.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">response data</returns>
-                    return Service.RequestCrossDomain(requestUrl, requestType, requestData, responseType, true).then(
-                        function (data) {
+        //        var executeCrossDomainRequest = function (requestUrl, requestType, requestData, responseType, run) {
+        //            ///<summary>
+        //            /// This is the delegate request for cross domain which is called recursively when more items to be fetched in batch.
+        //            ///</summary>
+        //            /// <param name="requestUrl" type="String">Request Url.</param>
+        //            /// <param name="requestType" type="String">Request Type.</param>
+        //            /// <param name="requestData" type="Object">Request data.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">response data</returns>
+        //            return Service.RequestCrossDomain(requestUrl, requestType, requestData, responseType, true).then(
+        //                function (data) {
 
-                            //Verify if more items are present or not
-                            var convertResult;
-                            if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
-                                convertResult = $.parseJSON($.parseJSON(data).d.RenderListData);
-                            } else {
-                                convertResult = $.parseJSON($($.parseXML(data).lastChild).text());
-                            }
+        //                    //Verify if more items are present or not
+        //                    var convertResult;
+        //                    if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
+        //                        convertResult = $.parseJSON($.parseJSON(data).d.RenderListData);
+        //                    } else {
+        //                        convertResult = $.parseJSON($($.parseXML(data).lastChild).text());
+        //                    }
 
-                            //call callback function
-                            run.OnSuccess(data);
+        //                    //call callback function
+        //                    run.OnSuccess(data);
 
-                            if (convertResult.NextHref) {
-                                //update the Request Url for next batch
-                                var Url = requestUrl;
-                                var queryParam = requestUrl.split("?");
-                                if (queryParam.length === 2) {
-                                    Url = queryParam[0] + convertResult.NextHref;
-                                } else {
-                                    Url = requestUrl + convertResult.NextHref;
-                                }
+        //                    if (convertResult.NextHref) {
+        //                        //update the Request Url for next batch
+        //                        var Url = requestUrl;
+        //                        var queryParam = requestUrl.split("?");
+        //                        if (queryParam.length === 2) {
+        //                            Url = queryParam[0] + convertResult.NextHref;
+        //                        } else {
+        //                            Url = requestUrl + convertResult.NextHref;
+        //                        }
 
-                                executeCrossDomainRequest(Url, SharePointClient.Constants.REST.HTTP.POST, requestData, responseType, run);
-                            }
+        //                        executeCrossDomainRequest(Url, SharePointClient.Constants.REST.HTTP.POST, requestData, responseType, run);
+        //                    }
 
-                            return convertResult;
-                        }, function (xhr, errorType, exception) {
-                            SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
-                        });
-                };
+        //                    return convertResult;
+        //                }, function (xhr, errorType, exception) {
+        //                    SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
+        //                    run.OnError("Exception : " + xhr.responseText);
+        //                });
+        //        };
 
-                var delegateRequest = function (requestUrl, requestType, requestData, digestValue, responseType, run) {
-                    ///<summary>
-                    /// This is the delegate request called recursively when more items to be fetched in batch.
-                    ///</summary>
-                    /// <param name="requestUrl" type="String">Request Url.</param>
-                    /// <param name="requestType" type="String">Request Type.</param>
-                    /// <param name="requestData" type="Object">Request data.</param>
-                    /// <param name="digestValue" type="String">Request Digest value.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">response data</returns>
-                    return Service.RequestWithDigest(requestUrl, requestType, requestData, digestValue, responseType, true).then(
-                         function (data) {
+        //        var delegateRequest = function (requestUrl, requestType, requestData, digestValue, responseType, run) {
+        //            ///<summary>
+        //            /// This is the delegate request called recursively when more items to be fetched in batch.
+        //            ///</summary>
+        //            /// <param name="requestUrl" type="String">Request Url.</param>
+        //            /// <param name="requestType" type="String">Request Type.</param>
+        //            /// <param name="requestData" type="Object">Request data.</param>
+        //            /// <param name="digestValue" type="String">Request Digest value.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">response data</returns>
+        //            return Service.RequestWithDigest(requestUrl, requestType, requestData, digestValue, responseType, true).then(
+        //                 function (data) {
 
-                             //Verify if more items are present or not
-                             var convertResult, Url = requestUrl, queryParam = requestUrl.split("?");
-                             if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
-                                 convertResult = JSON.parse(data.d.RenderListData);
-                             } else {
-                                 convertResult = $.parseJSON($(data.lastChild).text());
-                             }
+        //                     //Verify if more items are present or not
+        //                     var convertResult, Url = requestUrl, queryParam = requestUrl.split("?");
+        //                     if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
+        //                         convertResult = JSON.parse(data.d.RenderListData);
+        //                     } else {
+        //                         convertResult = $.parseJSON($(data.lastChild).text());
+        //                     }
 
-                             //call callback function
-                             run.OnSuccess(data);
+        //                     //call callback function
+        //                     run.OnSuccess(data);
 
-                             if (convertResult.NextHref) {
-                                 //update the Request Url for next batch                                
-                                 if (queryParam.length === 2) {
-                                     Url = queryParam[0] + convertResult.NextHref;
-                                 } else {
-                                     Url = requestUrl + convertResult.NextHref;
-                                 }
+        //                     if (convertResult.NextHref) {
+        //                         //update the Request Url for next batch                                
+        //                         if (queryParam.length === 2) {
+        //                             Url = queryParam[0] + convertResult.NextHref;
+        //                         } else {
+        //                             Url = requestUrl + convertResult.NextHref;
+        //                         }
 
-                                 delegateRequest(Url, SharePointClient.Constants.REST.HTTP.POST, requestData, digestValue, responseType, run);
-                             }
+        //                         delegateRequest(Url, SharePointClient.Constants.REST.HTTP.POST, requestData, digestValue, responseType, run);
+        //                     }
 
-                             return convertResult;
-                         }, function (xhr, errorType, exception) {
-                             SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
-                         });
-                };
+        //                     return convertResult;
+        //                 }, function (xhr, errorType, exception) {
+        //                     SharePointClient.Logger.LogRESTException("Exception : " + xhr.responseText);
+        //                     run.OnError("Exception : " + xhr.responseText);
+        //                 });
+        //        };
 
-                var formatListCollection = function (dataCollection, responseType) {
-                    ///<summary>
-                    /// Format the collection object to JSON.
-                    ///</summary>
-                    /// <param name="dataCollection" type="String">Response data from the request.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">ListItems collection data</returns>
-                    var finalFormatteData = null;
-                    if (SharePointClient.Configurations.IsCrossDomainRequest) {
-                        if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
-                            finalFormatteData = $.parseJSON($.parseJSON(dataCollection).d.RenderListData);
-                        } else {
-                            finalFormatteData = $.parseJSON($($.parseXML(dataCollection).lastChild).text());
-                        }
-                    } else {
-                        if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
-                            finalFormatteData = JSON.parse(dataCollection.d.RenderListData);
-                        } else {
-                            finalFormatteData = $.parseJSON($(dataCollection.lastChild).text());
-                        }
-                    }
+        //        var formatListCollection = function (dataCollection, responseType) {
+        //            ///<summary>
+        //            /// Format the collection object to JSON.
+        //            ///</summary>
+        //            /// <param name="dataCollection" type="String">Response data from the request.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">ListItems collection data</returns>
+        //            var finalFormatteData = null;
+        //            if (SharePointClient.Configurations.IsCrossDomainRequest) {
+        //                if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
+        //                    finalFormatteData = $.parseJSON($.parseJSON(dataCollection).d.RenderListData);
+        //                } else {
+        //                    finalFormatteData = $.parseJSON($($.parseXML(dataCollection).lastChild).text());
+        //                }
+        //            } else {
+        //                if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.JSON) {
+        //                    finalFormatteData = JSON.parse(dataCollection.d.RenderListData);
+        //                } else {
+        //                    finalFormatteData = $.parseJSON($(dataCollection.lastChild).text());
+        //                }
+        //            }
 
-                    return finalFormatteData;
-                };
+        //            return finalFormatteData;
+        //        };
 
-                var convertRenderListDataToXml = function (jsonData) {
-                    ///<summary>
-                    /// Convert the RenderListData json to Xml Document.
-                    ///</summary>
-                    /// <param name="jsonData" type="Object">JSON object.</param>
-                    /// <returns type="String">Xml document as string</returns>
-                    var xmlString = "<d:RenderListData xmlns:d=\"http://schemas.microsoft.com/ado/2007/08/dataservices\" " +
-                        "xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\" " +
-                        "xmlns:georss=\"http://www.georss.org/georss\" " +
-                        "xmlns:gml=\"http://www.opengis.net/gml\">" + JSON.stringify(jsonData) +
-                        "</d:RenderListData>";
+        //        var convertRenderListDataToXml = function (jsonData) {
+        //            ///<summary>
+        //            /// Convert the RenderListData json to Xml Document.
+        //            ///</summary>
+        //            /// <param name="jsonData" type="Object">JSON object.</param>
+        //            /// <returns type="String">Xml document as string</returns>
+        //            var xmlString = "<d:RenderListData xmlns:d=\"http://schemas.microsoft.com/ado/2007/08/dataservices\" " +
+        //                "xmlns:m=\"http://schemas.microsoft.com/ado/2007/08/dataservices/metadata\" " +
+        //                "xmlns:georss=\"http://www.georss.org/georss\" " +
+        //                "xmlns:gml=\"http://www.opengis.net/gml\">" + JSON.stringify(jsonData) +
+        //                "</d:RenderListData>";
 
-                    return xmlString;
-                };
+        //            return xmlString;
+        //        };
 
-                var listItemsByListName = function (listTitle, camlQuery, responseType) {
-                    ///<summary>
-                    /// Get the items by listname in batch by batch.
-                    ///</summary>
-                    /// <param name="listTitle" type="String">List Name.</param>
-                    /// <param name="camlQuery" type="String">View Xml.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">ListItems collection data</returns>
-                    var run = new SharePointClient.Services.ClientRun();
-                    var runBatch = new SharePointClient.Services.ClientRun();
+        //        var listItemsByListName = function (listTitle, camlQuery, responseType) {
+        //            ///<summary>
+        //            /// Get the items by listname in batch by batch.
+        //            ///</summary>
+        //            /// <param name="listTitle" type="String">List Name.</param>
+        //            /// <param name="camlQuery" type="String">View Xml.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">ListItems collection data</returns>
+        //            var run = new SharePointClient.Services.ClientRun();
+        //            var runBatch = new SharePointClient.Services.ClientRun();
 
-                    var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')/RenderListData";
+        //            var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')/RenderListData";
 
-                    var requestData = {
-                        "viewXml": camlQuery.GetQueryViewXml()
-                    };
+        //            var requestData = {
+        //                "viewXml": camlQuery.GetQueryViewXml()
+        //            };
 
-                    if (SharePointClient.Configurations.IsCrossDomainRequest) {
-                        $.getScript(utility.GetQueryStringParameter("SPHostUrl") + "/_layouts/15/SP.RequestExecutor.js", function () {
-                            return executeCrossDomainRequest(RequestUrl, constants.HTTP.POST, requestData, responseType, runBatch);
-                        });
-                    } else {
-                        Service.Request(utility.REST.GetRequestDigestUrl(), constants.HTTP.POST, null, constants.HTTP.DATA_TYPE.JSON, false).then(function (data) {
-                            var NewDigest = data.d.GetContextWebInformation.FormDigestValue;
-                            delegateRequest(RequestUrl, constants.HTTP.POST, requestData, NewDigest, responseType, runBatch);
-                        });
-                    }
+        //            if (SharePointClient.Configurations.IsCrossDomainRequest) {
+        //                $.getScript(utility.GetQueryStringParameter("SPHostUrl") + "/_layouts/15/SP.RequestExecutor.js", function () {
+        //                    return executeCrossDomainRequest(RequestUrl, constants.HTTP.POST, requestData, responseType, runBatch);
+        //                });
+        //            } else {
+        //                Service.Request(utility.REST.GetRequestDigestUrl(), constants.HTTP.POST, null, constants.HTTP.DATA_TYPE.JSON, false).then(function (data) {
+        //                    var NewDigest = data.d.GetContextWebInformation.FormDigestValue;
+        //                    delegateRequest(RequestUrl, constants.HTTP.POST, requestData, NewDigest, responseType, runBatch);
+        //                });
+        //            }
 
-                    var itemsCollection = null;
-                    runBatch.Execute(function (result) {
-                        //Convert the result to JSON
-                        var modifiedResult = formatListCollection(result, responseType);
-                        if (itemsCollection) {
-                            $.each(modifiedResult, function (index, value) {
-                                if ($.isArray(value)) {
-                                    //Get the previous array collection
-                                    $.each(itemsCollection, function (cIndex, cValue) {
-                                        if ($.isArray(cValue)) {
-                                            $.each(value, function (k, v) {
-                                                cValue.push(v);
-                                            });
-                                        }
-                                    });
-                                }
-                            });
-                        } else {
-                            itemsCollection = modifiedResult;
-                        }
-                        //console.log( modifiedResult.NextHref);
-                        if (!modifiedResult.NextHref) {
-                            //Set next item collection query string
-                            itemsCollection.NextHref = modifiedResult.NextHref;
+        //            var itemsCollection = null;
+        //            runBatch.Execute(function (result) {
+        //                //Convert the result to JSON
+        //                var modifiedResult = formatListCollection(result, responseType);
+        //                if (itemsCollection) {
+        //                    $.each(modifiedResult, function (index, value) {
+        //                        if ($.isArray(value)) {
+        //                            //Get the previous array collection
+        //                            $.each(itemsCollection, function (cIndex, cValue) {
+        //                                if ($.isArray(cValue)) {
+        //                                    $.each(value, function (k, v) {
+        //                                        cValue.push(v);
+        //                                    });
+        //                                }
+        //                            });
+        //                        }
+        //                    });
+        //                } else {
+        //                    itemsCollection = modifiedResult;
+        //                }
+		//		    //console.log( modifiedResult.NextHref);
+        //                if (!modifiedResult.NextHref) {
+        //                    //Set next item collection query string
+        //                    itemsCollection.NextHref = modifiedResult.NextHref;
+					   
+					   
+        //                    //Convert the final result on basis of response type
+        //                    var finalResult = itemsCollection;
+        //                    if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.XML) {
+        //                        finalResult = $.parseXML(convertRenderListDataToXml(finalResult));
+        //                    } else {
+        //                        var jsonString = {
+        //                            d: {
+        //                                RenderListData: JSON.stringify(finalResult)
+        //                            }
+        //                        };
 
+        //                        finalResult = jsonString;
+        //                    }
+        //                    run.OnSuccess(finalResult);
+        //                }
+        //            }, function () {
+        //                run.OnError();
+        //            });
 
-                            //Convert the final result on basis of response type
-                            var finalResult = itemsCollection;
-                            if (responseType === SharePointClient.Constants.REST.HTTP.DATA_TYPE.XML) {
-                                finalResult = $.parseXML(convertRenderListDataToXml(finalResult));
-                            } else {
-                                var jsonString = {
-                                    d: {
-                                        RenderListData: JSON.stringify(finalResult)
-                                    }
-                                };
+        //            return run;
+        //        };
 
-                                finalResult = jsonString;
-                            }
-                            run.OnSuccess(finalResult);
-                        }
-                    });
+        //        var listItemsBatchByListName = function (listTitle, camlQuery, responseType) {
+        //            ///<summary>
+        //            /// Get the items by listname in batch by batch.
+        //            ///</summary>
+        //            /// <param name="listTitle" type="String">List Name.</param>
+        //            /// <param name="camlQuery" type="String">View Xml.</param>
+        //            /// <param name="responseType" type="String">Response type XML/JSON.</param>
+        //            /// <returns type="Object">ListItems collection data</returns>
 
-                    return run;
-                };
+        //            var run = new SharePointClient.Services.ClientRun();
 
-                var listItemsBatchByListName = function (listTitle, camlQuery, responseType) {
-                    ///<summary>
-                    /// Get the items by listname in batch by batch.
-                    ///</summary>
-                    /// <param name="listTitle" type="String">List Name.</param>
-                    /// <param name="camlQuery" type="String">View Xml.</param>
-                    /// <param name="responseType" type="String">Response type XML/JSON.</param>
-                    /// <returns type="Object">ListItems collection data</returns>
+        //            var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')/RenderListData";
 
-                    var run = new SharePointClient.Services.ClientRun();
+        //            var requestData = {
+        //                "viewXml": camlQuery.GetQueryViewXml()
+        //            };
 
-                    var RequestUrl = utility.REST.GetApiUrl() + constants.WEB + "/" + constants.LISTS + "/getbytitle('" + listTitle + "')/RenderListData";
+        //            if (SharePointClient.Configurations.IsCrossDomainRequest) {
+        //                $.getScript(utility.GetQueryStringParameter("SPHostUrl") + "/_layouts/15/SP.RequestExecutor.js", function () {
+        //                    return executeCrossDomainRequest(RequestUrl, constants.HTTP.POST, requestData, responseType, run);
+        //                });
+        //            } else {
+        //                Service.Request(utility.REST.GetRequestDigestUrl(), constants.HTTP.POST, null, constants.HTTP.DATA_TYPE.JSON, false).then(function (data) {
+        //                    var NewDigest = data.d.GetContextWebInformation.FormDigestValue;
+        //                    delegateRequest(RequestUrl, constants.HTTP.POST, requestData, NewDigest, responseType, run);
+        //                });
+        //            }
 
-                    var requestData = {
-                        "viewXml": camlQuery.GetQueryViewXml()
-                    };
+        //            return run;
+        //        };
 
-                    if (SharePointClient.Configurations.IsCrossDomainRequest) {
-                        $.getScript(utility.GetQueryStringParameter("SPHostUrl") + "/_layouts/15/SP.RequestExecutor.js", function () {
-                            return executeCrossDomainRequest(RequestUrl, constants.HTTP.POST, requestData, responseType, run);
-                        });
-                    } else {
-                        Service.Request(utility.REST.GetRequestDigestUrl(), constants.HTTP.POST, null, constants.HTTP.DATA_TYPE.JSON, false).then(function (data) {
-                            var NewDigest = data.d.GetContextWebInformation.FormDigestValue;
-                            delegateRequest(RequestUrl, constants.HTTP.POST, requestData, NewDigest, responseType, run);
-                        });
-                    }
-
-                    return run;
-                };
-
-                return {
-                    GetLists: lists,
-                    GetListByTitle: listByTitle,
-                    GetListItemsByListName: listItemsByListName,
-                    GetListItemsBatchByListName: listItemsBatchByListName
-                };
-            }
-        }
+        //        return {
+        //            GetLists: lists,
+        //            GetListByTitle: listByTitle,
+        //            GetListItemsByListName: listItemsByListName,
+        //            GetListItemsBatchByListName: listItemsBatchByListName
+        //        };
+        //    }
+        //}
         //#endregion
     };
     //#endregion

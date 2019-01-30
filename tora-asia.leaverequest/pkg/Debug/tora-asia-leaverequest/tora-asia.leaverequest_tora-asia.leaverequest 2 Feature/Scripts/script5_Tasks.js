@@ -1,28 +1,34 @@
 ﻿function LRTasksViewModel(parent, ishrform) {
-    //ishrform = (typeof ishrform !== "undefined") ? ishrform : false;
+    ishrform = (typeof ishrform !== "undefined") ? ishrform : false;
     var self = this;
-    this.listtaskstitle = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestWorkflowTask.Title;
-    this.listformtitle = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.Title;
+    this.listtaskstitle = LRListManagement.Lists.LeaveRequestWorkflowTask.Title;
+    this.listformtitle = LRListManagement.Lists.LeaveRequestItem.Title;
     //this.tasksdatas = ko.observableArray();
 
-    this.datawithpaging = ko.observable(new datawithpaging());
-    //this.datawithpagingHr = ko.observable(new datawithpaging());
+    this.datawithpaging = ko.observable(new LRGlobalFunc.datawithpaging());
 
     this.isHR = ko.observable(parent.isHr());
     this.isManager = ko.observable(parent.isManager());
-    this.curUser = ko.observable(ToraAsiaLeaveRequestInfo.Services.GetUserId());
-   // this.ishrForm = ko.observable(ishrform);
+    this.curUser = ko.observable(LRServices.GetUserId());
+    this.ishrForm = ko.observable(ishrform);
 
-    this.generateQuery = function (ishrrview) {
+    this.generateQuery = function () {
 
         var allquery = [];
         var queryBegin = [];
         allquery.push(String.format(ko.defaultquery, "Neq", "Status", "Choice", "Completed", "", ""));
         allquery.push(String.format(ko.defaultquery, "Contains", "RelatedItems", "Text", "[{\"ItemId\":", "", ""));
-        if (self.isManager() || (ishrrview && self.isHR())) {
+        if (self.isManager() || (self.ishrForm() && self.isHR())) {
             allquery.push(String.format(ko.defaultquery, "Eq", "AssignedTo", "Lookup", self.curUser(), "LookupId='TRUE'", ""));
         }
-        if (!ishrrview) {
+        /*if (!self.ishrForm()) {
+            var textarrnew = gleavedic().EmailText.TitleManager1.split(" ");     
+            var textarrcancel = gleavedic().EmailText.TitleManager2.split(" ");    
+            queryBegin.push(String.format(ko.defaultquery, "Contains", "Title", "Text", textarrnew[textarrnew.length-1], "", ""));
+            queryBegin.push(String.format(ko.defaultquery, "Contains", "Title", "Text",textarrcancel[textarrcancel.length-1], "", ""));
+
+        }*/
+        if (!self.ishrForm()) {
 
             queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "แจ้งการขออนุมัติการลา", "", ""));
             queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "อนุมัติขอยกเลิกการลา", "", ""));
@@ -32,16 +38,67 @@
             queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "Review การลา", "", ""));
             queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "Review ขอยกเลิกการลา", "", ""));
         }
+        //else {
+        //    queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "Review การลา", "", ""));
+        //    queryBegin.push(String.format(ko.defaultquery, "BeginsWith", "Title", "Text", "Review ขอยกเลิกการลา", "", ""));
+        //}
         allquery.push(ko.MergeCAMLConditions(queryBegin, ko.MergeType.Or))
-
+        //var datearr = [];
+        /*if(typeof self.fromdate() !== "undefined" && self.fromdate()!== null){
+            allquery.push(String.format(ko.defaultquery,"Geq","StartDate","DateTime",self.fromdate().format("YYYY-MM-DD") ,"","IncludeTimeValue='False' "));
+        }
+        if(typeof self.todate() !== "undefined" && self.todate()!== null){
+            allquery.push(String.format(ko.defaultquery,"Leq","StartDate","DateTime",self.todate().format("YYYY-MM-DD"),"","IncludeTimeValue='False' "));
+        }
+        if(typeof self.leavetype() !== "undefined" && self.leavetype()!== null&& self.leavetype()!== ""){
+            allquery.push(String.format(ko.defaultquery,"Eq","LeaveType","Text",self.leavetype(),"",""));
+        }
+        if(self.officersId().length > 0){
+            var usersarr = [];
+            ko.utils.arrayForEach(self.officersId(), function(uid ) {
+                usersarr.push(String.format(ko.defaultquery,"Eq","Requester" ,"Lookup",uid ,"LookupId='TRUE'",""));         
+            });
+            allquery.push(ko.MergeCAMLConditions(usersarr ,ko.MergeType.Or));
+            
+        }
+        */
         if (allquery.length > 0) {
             return "<Where>" + ko.MergeCAMLConditions(allquery, ko.MergeType.And) + "</Where>";
         }
         return "";
     }
-    this.loadTasksData = function (datapaging,ishrreview, callback) {
-        ishrreview = (typeof ishrreview !== "undefined") ? ishrreview : false;
-        var querytxt = self.generateQuery(ishrreview);
+    this.loadTasksData = function (callback) {
+        var leavedataarr = ko.observableArray([]);
+        var relatedfield = [
+            { field: "LeaveId", type: "Default", typefield: "ID" },
+            { field: "LeaveTitle", type: "Default", typefield: "Title" },
+            { field: "StartDate", type: "Date", format: ko.dateformat.normal },
+            { field: LRListManagement.Lists.LeaveRequestItem.Fields.Requester.Internal+"Text" , type: "LookupText",
+            typefield:LRListManagement.Lists.LeaveRequestItem.Fields.Requester.Internal },
+            { field: "LeaveDayTotal" },
+            { field: "LeaveStatus" },
+            { field: "LeaveType" }
+        ]
+        var options = {};
+        options.fileData = [
+            { field: "ID", type: "Default", typefield: "ID" },
+            { field: "Title" },
+            {
+                field: "RelatedItems", type: "RelatedItems", typefield: "RelatedItems",
+                relatedField: relatedfield, relatedListName: self.listformtitle
+            }
+        ];
+        options.format = ko.dateformat.nomal;
+		var props = {};
+		props.listtitle = self.listtaskstitle;
+		props.options = options;
+		props.query = self.generateQuery();
+		LRGlobalFunc.queryDataJSOM(self.datawithpaging().rows, props, function () {
+            if (callback) {
+                callback();
+            }
+		});
+        /*var querytxt = self.generateQuery();
         var listServices = new SharePointClient.Services.JSOM.ListServices();
 
         //Get SP clientContext
@@ -64,7 +121,6 @@
             { field: "StartDate", type: "Date", format: ko.dateformat.normal },
             { field: "LeaveDayTotal" },
             { field: "LeaveStatus" },
-            //{ field: "CancelLeaveStatus" },
             { field: "LeaveType" }
         ]
         var options = {};
@@ -88,9 +144,9 @@
                         format: options.format
                     }, options);
 
-                    var olddata = datapaging().rows();
+                    var olddata = self.datawithpaging().rows();
                     var newdata = olddata.concat(alldata);
-                    datapaging().rows(newdata);
+                    self.datawithpaging().rows(newdata);
 
 
                     var nextpost = result.get_listItemCollectionPosition();
@@ -101,49 +157,30 @@
 
                     }
                 });
-
+*/
     }
     this.goToApproveForm = function (data) {
-        //console.log(data.LeaveId());
+        console.log(data.LeaveId());
         //parent.selectTemplate("idwating");
         //parent.selectModel (new LRApproveViewModel(parent,data.LeaveId(),data.Id,self.ishrForm()));
         //parent.selectTemplate("idapproveform");
         //GoToApproveViewModel(parent,data);
-        var isviewonly = true;
+       // var isviewonly = true;
+       // if ((self.ishrForm() && !self.isManager() && self.isHR()) ||
+		//	(!self.ishrForm() && self.isManager() && !self.isHR())
+		//   ) {
+       //     isviewonly = false;
+       // }
+       var isviewonly = true;
         if (self.isManager()) {
             isviewonly = false;
         }
 
-        parent.GoToApproveViewModel(parent, data, data.LeaveId(), "idapprove", isviewonly, self.isManager(), false);
+        parent.GoToApproveViewModel(parent, data, data.LeaveId(), (ishrform ? "idhrapprove" : "idapprove"), isviewonly, self.isManager(), self.ishrForm());
     }
-    //this.goToApproveFormHR = function (data) {
-    //    //console.log(data.LeaveId());
-    //    //parent.selectTemplate("idwating");
-    //    //parent.selectModel (new LRApproveViewModel(parent,data.LeaveId(),data.Id,self.ishrForm()));
-    //    //parent.selectTemplate("idapproveform");
-    //    //GoToApproveViewModel(parent,data);
-    //    var isviewonly = true;
-    //    if (self.isHR()) {
-    //        isviewonly = false;
-    //    }
-
-    //    parent.GoToApproveViewModel(parent, data, data.LeaveId(), "idapprove", isviewonly, self.isManager(), true);
-    //}
     ko.contentDialog.show();
-    //var maxloaded = 2;
-    //var countloaded = 0;
-    this.loadTasksData(self.datawithpaging, false, function () {
-        //countloaded++;
-        //if (maxloaded === countloaded) {
-        //    ko.contentDialog.hide();
-        //}
+    this.loadTasksData(function () {
         ko.contentDialog.hide();
         //console.log(self.tasksdatas());
     });
-    //this.loadTasksData(self.datawithpagingHr,true,function () {
-    //    countloaded++;
-    //    if (maxloaded === countloaded) {
-    //        ko.contentDialog.hide();
-    //    }
-    //});
 }

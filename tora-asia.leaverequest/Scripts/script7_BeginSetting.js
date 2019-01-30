@@ -1,10 +1,10 @@
 ﻿function LRBeginSettingViewModel(parent){
 	var self = this;
-	this.obtionListName = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestConfiguration.Title;
-	this.isAllcreate = ko.observable(ToraAsiaLeaveRequestInfo.Services.IsAllListCreated());
-	this.isFeatureActivate = ko.observable(ToraAsiaLeaveRequestInfo.Services.GetIsFeatureActivate());
-	this.isfoundWorkflow = ko.observable(ToraAsiaLeaveRequestInfo.Services.GetIsFoundWorkflow ());
-	this.isWorkflowMap = ko.observable(ToraAsiaLeaveRequestInfo.Services.GetIsWorkflowMapping());
+	this.obtionListName = LRListManagement.Lists.LeaveRequestConfiguration.Title;
+	this.isAllcreate = ko.observable(LRServices.IsAllListCreated());
+	this.isFeatureActivate = ko.observable(LRServices.GetIsFeatureActivate());
+	this.isfoundWorkflow = ko.observable(LRServices.GetIsFoundWorkflow ());
+	this.isWorkflowMap = ko.observable(LRServices.GetIsWorkflowMapping());
 	
 	
 	this.createStep = ko.computed(function() {
@@ -48,379 +48,167 @@
 		else if(self.isAllcreate ()){
     		curstep =2;
 		}
-
-		//console.log(curstep );
-    	//if(self.createStep()){ return 1;}
-    	//if(self.hasworkflowStep ()){ return 2;}
-    	//if(self.mapWorkflowStep()){ return 3;}
-    	//if(self.deleteStep()){ return 4;}
     	return curstep ;
     });
-	this.CreateListClick = function(){
-		swal({
-		  title: "Are you sure to create Lists?",
-		 // text: "To create Lists!",
-		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
-		})
-		.then(function(willDelete)  {
-		  if (willDelete) {
-		   // swal("Poof! Your imaginary file has been deleted!", {
-		    //  icon: "success",
-		   // });
-		   		ko.contentDialog.show();
-		   		ToraAsiaLeaveRequestInfo.Services.GetListInfomation(true,function () {
-		            //self.isAllcreate(true);
-		            //console.log(self);
-		            swal("Create List Success", {
-						      icon: "success",
-						    }).then(function()  {
-								ko.contentDialog.hide();
-			            	    self.isAllcreate(ToraAsiaLeaveRequestInfo.Services.IsAllListCreated());
-		            			parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
+    this.CreateListClick = function () {
+        LRGlobalFunc.swalalrt({
+            title: gswalText().admin.createlist,
+            //text: "To save data!",
+            type: 'warning',
+            showCancelButton: true,
+        }, function () {
+            ko.contentDialog.show();
+            LRListManagement.Services.GetListInformation(true).then(function () {
+	            LRGlobalFunc.swalalrt({
+                    title: gswalText().admin.createlistsuccess,
+                    type: 'success'
+                }, null, function () {
+                    ko.contentDialog.hide();
+                    self.isAllcreate(LRServices.IsAllListCreated());
+                    parent.isBeginSetupSuccess(LRServices.isAppReady());
+                });
 
-
-							});
-
-		            //self.isAllcreate(ToraAsiaLeaveRequestInfo.Services.IsAllListCreated());
-		            //parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-					//alert("Create List Success");
-		        });
-
-		  } 		
-		 });
-
-		/*var r = confirm("Are you sure to create Lists?");
-		if(r){
-			ToraAsiaLeaveRequestInfo.Services.GetListInfomation(true,function () {
-	            //self.isAllcreate(true);
-	            //console.log(self);
-	            self.isAllcreate(ToraAsiaLeaveRequestInfo.Services.IsAllListCreated());
-	            parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-				alert("Create List Success");
+	        }, function (errmsg) {
+	        	ko.contentDialog.hide();
+	            console.log(errmsg);
 	        });
-        }*/
+        });
 	}
-	this.ActivateFeatureClick = function(){
-		swal({
-		  title:"Are you sure to Activate Feature?",
-		 // text: "To create Lists!",
-		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
-		})
-		.then(function(willDelete)  {
-		  if (willDelete) {
-		   // swal("Poof! Your imaginary file has been deleted!", {
-		    //  icon: "success",
-		   // });
-		   		ko.contentDialog.show();
-		   		ToraAsiaLeaveRequestInfo.Services.ActivateFeature().then(function(){
-					            	//UpdateSetupID
-							var setfieldata = [
-											{
-												Title:"Title",
-												Value: "ActivateFeature",
-											},	
-											{
-												Title:"Details",
-												Value: "true"
-											}							
-										];
-							var optioninside = {
-							            listTitle:self.obtionListName,
-							            data :setfieldata,
-										itemid :ToraAsiaLeaveRequestInfo.Services.ActivateFeatureID
-						    }
-						   // parent.navLinkClick("idapprove");
-						    ko.SaveDatatoList(optioninside ,function(id){   
-						    
-						    	swal("Activate Feature Success", {
-							      icon: "success",
-							    }).then(function()  {
-									ko.contentDialog.hide();
-				            	    ToraAsiaLeaveRequestInfo.Services.ActivateFeatureID = id;
-									self.isFeatureActivate(ToraAsiaLeaveRequestInfo.Services.GetIsFeatureActivate());
-									parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-								});		
-							});
-					},
-					function(merr){
-						//console.log(merr);
-						swal(merr, {
-						      icon: "error",
-						    }).then(function()  {
-									ko.contentDialog.hide();							
-				           });
+	
+	this.SaveLeaveRequestConfiguration = function(config_value,config_id,success_alert_msg){
+			 var setfieldata = [
+                    {
+                       Title: LRListManagement.Lists.LeaveRequestConfiguration.Fields.Title.Internal,
+                       Value: config_value ,
+                    },
+                    {
+                       Title: LRListManagement.Lists.LeaveRequestConfiguration.Fields.Details.Internal,
+                       Value: "true"
+                    }
+                ];
+                var optioninside = {
+                    listTitle: self.obtionListName,
+                    data: setfieldata,
+                    itemid: config_id
+                }
+                // parent.navLinkClick("idapprove");
+                LRGlobalFunc.SaveDatatoList(optioninside).then(function(id){
+                	LRGlobalFunc.swalalrt({
+                        title: success_alert_msg,
+                        type: 'success'
+                    }, null, function () {
+                        ko.contentDialog.hide();
+                        switch(config_value){
+                        	case LRServices.Variables.RequestConfiguration.FeatureActivated:
+                        		LRServices.Variables.ActivateFeatureID = id;
+		                        LRServices.Variables.IsFeatureActivate = true;
+		                        self.isFeatureActivate(LRServices.GetIsFeatureActivate());
+                        	break;
+                        	case LRServices.Variables.RequestConfiguration.FoundWorkflow:
+                        		LRServices.Variables.FoundWorkflowID  = id;
+		                        LRServices.Variables.IsFoundWorkflow = true;
+		                        self.isfoundWorkflow(LRServices.GetIsFoundWorkflow());
+                        	break;
+                        	case LRServices.Variables.RequestConfiguration.WorkflowMaping:
+                        		LRServices.Variables.WorkflowMapingID = id;
+		                        LRServices.Variables.IsWorkflowMaping = true;
+		                        self.isWorkflowMap(LRServices.GetIsWorkflowMapping());
+                        	break;
 
-					});
+                        }; 
+                        parent.isBeginSetupSuccess(LRServices.isAppReady());
+                    });
+                },self.errorshowaler);
+	}
+	this.errorshowaler = function(err_msg){
+		LRGlobalFunc.swalalrt({
+            title: err_msg,
+            type: 'error'
+        }, null, function () {
+            ko.contentDialog.hide();
+        });
 
-		  } 		
-		 });
-
-		/*var r = confirm("Are you sure to Activate Feature?");
-		if(r){
-			ToraAsiaLeaveRequestInfo.Services.ActivateFeature().then(function(){
-					            	//UpdateSetupID
-					var setfieldata = [
-									{
-										Title:"Title",
-										Value: "ActivateFeature",
-									},	
-									{
-										Title:"Details",
-										Value: "true"
-									}							
-								];
-					var optioninside = {
-					            listTitle:self.obtionListName,
-					            data :setfieldata,
-								itemid :ToraAsiaLeaveRequestInfo.Services.ActivateFeatureID
-				    }
-				   // parent.navLinkClick("idapprove");
-				    ko.SaveDatatoList(optioninside ,function(id){   
-				    	ToraAsiaLeaveRequestInfo.Services.ActivateFeatureID = id;
-						self.isFeatureActivate(ToraAsiaLeaveRequestInfo.Services.GetIsFeatureActivate());
-						parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-		
-						alert("Activate Feature Success");
-
-					});
-			},
-			function(merr){
-				console.log(merr);
-			});
-
-		}*/
+	}
+	
+    this.ActivateFeatureClick = function () {
+        LRGlobalFunc.swalalrt({
+            title: gswalText().admin.activatefeature,
+            //text: "To save data!",
+            type: 'warning',
+            showCancelButton: true,
+        }, function () {
+            ko.contentDialog.show();
+            LRServices.ActivateFeature(LRGlobalFunc.WorkflowsCanUseAppPermissions).then(function () {
+                //UpdateSetupID
+                self.SaveLeaveRequestConfiguration(LRServices.Variables.RequestConfiguration.FeatureActivated,
+	                	LRServices.Variables.ActivateFeatureID,
+	                	gswalText().admin.activatefeaturesuccess
+                	);
+                },self.errorshowaler);
+        });
 	}
 
-	this.CloneWorkflowClick = function(){
-		swal({
-		  title:"Are you sure to update/clone Workflow?",
-		 // text: "To create Lists!",
-		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
-		})
-		.then(function(willDelete)  {
-		  if (willDelete) {
-		   // swal("Poof! Your imaginary file has been deleted!", {
-		    //  icon: "success",
-		   // });
-		   		ko.contentDialog.show();
-		   		ToraAsiaLeaveRequestInfo.Services.CloneWorkflow().then(function(){
-					        var setfieldata = [
-									{
-										Title:"Title",
-										Value: "FoundWorkflow",
-									},	
-									{
-										Title:"Details",
-										Value: "true"
-									}							
-								];
-							var optioninside = {
-							            listTitle:self.obtionListName,
-							            data :setfieldata,
-										itemid :ToraAsiaLeaveRequestInfo.Services.FoundWorkflowID
-						    }
-						   // parent.navLinkClick("idapprove");
-						    ko.SaveDatatoList(optioninside ,function(id){   
-								swal("Clone/Update Workflow Success", {
-							      icon: "success",
-							    }).then(function()  {
-									ko.contentDialog.hide();
-				            	    ToraAsiaLeaveRequestInfo.Services.FoundWorkflowID = id;
-									self.isfoundWorkflow (ToraAsiaLeaveRequestInfo.Services.GetIsFoundWorkflow ());
-									parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-								});	
-		
-							});
-					},
-					function(merr){
-						//console.log(merr);
-						swal(merr, {
-						      icon: "error",
-						    }).then(function()  {
-									ko.contentDialog.hide();							
-				           });
+    this.CloneWorkflowClick = function () {
 
-					});
-
-		  } 		
-		 });
-/*
-		var r = confirm("Are you sure to update/clone Workflow?");
-		if(r){
-			ToraAsiaLeaveRequestInfo.Services.CloneWorkflow().then(function(){
-					            	//UpdateSetupID
-					var setfieldata = [
-									{
-										Title:"Title",
-										Value: "FoundWorkflow",
-									},	
-									{
-										Title:"Details",
-										Value: "true"
-									}							
-								];
-					var optioninside = {
-					            listTitle:self.obtionListName,
-					            data :setfieldata,
-								itemid :ToraAsiaLeaveRequestInfo.Services.FoundWorkflowID
-				    }
-				   // parent.navLinkClick("idapprove");
-				    ko.SaveDatatoList(optioninside ,function(id){   
-				    	ToraAsiaLeaveRequestInfo.Services.FoundWorkflowID = id;
-						self.isfoundWorkflow (ToraAsiaLeaveRequestInfo.Services.GetIsFoundWorkflow ());
-						parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-		
-						alert("Clone/Update Workflow Success");
-
-					});
-			},
-			function(merr){
-				console.log(merr);
-			});
-
-		}*/
+        LRGlobalFunc.swalalrt({
+            title: gswalText().admin.clonewf,
+            //text: "To save data!",
+            type: 'warning',
+            showCancelButton: true,
+        }, function () {
+            ko.contentDialog.show();
+            LRServices.CloneWorkflow().then(function () {
+            	self.SaveLeaveRequestConfiguration(LRServices.Variables.RequestConfiguration.FoundWorkflow,
+	                	LRServices.Variables.FoundWorkflowID,
+	                	gswalText().admin.clonewfsuccess
+                	);
+            },self.errorshowaler);
+        });
 	}
 
-	this.MappingWorkflowClick = function(){
-		swal({
-		  title:"Are you sure to mapping Workflow?",
-		 // text: "To create Lists!",
-		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
-		})
-		.then(function(willDelete)  {
-		  if (willDelete) {
-		   // swal("Poof! Your imaginary file has been deleted!", {
-		    //  icon: "success",
-		   // });
-		   		ko.contentDialog.show();
-		   		ToraAsiaLeaveRequestInfo.Services.AddWorkflowdefinitiontoList().then(function(){
-					        var setfieldata = [
-									{
-										Title:"Title",
-										Value: "WorkflowMaping",
-									},	
-									{
-										Title:"Details",
-										Value: "true"
-									}							
-								];
-								var optioninside = {
-								            listTitle:self.obtionListName,
-								            data :setfieldata,
-											itemid :ToraAsiaLeaveRequestInfo.Services.WorkflowMapingID
-							    }
-						   // parent.navLinkClick("idapprove");
-						    ko.SaveDatatoList(optioninside ,function(id){   
-								swal("Add workflow to List Success", {
-							      icon: "success",
-							    }).then(function()  {
-									ko.contentDialog.hide();
-				            	    ToraAsiaLeaveRequestInfo.Services.WorkflowMapingID = id;
-									self.isWorkflowMap(ToraAsiaLeaveRequestInfo.Services.GetIsWorkflowMapping());
-									parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-								});	
-		
-							});
-					},
-					function(merr){
-						//console.log(merr);
-						swal(merr, {
-						      icon: "error",
-						    }).then(function()  {
-									ko.contentDialog.hide();							
-				           });
-
-					});
-
-		  } 		
-		 });
-
-		/*var r = confirm("Are you sure to mapping Workflow?");
-		if(r){
-			ToraAsiaLeaveRequestInfo.Services.AddWorkflowdefinitiontoList().then(function(){
-			
-				var setfieldata = [
-									{
-										Title:"Title",
-										Value: "WorkflowMaping",
-									},	
-									{
-										Title:"Details",
-										Value: "true"
-									}							
-								];
-					var optioninside = {
-					            listTitle:self.obtionListName,
-					            data :setfieldata,
-								itemid :ToraAsiaLeaveRequestInfo.Services.WorkflowMapingID
-				    }
-				   // parent.navLinkClick("idapprove");
-				    ko.SaveDatatoList(optioninside ,function(id){   
-							ToraAsiaLeaveRequestInfo.Services.WorkflowMapingID = id;
-							self.isWorkflowMap(ToraAsiaLeaveRequestInfo.Services.GetIsWorkflowMapping());
-							parent.isBeginSetupSuccess(ToraAsiaLeaveRequestInfo.Services.isAppReady());
-			
-							alert("Add workflow to List Success");	
-
-					});
-			},
-			function(merr){
-				console.log(merr);
-			});
-		}*/
+    this.MappingWorkflowClick = function () {
+        LRGlobalFunc.swalalrt({
+            title: gswalText().admin.mapwf,
+            //text: "To save data!",
+            type: 'warning',
+            showCancelButton: true,
+        }, function () {
+            ko.contentDialog.show();
+            LRServices.AddWorkflowdefinitiontoList().then(function () {
+            	self.SaveLeaveRequestConfiguration(LRServices.Variables.RequestConfiguration.WorkflowMaping,
+	                	LRServices.Variables.WorkflowMapingID,
+	                	gswalText().admin.mapwfsuccess
+                	);
+            },self.errorshowaler);
+        });
 	}
-	this.DeleteListClick = function(){
-		swal({
-		  title:"Are you sure to delete Lists?",
-		 // text: "To create Lists!",
-		  icon: "warning",
-		  buttons: true,
-		  dangerMode: true,
-		})
-		.then(function(willDelete)  {
-		  if (willDelete) {
-		   // swal("Poof! Your imaginary file has been deleted!", {
-		    //  icon: "success",
-		   // });
-		   		ko.contentDialog.show();
-		   		ToraAsiaLeaveRequestInfo.Services.deleteAllList().then(function(m){
-					       swal(m, {
-							      icon: "success",
-							    }).then(function()  {
-									ko.contentDialog.hide();
-				            	    window.location.href = window.location.href;								
-				           });	
-					},
-					function(merr){
-						//console.log(merr);
-						swal(merr, {
-						      icon: "error",
-						    }).then(function()  {
-									ko.contentDialog.hide();							
-				           });
-					});
-
-		  } 		
-		 });
-
-		/*var r = confirm("Are you sure to delete Lists?");
-		if(r){
-			//alert("Delete");
-			ToraAsiaLeaveRequestInfo.Services.deleteAllList().then(function(m){
-					alert(m);
-					window.location.href = window.location.href;
-			},function(em){
-				alert(em);
-			});
-        }*/
+    this.DeleteListClick = function () {
+        LRGlobalFunc.swalalrt({
+            title: gswalText().admin.deletelist,
+            //text: "To save data!",
+            type: 'warning',
+            showCancelButton: true,
+        }, function () {
+            ko.contentDialog.show();
+            ToraAsiaLeaveRequestInfo.Services.deleteAllList().then(function (m) {
+                LRGlobalFunc.swalalrt({
+                    title: m,
+                    type: 'success'
+                }, null, function () {
+                    ko.contentDialog.hide();
+                    window.location.href = window.location.href;
+                });
+            },
+                function (merr) {
+                    LRGlobalFunc.swalalrt({
+                        title: merr,
+                        type: 'error'
+                    }, null, function () {
+                        ko.contentDialog.hide();
+                    });
+                });
+           
+        });
 	}
 
 

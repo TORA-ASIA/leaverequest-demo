@@ -1,0 +1,6 @@
+﻿<WorkflowDefinition xmlns="http://schemas.microsoft.com/sharepoint/2012/app/workflow">
+  <Description>My 'LeaveReqeustWF' Workflow</Description>
+  <DisplayName>LeaveReqeustWFV1</DisplayName>
+  <Id>259f5d8c-3ae4-4d5c-8869-50f311835f9a</Id>
+  <RestrictAssociationToType>List</RestrictAssociationToType>
+</WorkflowDefinition>

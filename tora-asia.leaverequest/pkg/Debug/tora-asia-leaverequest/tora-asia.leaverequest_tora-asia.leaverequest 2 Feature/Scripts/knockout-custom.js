@@ -3,8 +3,8 @@
 	self:"DD MMM YYYY",
 	tolist:"MM/DD/YYYY HH:mm:ss",
 	tolistnoTime:"MM/DD/YYYY",
-	endcircletoList: "MM/DD",
-    camlquery: "YYYY-MM-DD"
+	endcircletoList:"MM/DD",
+	camlquery: "YYYY-MM-DD"
 }
 ko.defaultquery = "<{0}>"+
 						"<FieldRef Name='{1}' {4}/>"+
@@ -84,13 +84,7 @@ ko.getUserId = function (loginNameArr,callback) {
 		    	if(callback){
 		    		callback(uidarr);
 		    	}
-		    }, function (sender, args) {
-		        console.log('Request failed. ' + args.get_message() +
-                                '\n' + args.get_stackTrace());
-		        if (callback) {
-		            callback();
-		        }
-		    });
+		    },ko.errorquery);
 }	
 ko.getRelatedObjectData = function(itemobj,relatedata,curr,option){
 		
@@ -104,7 +98,7 @@ ko.getRelatedObjectData = function(itemobj,relatedata,curr,option){
 		var relateddataobj = JSON.parse(relatedata);
 
 		//Get SP clientContext
-		SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
+		SharePointClient.Configurations.IsCrossDomainRequest = LRGlobalFunc.IsCrossDomain;
 				                //SharePointClient.Configurations.SPUrl = utility.GetHostUrl();
 		var hostcontext = new SharePointClient.Services.JSOM.Context();
 				                //get current context
@@ -228,10 +222,10 @@ ko.readFieldData = function(oListItem,options,olditemobj){
 														var sumapprove = 0;
 														//var sumcancel = 0;
 														ko.utils.arrayForEach(dayinprogress, function(item) {
-														    suminprogress += parseInt(item.LeaveDayTotal, 10);
+													        suminprogress += parseInt(item.NumberOfDay,10);
 													    });
 													    ko.utils.arrayForEach(dayapprove, function(item) {
-													        sumapprove += parseInt(item.LeaveDayTotal, 10);
+													        sumapprove += parseInt(item.NumberOfDay,10);
 													    });
 
 														dayobj.inprogress = suminprogress ;
@@ -345,7 +339,7 @@ ko.queryData = function(options,callback){
 		options.fileData  = fieldDataDefault;
     //console.log(options.fileData);
     //Get SP clientContext
-		SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
+		SharePointClient.Configurations.IsCrossDomainRequest = LRGlobalFunc.IsCrossDomain;
     //SharePointClient.Configurations.SPUrl = utility.GetHostUrl();
 		var hostcontext = new SharePointClient.Services.JSOM.Context();
     //get current context
@@ -375,13 +369,7 @@ ko.queryData = function(options,callback){
 					if(callback){
 					    callback(alldata,options);
 					 }
-		}, function (sender, args) {
-		    console.log('Request failed. ' + args.get_message() +
-                            '\n' + args.get_stackTrace());
-		    if (callback) {
-		        callback();
-		    }
-		});
+				},ko.errorquery );
 
 
 }
@@ -404,7 +392,7 @@ ko.queryDataById = function(options,callback){
     //var ctx = new SP.ClientContext(options.ctxUrl);
 
         //Get SP clientContext
-		    SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
+		    SharePointClient.Configurations.IsCrossDomainRequest = LRGlobalFunc.IsCrossDomain;
         //SharePointClient.Configurations.SPUrl = utility.GetHostUrl();
 		    var hostcontext = new SharePointClient.Services.JSOM.Context();
         //get current context
@@ -423,13 +411,7 @@ ko.queryDataById = function(options,callback){
 					if(callback){
 					    callback(alldata);
 					 }
-		}, function (sender, args) {
-		    console.log('Request failed. ' + args.get_message() +
-                            '\n' + args.get_stackTrace());
-		    if (callback) {
-		        callback();
-		    }
-		});
+				},ko.errorquery );
 
 
 }
@@ -439,7 +421,7 @@ ko.SaveDatatoList=function(options,callback){
 		options.itemid = options.itemid || 0;
 		if (options.listTitle) {
 		                //Get SP clientContext
-		                SharePointClient.Configurations.IsCrossDomainRequest = ToraAsiaLeaveRequestInfo.Services.IsCrossDomain;
+		                SharePointClient.Configurations.IsCrossDomainRequest = LRGlobalFunc.IsCrossDomain;
 		                //SharePointClient.Configurations.SPUrl = utility.GetHostUrl();
 		                var hostcontext = new SharePointClient.Services.JSOM.Context();
 		                //get current context
@@ -475,136 +457,136 @@ ko.SaveDatatoList=function(options,callback){
 		    				}
 		    				//self.saveImagefilesVideo(oListItem.get_item("Title"),parseInt(oListItem.get_item("ID"),10));
 							  // Get the first items rollup image, just as an example
-		    			}, function (sender, args) {
-		    			    console.log('Request failed. ' + args.get_message() +
-                                            '\n' + args.get_stackTrace());
-		    			    if (callback) {
-		    			        callback();
-		    			    }
-		    			});
+						},ko.errorquery);
 	}
 }
 /********Start Binding Handlers***************/
-ko.bindingHandlers.peoplepicker = {
-    init: function (element, valueAccessor, allBindingsAccessor) {
-        var options = allBindingsAccessor().peopleOptions || {};
-        //console.log(options.disabled);
-        options.peoplePickerElementId = element.id,
-		options.AllowMultipleValues = options.AllowMultipleValues || false,
-		options.PeopleorGroup = options.PeopleorGroup || 'PeopleOnly',
-		options.GroupID = options.GroupID || 0;
-        options.oldvaluetmp = options.oldvaluetmp || ko.observable();
+ko.bindingHandlers.peoplepicker= (function(){
+	 var self = this,
+         unwrap = ko.utils.unwrapObservable; //support older KO versions that did not have ko.unwrap
+         
+         this.checkSPFuncLoaded = function(callback){
+         		SP.SOD.executeOrDelayUntilScriptLoaded(function() {
+		         try{
+				        SP.SOD.registerSod("clientpeoplepicker.js", SP.Utilities.Utility.getLayoutsPageUrl("clientpeoplepicker.js"));
+				        }catch(e){}
 
-        /*var peoplePickerElementId=element.id,
-    		AllowMultipleValues= options.AllowMultipleValues ||false,
-    		PeopleorGroup= options.PeopleorGroup || 'PeopleOnly',
-    		GroupID = options.GroupID || 0;*/
-        var pickerself = this;
-        pickerself.valuchange = function (option) {
-            var observable = valueAccessor();
-            try {
-                var olddata = observable();
+		        SP.SOD.executeOrDelayUntilScriptLoaded(function() {
+		        	SP.SOD.executeOrDelayUntilScriptLoaded(function() {
+		        			if(callback){
+						       callback();
+						    } 		
+		        	},"clientpeoplepicker.js");
+		        	SP.SOD.executeFunc("clientpeoplepicker.js", false, function() {});		            
+		        },
+		        "clienttemplates.js");
+		        SP.SOD.executeFunc("clienttemplates.js", false, function() {});
+		    },
+		    "sp.js");
+		 	SP.SOD.executeFunc("sp.js", false, function() {});
+         }
+	    this.valuchange = function(valueAccessor,option){
+    		var observable = valueAccessor();
+		     try{
+		     	 var olddata = observable();
+		     	 
+			     var peoplePicker = SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId+"_TopSpan"];
 
-                var peoplePicker = SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId + "_TopSpan"];
-
-                //console.log(userInfo );
-                //console.log(peoplePicker);
-                var keys = peoplePicker.GetAllUserKeys();
-                // console.log(olddata );
-                //console.log(keys );
-                // console.log(keys );
-                if ((olddata !== keys && typeof olddata !== 'undefined') || (keys.length > 0 && typeof olddata === 'undefined')) {
-                    option.oldvaluetmp(keys);
-                    observable(keys);
-
-
-                }
-            } catch (e) { }
-        }
-        pickerself.loadpeopleData = function (that, option) {
-            var schema = {};
-            schema['SearchPrincipalSource'] = 15;
-            schema['ResolvePrincipalSource'] = 15;
-            schema['MaximumEntitySuggestions'] = 50;
-            schema['Width'] = '280px';
-            schema['AllowMultipleValues'] = option.AllowMultipleValues;
-            if (option.PeopleorGroup == 'PeopleOnly') schema['PrincipalAccountType'] = 'User';
-            else schema['PrincipalAccountType'] = 'User,DL,SecGroup,SPGroup';
-            if (option.GroupID > 0) {
-                schema['SharePointGroupID'] = option.GroupID
-            }
-            // Render and initialize the picker.  
-            // Pass the ID of the DOM element that contains the picker, an array of initial  
-            // PickerEntity objects to set the picker value, and a schema that defines  
-            // picker properties.  
-            that.SPClientPeoplePicker_InitStandaloneControlWrapper(option.peoplePickerElementId, null, schema);
-            that.SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId + "_TopSpan"].OnUserResolvedClientScript = function (peoplePickerElementId, selectedUsersInfo) {
-                pickerself.valuchange(option);
-            };
-        }
-        pickerself.loadpeopleData(pickerself, options)
-
-    },
-    update: function (element, valueAccessor, allBindingsAccessor) {
-        var options = allBindingsAccessor().peopleOptions || {};
-        options.peoplePickerElementId = element.id,
-        options.AllowMultipleValues = options.AllowMultipleValues || false,
-        options.PeopleorGroup = options.PeopleorGroup || 'PeopleOnly',
-        options.GroupID = options.GroupID || 0;
-        options.oldvaluetmp = options.oldvaluetmp || ko.observable();
-
-
-        //var currentdisable = !options.disabled;
-        //console.log(options);
-        options.disabled = !options.disabled;
-        var self = this;
-        var currentvalue = valueAccessor()();
-
-        self.setData = function (option) {
-            //console.log(currentvalue  );
-            var peoplePickerObject = SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId + "_TopSpan"];
-            peoplePickerObject.SetEnabledState(option.disabled);
-
-            //console.log(peoplePickerObject );
-            //console.log(element.id);
-            if (element.id === option.peoplePickerElementId) {
-                if (typeof currentvalue !== "undefined" && currentvalue !== null) {
-                    var usersobject = peoplePickerObject.GetAllUserInfo();
-                    usersobject.forEach(function (index) {
-                        peoplePickerObject.DeleteProcessedUser(usersobject[index]);
-                    });
-                    //if(typeof option.oldvaluetmp() === 'undefined' || option.oldvaluetmp() === null)
-                    if (option.oldvaluetmp() !== currentvalue) {
-
-
-                        //var userName = "i:0#.f|membership|chalermwit.kh@tora-asia.com;i:0#.f|membership|weeraya.j@tora-asia.com";
-
-                        var valuearr = currentvalue.split(';')
-                        //console.log(valuearr.length );
-                        var obj = [];
-                        for (var index in valuearr) {
-                            //obj.push({ Key:userName });
-                            //console.log("curintdex:"+index);
-                            peoplePickerObject.AddUnresolvedUser({ Key: valuearr[index] }, true);
-                            //peoplePickerObject.AddUserKeys(valuearr[index ]);
-                        }
-                        //option.oldvaluetmp(currentvalue) ;
-                    }
-                }
-                else {
-                    var usersobject = peoplePickerObject.GetAllUserInfo();
-                    usersobject.forEach(function (index) {
-                        peoplePickerObject.DeleteProcessedUser(usersobject[index]);
-                    });
-                    option.oldvaluetmp(null);
-                }
-
-
-            }
-        }
-        self.setData(options);
+			     //console.log(userInfo );
+			     //console.log(peoplePicker);
+			     var keys = peoplePicker.GetAllUserKeys();
+			    // console.log(olddata );
+			     //console.log(keys );
+			    // console.log(keys );
+			     if((olddata !== keys && typeof olddata  !== 'undefined')||(keys.length > 0 && typeof olddata  === 'undefined')){
+			     	option.oldvaluetmp(keys);
+			     	observable(keys );
+			     	
+			     	
+			     }
+		     }catch(e){}
     }
-};
+	this.loadpeopleData= function(valueAccessor,option){
+	        var schema = {};  
+	        schema['SearchPrincipalSource'] = 15;  
+	        schema['ResolvePrincipalSource'] = 15;  
+	        schema['MaximumEntitySuggestions'] = 50;  
+	        schema['Width'] = '280px';  
+	        schema['AllowMultipleValues'] = option.AllowMultipleValues;  
+	        if (option.PeopleorGroup == 'PeopleOnly') schema['PrincipalAccountType'] = 'User';  
+	        else schema['PrincipalAccountType'] = 'User,DL,SecGroup,SPGroup';  
+	        if (option.GroupID > 0) {  
+	            schema['SharePointGroupID'] = option.GroupID  
+	        }  
+	        // Render and initialize the picker.  
+	        // Pass the ID of the DOM element that contains the picker, an array of initial  
+	        // PickerEntity objects to set the picker value, and a schema that defines  
+	        // picker properties.  
+	        SPClientPeoplePicker_InitStandaloneControlWrapper(option.peoplePickerElementId, null, schema);  
+	        SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId+"_TopSpan"].OnUserResolvedClientScript=function (peoplePickerElementId, selectedUsersInfo) {
+		        	self.valuchange(valueAccessor,option);
+		    };	    
+	}
+	this.setData=function(option){
+	    	//console.log(currentvalue  );
+	    	var peoplePickerObject = SPClientPeoplePicker.SPClientPeoplePickerDict[option.peoplePickerElementId+"_TopSpan"];
+	  	    	peoplePickerObject.SetEnabledState(option.disabled);
+	  	    	//console.log(element.id);
+			if(typeof currentvalue  !== "undefined" && element.id === option.peoplePickerElementId){
+
+				if(typeof option.oldvaluetmp() === 'undefined')
+					{
+						
+						//var userName = "i:0#.f|membership|chalermwit.kh@tora-asia.com;i:0#.f|membership|weeraya.j@tora-asia.com";
+
+							var valuearr = currentvalue.split(';')
+							//console.log(valuearr.length );
+							var obj = [];
+							for (var index in valuearr ) {  
+								//obj.push({ Key:userName });
+								//console.log(userName);
+								peoplePickerObject.AddUnresolvedUser({ Key:valuearr[index ]}, true);
+								//peoplePickerObject.AddUserKeys(valuearr[index ]);
+							}
+							option.oldvaluetmp(currentvalue) ;
+					}
+				}
+	 }
+
+	return {
+		 init: function (element, valueAccessor, allBindingsAccessor, data, context) {
+				var options = allBindingsAccessor().peopleOptions || {};
+		    	//console.log(options.disabled);
+		    	options.peoplePickerElementId=element.id,
+				options.AllowMultipleValues= options.AllowMultipleValues ||false,
+				options.PeopleorGroup= options.PeopleorGroup || 'PeopleOnly',
+				options.GroupID = options.GroupID || 0;
+				options.oldvaluetmp= options.oldvaluetmp|| ko.observable();
+				self.checkSPFuncLoaded(function(){
+					self.loadpeopleData(valueAccessor,options);
+				});
+				//self.loadpeopleData(valueAccessor,options);
+
+	    	},
+	    update: function (element, valueAccessor, allBindingsAccessor) {
+	    	    var options = allBindingsAccessor().peopleOptions || {};
+		    	//console.log(options.disabled);
+		    	options.peoplePickerElementId=element.id,
+				options.AllowMultipleValues= options.AllowMultipleValues ||false,
+				options.PeopleorGroup= options.PeopleorGroup || 'PeopleOnly',
+				options.GroupID = options.GroupID || 0;
+				options.oldvaluetmp= options.oldvaluetmp|| ko.observable();
+				options.disabled = !options.disabled;
+				self.checkSPFuncLoaded(function(){
+					self.setData(options);	
+				});
+				//self.setData(options);
+
+	    }
+
+	}
+
+})(jQuery);
 ko.validation.makeBindingHandlerValidatable('peoplepicker');
 
 ko.bindingHandlers.datepicker = {
@@ -618,14 +600,14 @@ ko.bindingHandlers.datepicker = {
 		options.useCurrent =  (options.useCurrent !== undefined)?options.useCurrent:false;
 		options.format =  (options.format !== undefined)?options.format :thisFormat;
 		var plusday = allBindingsAccessor().plusday || 0;
-		options.minDate = (typeof options.minDate !== "undefined" && options.minDate!== null)?moment(options.minDate.format(options.format)).add(plusday  , 'days'):false;
+		options.minDate = (typeof options.minDate !== "undefined" && options.minDate!== null && options.minDate !== false )?moment(options.minDate.format(options.format)).add(plusday  , 'days'):false;
 		/*if(options.plusday > 0){
 			
 		}
 		else{
 			options.minDate = (typeof options.minDate !== "undefined" && options.minDate!== null)?options.minDate:false;
 		}*/
-		if(typeof defaultvalue  !== 'undefined' && defaultvalue  !== null){
+		if(typeof defaultvalue  !== 'undefined' && defaultvalue  !== null && defaultvalue !== false){
        		options.defaultDate = moment(defaultvalue,options.format) ;
 		}
 		
@@ -643,10 +625,13 @@ ko.bindingHandlers.datepicker = {
         ko.utils.domNodeDisposal.addDisposeCallback(element, function () {
             $(element).datetimepicker("destroy");
         });
-        
-         $(element).parent().find(".input-group-addon").click(function(){
-		 	$(element).trigger('focus');
-		 });
+		
+		$(element).closest(".datetimepicker-boos4").click(function(){
+			$(element).trigger('focus');
+		});
+         //$(element).parent().find(".input-group-addon").click(function(){
+		// 	$(element).trigger('focus');
+		// });
 
 
     },
@@ -657,10 +642,10 @@ ko.bindingHandlers.datepicker = {
         
 		options.format =  (options.format !== undefined)?options.format :thisFormat;
        	var plusday = allBindingsAccessor().plusday || 0;		
-       	options.minDate = (typeof options.minDate !== "undefined" && options.minDate!== null)?moment(options.minDate.format(options.format)).add(plusday  , 'days'):false;
+       	options.minDate = (typeof options.minDate !== "undefined" && options.minDate!== null && options.minDate !== false)?moment(options.minDate.format(options.format)).add(plusday  , 'days'):false;
 		
 		var diff = 9999;
-		if(typeof defaultvalue  !== 'undefined' && defaultvalue  !== null){
+		if(typeof defaultvalue  !== 'undefined' && defaultvalue  !== null && defaultvalue !== false){
 			diff = defaultvalue .diff(options.minDate, 'days');
 			//console.log(diff);
        		//$(element).data("DateTimePicker").date(defaultvalue )		
@@ -1050,6 +1035,7 @@ ko.bindingHandlers.selectPicker = {
 						rowsPerPage: itemOnPage,
 						totalPages:allpage,
 						showRowsPerPage:false,
+						//visiblePageLinks:1,
 						onChangePage:function(evt,p){
 							//console.log(index);
 							if(typeof options.eventclick === 'function'){

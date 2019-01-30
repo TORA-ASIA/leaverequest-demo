@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="Leave_Request_V1"
      ProductID="{a9de7a6e-c151-4b0f-aebb-cfceac2e5748}"
-     Version="1.0.0.0"
+     Version="1.0.0.3"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>

@@ -1,14 +1,14 @@
 ﻿function LRHistoryViewModel(parent, searchuser) {
     var self = this;
-    this.listrequestformtitle = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestItem.Title;
-    this.listleavetypetitle = ToraAsiaLeaveRequestInfo.ListManagement.LeaveRequestCondition.Title;
+    this.listrequestformtitle = LRListManagement.Lists.LeaveRequestItem.Title;
+    this.listleavetypetitle = LRListManagement.Lists.LeaveRequestConfiguration.Title;
     this.dateformate = ko.dateformat.normal;
     this.fromdate = ko.observable();
     this.todate = ko.observable();
     this.leavetype = ko.observable();
-    this.leavetypearr = ko.observableArray();
+    this.leavetypearr = ko.observableArray(LRServices.Variables.LeaveConditions);
     //console.log(beforehistory);
-    this.datawithpaging = ko.observable(new datawithpaging());
+    this.datawithpaging = ko.observable(new LRGlobalFunc.datawithpaging());
     this.datawithpaging().rows(beforehistory);
     //if (beforehistory.length > 0 && gcurrentPageIndex > 0) {
         this.datawithpaging().pageIndex(gcurrentPageIndex);
@@ -28,7 +28,7 @@
     this.officersId = ko.observableArray(self.defaultUid);
 
 
-    this.loadLeaveChoice = function (callback) {
+    /*this.loadLeaveChoice = function (callback) {
         var options = {
             listTitle: self.listleavetypetitle,
             fileData: [
@@ -41,18 +41,19 @@
         });
 
     }
-    this.loadLeaveChoice();
+    this.loadLeaveChoice();*/
     this.generateQuery = function () {
 
         var allquery = [];
         //var datearr = [];
-        if (typeof self.fromdate() !== "undefined" && self.fromdate() !== null) {
+        if (typeof self.fromdate() !== "undefined" && self.fromdate() !== null && self.fromdate() !== false) {
             allquery.push(String.format(ko.defaultquery, "Geq", "StartDate", "DateTime", self.fromdate().format("YYYY-MM-DD"), "", "IncludeTimeValue='False' "));
         }
-        if (typeof self.todate() !== "undefined" && self.todate() !== null) {
+        if (typeof self.todate() !== "undefined" && self.todate() !== null && self.todate() !== false) {
             allquery.push(String.format(ko.defaultquery, "Leq", "StartDate", "DateTime", self.todate().format("YYYY-MM-DD"), "", "IncludeTimeValue='False' "));
         }
         if (typeof self.leavetype() !== "undefined" && self.leavetype() !== null && self.leavetype() !== "") {
+            console.log(self.leavetype());
             allquery.push(String.format(ko.defaultquery, "Eq", "LeaveType", "Text", self.leavetype(), "", ""));
         }
         if (self.officersId().length > 0) {
@@ -94,7 +95,14 @@
             });
         }
     }
-    this.loadAllLeaveData = function (query, callback) {
+    this.loadAllLeaveData = function (allquerystr, callback) {
+
+		LRServices.GetLeaveItems(self.datawithpaging().rows,allquerystr).then(function () {
+            callback();
+		}, LRServices.errorshowaler);
+		    
+	}
+   /* this.loadAllLeaveData = function (query, callback) {
 
         var listServices = new SharePointClient.Services.JSOM.ListServices();
 
@@ -147,12 +155,12 @@
                     }
                 });
 
-    }
+    }*/
     this.goToApproveForm = function (data) {
         //console.log(data.LeaveId());
         //parent.selectTemplate("idwating");
         //parent.selectModel (new LRApproveViewModel(parent,data.LeaveId(),data.Id,self.ishrForm()));
         //parent.selectTemplate("idapproveform");
-        parent.GoToApproveViewModel(parent, data, data.Id, (searchuser ? "idofficerinfo" : "idmyhistory"), true, false);
+        parent.GoToApproveViewModel(parent, data, data.ID, (searchuser ? "idofficerinfo" : "idmyhistory"), true, false);
     }
 }
